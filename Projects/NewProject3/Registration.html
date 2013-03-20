@@ -1,0 +1,260 @@
+
+<!-- BEGIN Panel Head -->
+<title>Registration</title>
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-D1BE677D
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&lang={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Contentmembersphone_day_OnLoad @75-A88A8B75
+function Contentmembersphone_day_OnLoad()
+{
+    var result = true;
+//End Contentmembersphone_day_OnLoad
+
+//Validate Entry @96-157BAFC1
+    this.ccsRequired = false;
+    this.ccsMinLength = 14;
+    this.ccsMaxLength = 14;
+    this.ccsInputMask = "(000) 000-0000";
+    inputMaskInitialize(this, '_');
+    this.ccsCaption = "";
+//End Validate Entry
+
+//Close Contentmembersphone_day_OnLoad @75-BC33A33A
+    return result;
+}
+//End Close Contentmembersphone_day_OnLoad
+
+//Contentmembersphone_evn_OnLoad @76-570FBBE5
+function Contentmembersphone_evn_OnLoad()
+{
+    var result = true;
+//End Contentmembersphone_evn_OnLoad
+
+//Validate Entry @97-157BAFC1
+    this.ccsRequired = false;
+    this.ccsMinLength = 14;
+    this.ccsMaxLength = 14;
+    this.ccsInputMask = "(000) 000-0000";
+    inputMaskInitialize(this, '_');
+    this.ccsCaption = "";
+//End Validate Entry
+
+//Close Contentmembersphone_evn_OnLoad @76-BC33A33A
+    return result;
+}
+//End Close Contentmembersphone_evn_OnLoad
+
+//Contentmembersfax_OnLoad @77-A636E2B7
+function Contentmembersfax_OnLoad()
+{
+    var result = true;
+//End Contentmembersfax_OnLoad
+
+//Validate Entry @98-157BAFC1
+    this.ccsRequired = false;
+    this.ccsMinLength = 14;
+    this.ccsMaxLength = 14;
+    this.ccsInputMask = "(000) 000-0000";
+    inputMaskInitialize(this, '_');
+    this.ccsCaption = "";
+//End Validate Entry
+
+//Close Contentmembersfax_OnLoad @77-BC33A33A
+    return result;
+}
+//End Close Contentmembersfax_OnLoad
+
+//Contentmembers_OnSubmit @59-E6BEFD18
+function Contentmembers_OnSubmit()
+{
+    var result = true;
+//End Contentmembers_OnSubmit
+
+//Regular Expression Validation @93-4F69665A
+    if(!(/^[\d()\- ]+$/g.test(getSameLevelCtl("Contentmembersphone_day", this).value))) {
+        alert("Incorrect format for 'Phone Day'");
+        getSameLevelCtl("Contentmembersphone_day", this).focus();
+        return false;
+    }
+//End Regular Expression Validation
+
+//Regular Expression Validation @94-B15D6279
+    if(!(/^[\d()\- ]+$/g.test(getSameLevelCtl("Contentmembersphone_evn", this).value))) {
+        alert("Incorrect format for 'Phone Evening'");
+        getSameLevelCtl("Contentmembersphone_evn", this).focus();
+        return false;
+    }
+//End Regular Expression Validation
+
+//Regular Expression Validation @95-EBF9CA5F
+    if(!(/^[\d()\- ]+$/g.test(getSameLevelCtl("Contentmembersfax", this).value))) {
+        alert("Incorrect format for 'Fax'");
+        getSameLevelCtl("Contentmembersfax", this).focus();
+        return false;
+    }
+//End Regular Expression Validation
+
+//Close Contentmembers_OnSubmit @59-BC33A33A
+    return result;
+}
+//End Close Contentmembers_OnSubmit
+
+//Contentmembersportal_Delete_OnClick @81-67F8F920
+function Contentmembersportal_Delete_OnClick()
+{
+    disableValidation = true;
+    return true;
+}
+//End Contentmembersportal_Delete_OnClick
+
+//Contentmembersportal_Cancel_OnClick @82-BDC96396
+function Contentmembersportal_Cancel_OnClick()
+{
+    disableValidation = true;
+    return true;
+}
+//End Contentmembersportal_Cancel_OnClick
+
+//bind_events @1-F0476A02
+function bind_events() {
+    try { Header_bind_events(); } catch(e) {}
+    addEventHandler("Contentmembersphone_day", "load", Contentmembersphone_day_OnLoad);
+    addEventHandler("Contentmembersphone_evn", "load", Contentmembersphone_evn_OnLoad);
+    addEventHandler("Contentmembersfax", "load", Contentmembersfax_OnLoad);
+    addEventHandler("Contentmembers", "submit", Contentmembers_OnSubmit);
+    addEventHandler("Contentmembersportal_Delete", "click", Contentmembersportal_Delete_OnClick);
+    addEventHandler("Contentmembersportal_Cancel", "click", Contentmembersportal_Cancel_OnClick);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+<!-- END Panel Head -->
+<!-- BEGIN Panel Content -->
+<!-- BEGIN Record members -->
+<form id="Contentmembers" method="post" name="{HTMLFormName}" action="{Action}">
+  <table class="MainTable" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td class="HeaderLeft"><img alt="" src="{CCS_PathToMasterPage}Images/Spacer.gif"></td> 
+            <td class="th"><strong>User Registration</strong></td> 
+            <td class="HeaderRight"><img alt="" src="{CCS_PathToMasterPage}Images/Spacer.gif"></td> 
+          </tr>
+ 
+        </table>
+ 
+        <table class="Record">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td> 
+          </tr>
+ <!-- END Error -->
+          <tr class="Controls">
+            <td class="th">&nbsp;<label for="Contentmembersmember_login">Login *</label></td> 
+            <td><input id="Contentmembersmember_login" value="{member_login}" maxlength="15" size="15" name="member_login"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">&nbsp;<label for="Contentmembersmember_password">Password *</label></td> 
+            <td><input type="password" id="Contentmembersmember_password" value="{member_password}" maxlength="15" size="15" name="member_password"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">&nbsp;<label for="Contentmembersfirst_name">First Name *</label>&nbsp;</td> 
+            <td><input id="Contentmembersfirst_name" value="{first_name}" maxlength="20" size="15" name="first_name"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">&nbsp;<label for="Contentmemberslast_name">Last Name *</label></td> 
+            <td><input id="Contentmemberslast_name" value="{last_name}" maxlength="20" size="15" name="last_name"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">&nbsp;<label for="Contentmembersemail">Email *</label></td> 
+            <td><input id="Contentmembersemail" value="{email}" maxlength="30" size="30" name="email"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th" valign="top" rowspan="3">&nbsp;<label for="Contentmembersaddress1">Address</label></td> 
+            <td><input id="Contentmembersaddress1" value="{address1}" maxlength="50" size="30" name="address1"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td><input id="Contentmembersaddress2" value="{address2}" maxlength="50" size="30" name="address2"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td><input id="Contentmembersaddress3" value="{address3}" maxlength="50" size="30" name="address3"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">&nbsp;<label for="Contentmemberscity">City</label></td> 
+            <td><input id="Contentmemberscity" value="{city}" maxlength="30" size="30" name="city"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">&nbsp;<label for="Contentmembersstate_id">State</label></td> 
+            <td>
+              <select id="Contentmembersstate_id" name="state_id">
+                <option selected value="">Select Value</option>
+ {state_id_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">&nbsp;<label for="Contentmemberszip">Zip</label></td> 
+            <td><input id="Contentmemberszip" value="{zip}" maxlength="10" size="6" name="zip"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">&nbsp;<label for="Contentmemberscountry_id">Country</label></td> 
+            <td>
+              <select id="Contentmemberscountry_id" name="country_id">
+                <option selected value="">Select Value</option>
+ {country_id_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">&nbsp;<label for="Contentmembersphone_day">Phone Day</label></td> 
+            <td><input id="Contentmembersphone_day" value="{phone_day}" maxlength="20" name="phone_day"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">&nbsp;<label for="Contentmembersphone_evn">Phone Evening</label></td> 
+            <td><input id="Contentmembersphone_evn" value="{phone_evn}" maxlength="20" name="phone_evn"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">&nbsp;<label for="Contentmembersfax">Fax</label></td> 
+            <td><input id="Contentmembersfax" value="{fax}" maxlength="20" name="fax"></td> 
+          </tr>
+ 
+          <tr class="Bottom">
+            <td style="TEXT-ALIGN: right" colspan="2">
+              <!-- BEGIN Button portal_Insert --><input type="submit" class="Button" value="{res:CCS_Insert}" alt="{res:CCS_Insert}" name="portal_Insert"><!-- END Button portal_Insert -->
+              <!-- BEGIN Button portal_Update --><input type="submit" class="Button" value="{res:CCS_Update}" alt="{res:CCS_Update}" name="portal_Update"><!-- END Button portal_Update -->
+              <!-- BEGIN Button portal_Delete --><input type="submit" class="Button" value="{res:CCS_Delete}" alt="{res:CCS_Delete}" name="portal_Delete"><!-- END Button portal_Delete -->
+              <!-- BEGIN Button portal_Cancel --><input type="submit" class="Button" value="{res:CCS_Cancel}" alt="{res:CCS_Cancel}" name="portal_Cancel"><!-- END Button portal_Cancel --></td> 
+          </tr>
+ 
+        </table>
+ <input type="hidden" value="{group_id}" name="group_id"></td> 
+    </tr>
+ 
+  </table>
+</form>
+<!-- END Record members --><!-- END Panel Content -->
+<!-- BEGIN Panel Menu -->{Header}<!-- END Panel Menu -->
+<!-- BEGIN Panel Sidebar1 -->&nbsp;<!-- END Panel Sidebar1 -->

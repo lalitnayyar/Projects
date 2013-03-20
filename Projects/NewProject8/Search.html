@@ -1,0 +1,27 @@
+<!-- BEGIN Panel products_searchTemplatePanel -->
+<!-- BEGIN Panel products_searchTitle -->Search Products<!-- END Panel products_searchTitle -->
+<!-- BEGIN Panel products_searchContent -->
+<!-- BEGIN Record products_search -->
+<form method="post" name="{HTMLFormName}" action="{Action}">
+  <table style="width: 100%" >
+    <tr class="Controls">
+      <td><label for="Contentproducts_searchcategory_id" style="display: none;">Category Id</label> 
+        <select style="WIDTH: 100%" id="Contentproducts_searchcategory_id" name="{category_id_Name}">
+          <option selected value="">All</option>
+ {category_id_Options} 
+        </select>
+	</td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td><label for="Contentproducts_searchcategory" style="display: none;">Category</label><input id="Contentproducts_searchcategory" style="width: 97%" value="{s_keyword}" maxlength="250" name="{s_keyword_Name}"></td> 
+    </tr>
+ 
+    <tr class="Bottom">
+      <td style="TEXT-ALIGN: right">
+        <!-- BEGIN Button DoSearch --><input type="submit" class="Button" value="{res:CCS_Search}" alt="{res:CCS_Search}" name="{Button_Name}"><!-- END Button DoSearch --></td> 
+    </tr>
+ 
+  </table>
+</form>
+<!-- END Record products_search --><!-- END Panel products_searchContent --><!-- END Panel products_searchTemplatePanel -->

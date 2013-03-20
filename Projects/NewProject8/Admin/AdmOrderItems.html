@@ -1,0 +1,104 @@
+<!-- BEGIN Panel Head -->
+<title>AdmOrderItems</title>
+<!-- END Panel Head -->
+<!-- BEGIN Panel Content -->
+<!-- BEGIN Record Order_Record -->
+<form id="ContentOrder_Record" method="post" action="{Action}" name="{HTMLFormName}"> 
+<table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+  <table cellspacing="0" cellpadding="0" border="0" class="Header">
+	<tr>
+	  <td class="HeaderLeft"><img src="{CCS_PathToMasterPage}images/spacer.gif" alt=""></td>
+	  <td class="th"><strong>Edit Order</strong></td>
+	  <td class="HeaderRight"><img src="{CCS_PathToMasterPage}images/spacer.gif" alt=""></td>
+	</tr>
+   </table>
+  <table cellspacing="0" cellpadding="0" class="Record">
+    <!-- BEGIN Error -->
+    <tr class="Error">
+      <td colspan="2">{Error}</td> 
+    </tr>
+ <!-- END Error -->
+    <tr class="Controls">
+      <td class="th">#</td> 
+      <td>{order_id}</td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th">Date</td> 
+      <td>{order_date}</td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th"><label>Status</label></td> 
+      <td>
+        <select name="{order_status_id_Name}" id="ContentOrder_Recordorder_status_id">
+          <option value="">Select Value</option>
+ {order_status_id_Options} 
+        </select>
+ </td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th"><strong>Total</strong></td> 
+      <td><strong>{total}</strong></td> 
+    </tr>
+ 
+    <tr class="Bottom">
+      <td colspan="2" style="text-align: right">
+        <!-- BEGIN Button Button_Update --><input name="{Button_Name}" type="submit" value="Submit" alt="Submit" id="ContentOrder_RecordButton_Update" class="Button"><!-- END Button Button_Update --></td> 
+    </tr>
+ 
+  </table>
+     </td>
+    </tr>
+  </table>
+ </form>
+<!-- END Record Order_Record --><br><br>
+
+<!-- BEGIN Grid order_items -->
+<table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+  <table cellspacing="0" cellpadding="0" border="0" class="Header">
+	<tr>
+	  <td class="HeaderLeft"><img src="{CCS_PathToMasterPage}images/spacer.gif" alt=""></td>
+	  <td class="th"><strong>Edit Order</strong></td>
+	  <td class="HeaderRight"><img src="{CCS_PathToMasterPage}images/spacer.gif" alt=""></td>
+	</tr>
+   </table>
+<table class="Grid" cellspacing="0" cellpadding="0">
+  <tr class="Caption">
+    <th scope="col">Product Name</th>
+ 
+    <th scope="col">Qty</th>
+ 
+    <th scope="col" align="right">Price</th>
+ 
+  </tr>
+ 
+  <!-- BEGIN Row -->
+  <tr class="Row">
+    <td>{product_name}&nbsp;</td> 
+    <td align="right">{quantity}&nbsp;</td> 
+    <td align="right">{price}&nbsp;</td> 
+  </tr>
+ <!-- END Row -->
+  <!-- BEGIN NoRecords -->
+  <tr class="NoRecords">
+    <td colspan="3">No records</td> 
+  </tr>
+ <!-- END NoRecords -->
+  <tr class="Footer">
+    <td colspan="3">&nbsp;</td> 
+  </tr>
+ 
+</table>
+     </td>
+    </tr>
+  </table>
+<!-- END Grid order_items --> 
+<!-- END Panel Content -->
+<!-- BEGIN Panel Menu -->{AdmHeader}<!-- END Panel Menu -->
+<!-- BEGIN Panel Sidebar -->{AdmMenu}&nbsp;<!-- END Panel Sidebar -->

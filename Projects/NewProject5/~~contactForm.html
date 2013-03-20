@@ -1,0 +1,149 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!CCSDOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><HTML><HEAD><TITLE>contactForm</TITLE>
+<STYLE needdelete>td {border-style:dotted;border-width:1px;border-color:#aaaaaa;} table {border-style:dashed;border-width:1px;border-color:#aaaaaa;}</STYLE>
+
+<META name=GENERATOR content="MSHTML 10.00.9200.16525" ccsServiceable="true">
+<META content="text/html; charset=windows-1252" http-equiv=Content-Type 
+ccsServiceable="true">
+<SCRIPT language=JavaScript type=text/javascript>
+//Begin CCS script
+//Include Common JSFunctions @1-56D0AF56
+</SCRIPT>
+
+<SCRIPT language=JavaScript type=text/javascript charset=utf-8 
+src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" 
+ccs_src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}"></SCRIPT>
+
+<SCRIPT language=JavaScript type=text/javascript charset=utf-8 
+src="ClientI18N.php?file=DatePicker.js&amp;locale={res:CCS_LocaleID}" 
+ccs_src="ClientI18N.php?file=DatePicker.js&amp;locale={res:CCS_LocaleID}"></SCRIPT>
+
+<SCRIPT language=JavaScript type=text/javascript>
+//End Include Common JSFunctions
+
+//Include User Scripts @1-A328438A
+</SCRIPT>
+
+<SCRIPT language=JavaScript type=text/javascript 
+src="js/yui/build/yahoo-dom-event/yahoo-dom-event.js" 
+ccs_src="js/yui/build/yahoo-dom-event/yahoo-dom-event.js"></SCRIPT>
+
+<SCRIPT language=JavaScript type=text/javascript 
+src="js/yui/build/calendar/calendar-min.js" 
+ccs_src="js/yui/build/calendar/calendar-min.js"></SCRIPT>
+
+<SCRIPT language=JavaScript type=text/javascript 
+src="js/yui/datepicker-commons.js" 
+ccs_src="js/yui/datepicker-commons.js"></SCRIPT>
+<LINK rel=stylesheet type=text/css 
+href="C:\Users\Lalit\Documents\CodeChargeStudio5\Projects\NewProject5\Designs\Apricot\ccs-yui-calendar.css" 
+ccsServiceable="true" ccs_href="{CCS_PathToMasterPage}ccs-yui-calendar.css">
+<SCRIPT language=JavaScript type=text/javascript>
+//End Include User Scripts
+
+//Handle saconsultsacon_DOBInlineDatePicker1 @13-FC2D4B6E
+function saconsultsacon_DOBInlineDatePicker1_start(sender) {
+    if (!sender || sender === window) return;
+    generateDatePicker(sender.id, "yyyy-mm-dd","");
+}
+//End Handle saconsultsacon_DOBInlineDatePicker1
+
+//Handle saconsultsacon_TOBInlineDatePicker2 @15-463A710C
+function saconsultsacon_TOBInlineDatePicker2_start(sender) {
+    if (!sender || sender === window) return;
+    generateDatePicker(sender.id, "HH:nn:ss","");
+}
+//End Handle saconsultsacon_TOBInlineDatePicker2
+
+//bind_events @1-E82C88A6
+function bind_events() {
+    addEventHandler("saconsultsacon_DOB", "load", saconsultsacon_DOBInlineDatePicker1_start);
+    addEventHandler("saconsultsacon_TOB", "load", saconsultsacon_TOBInlineDatePicker2_start);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</SCRIPT>
+</HEAD>
+<BODY>&nbsp; <SPAN contentEditable=true 
+style="BORDER-TOP: #dcdcdc 1px solid; BORDER-RIGHT: #dcdcdc 1px solid; BORDER-BOTTOM: #dcdcdc 1px solid; BORDER-LEFT: #dcdcdc 1px solid; DISPLAY: block" 
+ccsServiceable="true" ccsName="saconsult" ccsId="6" 
+ccsDesignColorSelection="true" ccsType="Component">
+<FORM id=saconsult method=post name={HTMLFormName} action={Action} 
+ccsServiceable="true">
+<TABLE class=MainTable cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=top>
+      <TABLE class=HeaderSimple cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=HeaderLeftSimple><IMG alt="" 
+            src="Styles/Simple/Images/Spacer.gif" ccsServiceable="true" 
+            ccs_src="Styles/Simple/Images/Spacer.gif"></TD>
+          <TD class=thSimple><STRONG>Contact Form</STRONG></TD>
+          <TD class=HeaderRightSimple><IMG alt="" 
+            src="Styles/Simple/Images/Spacer.gif" ccsServiceable="true" 
+            ccs_src="Styles/Simple/Images/Spacer.gif"></TD></TR></TBODY></TABLE>
+      <TABLE class=RecordSimple cellSpacing=0 cellPadding=0><!-- BEGIN Error -->
+        <TBODY>
+        <TR class=ErrorSimple>
+          <TD colSpan=2>{Error}</TD></TR><!-- END Error -->
+        <TR class=ControlsSimple>
+          <TD class=thSimple><SPAN ccsServiceable="true" 
+            ccsHtmlTag_for="saconsultsacon_Name" 
+          ccsHtmlTag="label">Name</SPAN></TD>
+          <TD><INPUT id=saconsultsacon_Name maxLength=60 size=50 
+            value={sacon_Name} name={sacon_Name_Name} ccsServiceable="true" 
+            ccsName="sacon_Name" ccsId="11" ccsType="Component"></TD></TR>
+        <TR class=ControlsSimple>
+          <TD class=thSimple><SPAN ccsServiceable="true" 
+            ccsHtmlTag_for="saconsultsacon_DOB" ccsHtmlTag="label">Date Of 
+            Birth</SPAN></TD>
+          <TD><INPUT id=saconsultsacon_DOB maxLength=100 size=8 
+            value={sacon_DOB} name={sacon_DOB_Name} ccsServiceable="true" 
+            ccsName="sacon_DOB" ccsId="12" 
+          ccsType="Component">&nbsp;YYYY-MM-DD</TD></TR>
+        <TR class=ControlsSimple>
+          <TD class=thSimple><SPAN ccsServiceable="true" 
+            ccsHtmlTag_for="saconsultsacon_TOB" ccsHtmlTag="label">Time Of 
+            Birth</SPAN></TD>
+          <TD><INPUT id=saconsultsacon_TOB maxLength=100 size=8 
+            value={sacon_TOB} name={sacon_TOB_Name} ccsServiceable="true" 
+            ccsName="sacon_TOB" ccsId="14" ccsType="Component">&nbsp;HH:MM:SS 
+            (24hrs)</TD></TR>
+        <TR class=ControlsSimple>
+          <TD class=thSimple><SPAN ccsServiceable="true" 
+            ccsHtmlTag_for="saconsultsacon_POB" ccsHtmlTag="label">Place of 
+            Birth</SPAN></TD>
+          <TD><INPUT id=saconsultsacon_POB maxLength=60 size=50 
+            value={sacon_POB} name={sacon_POB_Name} ccsServiceable="true" 
+            ccsName="sacon_POB" ccsId="16" ccsType="Component"></TD></TR>
+        <TR class=ControlsSimple>
+          <TD class=thSimple><SPAN ccsServiceable="true" 
+            ccsHtmlTag_for="saconsultsacon_phone" ccsHtmlTag="label">Phone 
+            Number</SPAN></TD>
+          <TD><INPUT id=saconsultsacon_phone maxLength=60 size=50 
+            value={sacon_phone} name={sacon_phone_Name} ccsServiceable="true" 
+            ccsName="sacon_phone" ccsId="17" ccsType="Component"></TD></TR>
+        <TR class=ControlsSimple>
+          <TD class=thSimple><SPAN ccsServiceable="true" 
+            ccsHtmlTag_for="saconsultsacon_email" 
+          ccsHtmlTag="label">Email</SPAN></TD>
+          <TD><INPUT id=saconsultsacon_email maxLength=60 size=50 
+            value={sacon_email} name={sacon_email_Name} ccsServiceable="true" 
+            ccsName="sacon_email" ccsId="18" ccsType="Component"></TD></TR>
+        <TR class=ControlsSimple>
+          <TD class=thSimple><SPAN ccsServiceable="true" 
+            ccsHtmlTag_for="saconsultsacon_question" 
+            ccsHtmlTag="label">Question</SPAN></TD>
+          <TD><INPUT id=saconsultsacon_question maxLength=250 size=50 
+            value={sacon_question} name={sacon_question_Name} 
+            ccsServiceable="true" ccsName="sacon_question" ccsId="19" 
+            ccsType="Component"></TD></TR>
+        <TR class=BottomSimple>
+          <TD style="TEXT-ALIGN: right" colSpan=2><INPUT id=saconsultButton_Insert class=ButtonSimple alt=Add type=submit value=Add name={Button_Name} ccsServiceable="true" ccsName="Button_Insert" ccsId="8" ccsType="Component" ccsExtendedHtml="true"> 
+<INPUT id=saconsultButton_Update class=ButtonSimple alt=Submit type=submit value=Submit name={Button_Name} ccsServiceable="true" ccsName="Button_Update" ccsId="9" ccsType="Component" ccsExtendedHtml="true"></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></FORM>&nbsp;</SPAN><BR>&nbsp;&nbsp; 
+</BODY></HTML>

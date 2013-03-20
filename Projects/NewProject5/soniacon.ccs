@@ -1,0 +1,94 @@
+<Site id="0" language="PHPTemplates" name="soniacon" siteLanguage="en" publishingType="Project" FTPpublishingType="Project" securityType="None" urlType="Absolute" useCCSCultureFormats="True" defaultDateFormat="ShortDate" LSEnableQueryString="True" LSQueryStringName="locale" LSEnableHTTPHeader="False" LSEnableSession="True" LSSessionName="locale" LSLanguageSessionName="lang" LSEnableCookie="False" LSCookieName="locale" LSCookieExpired="365" cachingMethod="None" useI18nFeatures="False" showDepreciatedStyles="Styles" useDynamicStyles="False" SSEnableQueryString="True" SSQueryStringName="style" SSEnableSession="True" SSSessionName="style" SSEnableCookie="False" SSCookieName="style" SSCookieExpired="365" htmlTemplateType="HTML" isSection508="True" createIdsForControls="True" createIdsForNonEditableControls="True" createLablesForControls="False" generateJS="True" useDynamicDesigns="True" DDEnableQueryString="True" DDQueryStringName="design" DDEnableSession="True" DDSessionName="design" DDEnableCookie="False" DDCookieName="design" DDCookieExpired="365" fileExtension=".php" improvedHTTPCaching="True" outputFileFormat="Windows" PHPVersion="5" userIDStoreMethod="Session" userIDVariable="UserID" userLoginVariable="UserLogin" groupIDVariable="GroupID" cookieVariable="UserInfo" automatedLogin="False" defaultHTMLEncoding="windows-1252" omitIfEmpty="True" separateEvents="False" designFolder="Designs" PHPEncodeExtension="iconv" FCKBasePath="ckeditor" ccsVersion="5.0.0.16254" useAmp="True" codeFileEncoding="windows-1252" ALLoginCookieName="NewProject5Login" ALCookieExpired="30" ALEncryptionKey="fBd801075x4G899H" ALAutoProlong="False" ProtectPasswordsCodeExpression="md5({password})" ProtectPasswordsDBFunction="MD5({password})" connection="Connection1" securityConnection="Connection1" defaultStyle="Apricot" numberCounter="3" defaultDesign="Apricot">
+	<Components>
+	</Components>
+	<Connections>
+	</Connections>
+	<CodeFiles>
+		<CodeFile id="Templates" language="PHPTemplates" name="Template.php" forShow="False" comment="//" codePage="windows-1252"/>
+		<CodeFile id="Common" language="PHPTemplates" name="Common.php" forShow="False" comment="//" codePage="windows-1252"/>
+		<CodeFile id="Sorter" language="PHPTemplates" name="Sorter.php" forShow="False" comment="//" codePage="windows-1252"/>
+		<CodeFile id="Navigator" language="PHPTemplates" name="Navigator.php" forShow="False" comment="//" codePage="windows-1252"/>
+		<CodeFile id="CalendarNavigator" language="PHPTemplates" name="CalendarNavigator.php" forShow="False" comment="//" codePage="windows-1252"/>
+		<CodeFile id="Classes" language="PHPTemplates" name="Classes.php" forShow="False" comment="//" codePage="windows-1252"/>
+		<CodeFile id="db_mysql" language="PHPTemplates" name="db_mysql.php" forShow="False" comment="//" codePage="windows-1252"/>
+		<CodeFile id="db_array" language="PHPTemplates" name="db_array.php" forShow="False" comment="//" codePage="windows-1252"/>
+		<CodeFile id="db_adapter" language="PHPTemplates" name="db_adapter.php" forShow="False" comment="//" codePage="windows-1252"/>
+		<CodeFile id="JSFunctions" language="PHPTemplates" name="Functions.js" forShow="False" comment="//" codePage="utf-8"/>
+		<CodeFile id="JSDatePickerHTML" language="PHPTemplates" name="DatePicker.html" forShow="False" comment="&lt;!--" commentEnd="--&gt;" codePage="windows-1252"/>
+		<CodeFile id="JSDatePicker" language="PHPTemplates" name="DatePicker.js" forShow="False" comment="//" codePage="utf-8"/>
+		<CodeFile id="Client" language="PHPTemplates" name="ClientI18N.php" forShow="False" comment="//" codePage="utf-8"/>
+		<CodeFile id="Services" language="PHPTemplates" name="Services.php" forShow="False" comment="//" codePage="windows-1252"/>
+		<CodeFile id="Prototype" language="PHPTemplates" name="prototype.js" path="js\pt" forShow="False" comment="//" codePage="utf-8" CheckSum="DF56ADDD"/>
+		<CodeFile id="PrototypeCcs" language="PHPTemplates" name="prototype_ccs.js" path="js\pt" forShow="False" comment="//" codePage="windows-1252" CheckSum="DF43E555"/>
+		<CodeFile id="AjaxPanel" language="PHPTemplates" name="ajaxpanel.js" path="js\pt" forShow="False" comment="//" codePage="windows-1252" CheckSum="46C0457E"/>
+		<CodeFile id="InlineEditing" language="PHPTemplates" name="inlineediting.js" path="js\pt" forShow="False" comment="//" codePage="windows-1252" CheckSum="AADEB3FC"/>
+		<CodeFile id="CaptchaCCS" language="PHPTemplates" name="captcha.js" path="js\pt" forShow="False" comment="//" codePage="windows-1252" CheckSum="DA0B423F"/>
+		<CodeFile id="PTBuilder" language="PHPTemplates" name="builder.js" path="js\pt" forShow="False" comment="//" codePage="windows-1252" CheckSum="F58455A1"/>
+		<CodeFile id="PTControls" language="PHPTemplates" name="controls.js" path="js\pt" forShow="False" comment="//" codePage="windows-1252" CheckSum="5224641B"/>
+		<CodeFile id="PTDragDrop" language="PHPTemplates" name="dragdrop.js" path="js\pt" forShow="False" comment="//" codePage="windows-1252" CheckSum="F2FF6479"/>
+		<CodeFile id="PTEffects" language="PHPTemplates" name="effects.js" path="js\pt" forShow="False" comment="//" codePage="windows-1252" CheckSum="F9CE83BB"/>
+		<CodeFile id="PTScriptaculous" language="PHPTemplates" name="scriptaculous.js" path="js\pt" forShow="False" comment="//" codePage="windows-1252" CheckSum="FC331358"/>
+		<CodeFile id="PTSlider" language="PHPTemplates" name="slider.js" path="js\pt" forShow="False" comment="//" codePage="windows-1252" CheckSum="78349C90"/>
+		<CodeFile id="PTSound" language="PHPTemplates" name="sound.js" path="js\pt" forShow="False" comment="//" codePage="windows-1252" CheckSum="14D71A6D"/>
+		<CodeFile id="YUIAnimationMin" language="PHPTemplates" name="animation-min.js" path="js\yui\build\animation" forShow="False" comment="//" codePage="windows-1252" CheckSum="83AC29D7"/>
+		<CodeFile id="YUIAutocompleteMin" language="PHPTemplates" name="autocomplete-min.js" path="js\yui\build\autocomplete" forShow="False" comment="//" codePage="windows-1252" CheckSum="FDDC8F52"/>
+		<CodeFile id="YUIAutocompleteCommons" language="PHPTemplates" name="autocomplete-commons.js" path="js\yui" forShow="False" comment="//" codePage="windows-1252" CheckSum="C7D4EA64"/>
+		<CodeFile id="YUIAutocompleteCss" language="PHPTemplates" name="autocomplete.css" path="js\yui\build\autocomplete\assets\skins\sam" forShow="False" comment="//" codePage="windows-1252" CheckSum="DB58EE1A"/>
+		<CodeFile id="YUIJSONMin" language="PHPTemplates" name="json-min.js" path="js\yui\build\json" forShow="False" comment="//" codePage="windows-1252" CheckSum="9C6B8551"/>
+		<CodeFile id="YUICOnnectionMin" language="PHPTemplates" name="connection-min.js" path="js\yui\build\connection" forShow="False" comment="//" codePage="windows-1252" CheckSum="D8DF8F51"/>
+		<CodeFile id="YUIDataSource" language="PHPTemplates" name="datasource-min.js" path="js\yui\build\datasource" forShow="False" comment="//" codePage="windows-1252" CheckSum="05E27C3E"/>
+		<CodeFile id="YUIDOMMin" language="PHPTemplates" name="dom-min.js" path="js\yui\build\dom" forShow="False" comment="//" codePage="windows-1252" CheckSum="1D0EFD33"/>
+		<CodeFile id="YUIElementMin" language="PHPTemplates" name="element-min.js" path="js\yui\build\element" forShow="False" comment="//" codePage="windows-1252" CheckSum="74FDB25B"/>
+		<CodeFile id="YUIEventMin" language="PHPTemplates" name="event-min.js" path="js\yui\build\event" forShow="False" comment="//" codePage="windows-1252" CheckSum="1C159AFF"/>
+		<CodeFile id="YUITabViewMin" language="PHPTemplates" name="tabview-min.js" path="js\yui\build\tabview" forShow="False" comment="//" codePage="windows-1252" CheckSum="ED35E588"/>
+		<CodeFile id="YUITabViewBorderTab" language="PHPTemplates" name="border_tabs.css" path="js\yui\build\tabview\assets" forShow="False" comment="//" codePage="windows-1252" CheckSum="B61A1CC8"/>
+		<CodeFile id="YUITabViewCss" language="PHPTemplates" name="tabview.css" path="js\yui\build\tabview\assets" forShow="False" comment="//" codePage="windows-1252" CheckSum="8C0CE21C"/>
+		<CodeFile id="YUITabViewCoreCss" language="PHPTemplates" name="tabview-core.css" path="js\yui\build\tabview\assets" forShow="False" comment="//" codePage="windows-1252" CheckSum="744A5B1E"/>
+		<CodeFile id="YUICalendarMin" language="PHPTemplates" name="calendar-min.js" path="js\yui\build\calendar" forShow="False" comment="//" codePage="windows-1252" CheckSum="6B48AF78"/>
+		<CodeFile id="YUIDatepickerCommons" language="PHPTemplates" name="datepicker-commons.js" path="js\yui" forShow="False" comment="//" codePage="windows-1252" CheckSum="EB5F1815"/>
+		<CodeFile id="YUICalendarCss" language="PHPTemplates" name="calendar.css" path="js\yui\build\calendar\assets" forShow="False" comment="//" codePage="windows-1252" CheckSum="2ADF3D6F"/>
+		<CodeFile id="YUICalendarCoreCss" language="PHPTemplates" name="calendar-core.css" path="js\yui\build\calendar\assets" forShow="False" comment="//" codePage="windows-1252" CheckSum="54CE072D"/>
+		<CodeFile id="YUISliderMin" language="PHPTemplates" name="slider-min.js" path="js\yui\build\slider" forShow="False" comment="//" codePage="windows-1252" CheckSum="93E3C290"/>
+		<CodeFile id="YUIDragdropMin" language="PHPTemplates" name="dragdrop-min.js" path="js\yui\build\dragdrop" forShow="False" comment="//" codePage="windows-1252" CheckSum="B9FB4883"/>
+		<CodeFile id="YUISliderCommons" language="PHPTemplates" name="slider-commons.js" path="js\yui" forShow="False" comment="//" codePage="windows-1252" CheckSum="10463619"/>
+		<CodeFile id="YUISliderCss" language="PHPTemplates" name="slider.css" path="js\yui\build\slider\assets\skins\sam" forShow="False" comment="//" codePage="windows-1252" CheckSum="0475D8C6"/>
+		<CodeFile id="YUISliderSkinCss" language="PHPTemplates" name="slider-skin.css" path="js\yui\build\slider\assets\skins\sam" forShow="False" comment="//" codePage="windows-1252" CheckSum="2C39C96E"/>
+		<CodeFile id="ExtJSSpinnerAll" language="PHPTemplates" name="ext.js" path="js\extjs\ext" forShow="False" comment="//" codePage="windows-1252" CheckSum="C8EEB055"/>
+		<CodeFile id="ExtJSSpinnerStrategy" language="PHPTemplates" name="spinner-strategy.js" path="js\spinner" forShow="False" comment="//" codePage="windows-1252" CheckSum="4FAD9A90"/>
+		<CodeFile id="ExtJSSpinnerCommons" language="PHPTemplates" name="spinner-commons.js" path="js\spinner" forShow="False" comment="//" codePage="windows-1252" CheckSum="27286FEE"/>
+		<CodeFile id="YUIYahooMin" language="PHPTemplates" name="yahoo-min.js" path="js\yui\build\yahoo" forShow="False" comment="//" codePage="windows-1252" CheckSum="95969253"/>
+		<CodeFile id="YUIYahooDomEvent" language="PHPTemplates" name="yahoo-dom-event.js" path="js\yui\build\yahoo-dom-event" forShow="False" comment="//" codePage="windows-1252" CheckSum="878E8CA4"/>
+		<CodeFile id="MenuScript" language="PHPTemplates" name="ADxMenu.js" path="js\menu" forShow="False" comment="//" codePage="windows-1252" CheckSum="3BC8A1B8"/>
+		<CodeFile id="MenuWCHScript" language="PHPTemplates" name="WCH.js" path="js\menu" forShow="False" comment="//" codePage="windows-1252" CheckSum="20EABDE1"/>
+		<CodeFile id="YUIContainerMin" language="PHPTemplates" name="container-min.js" path="js\yui\build\container" forShow="False" comment="//" codePage="windows-1252" CheckSum="28883421"/>
+		<CodeFile id="YUIContainerCore" language="PHPTemplates" name="container_core-min.js" path="js\yui\build\container" forShow="False" comment="//" codePage="windows-1252" CheckSum="FAFCD9BD"/>
+		<CodeFile id="YUIContainerCSS" language="PHPTemplates" name="container.css" path="js\yui\build\container\assets\skins\sam" forShow="False" comment="//" codePage="windows-1252" CheckSum="76397594"/>
+		<CodeFile id="YUIContainerSkin" language="PHPTemplates" name="container-skin.css" path="js\yui\build\container\assets\skins\sam" forShow="False" comment="//" codePage="windows-1252" CheckSum="290F457C"/>
+		<CodeFile id="YUIDragDropMin" language="PHPTemplates" name="dragdrop-min.js" path="js\yui\build\dragdrop" forShow="False" comment="//" codePage="windows-1252" CheckSum="B9FB4883"/>
+	</CodeFiles>
+	<Groups/>
+	<Styles>
+		<Style id="2" name="Apricot" caption="Apricot"/>
+		<Style id="3" name="Simple" caption="Simple"/>
+		<Style id="4" name="Maple" caption="Maple"/>
+	</Styles>
+	<CustomButtons/>
+	<Profiles>
+		<Profile name="Server1" FTPPassiveMode="True" FTPSecureConnection="False" FTPpublishingAllMask="html;js;asp;php;jsp;cfm;cfc;pl;pm;cgi;mdb;gif;jpg;png;css;xml;java;asax;ascx;aspx;asmx;cs;vb;vbproj;resx;config;vsdisco;csproj;webinfo;bat;tld;jar;properties;inc;txt;resources;dll;swf;master;res;ico" FTPpublishingExceptMask="ccs;ccp" FTPpublishingType="Project" fileExtension=".php" location="Local" publishingAllMask="html;js;asp;php;jsp;cfm;cfc;pl;pm;cgi;mdb;gif;jpg;png;css;xml;java;asax;ascx;aspx;asmx;cs;vb;vbproj;resx;config;vsdisco;csproj;webinfo;bat;tld;jar;properties;inc;txt;resources;dll;swf;master;res;ico" publishingExceptMask="ccs;ccp" publishingType="Project" FTPFolder="" FTPLogin="" FTPPassword="" FTPServer="" FTPServerURL="" __specValue="" localServerPath="C:\xampp\htdocs\soniacon1" localServerURL="http://localhost/soniacon1">
+			<Connections>
+				<Connection id="1" serverDatabase="MySQL" DBNameUppercase="True" OptimizeSQL="True" PHPDBLib="MySQL" database="MySQL" showViews="True" showSynonyms="True" showSysTable="False" showSysView="False" showAliases="False" relationshipDiscovery="True" serverPersistentConnection="False" serverUseODBCCursor="0" connectionType="mysql_native" connectionString="symbioticindia.in;Port=3306;Database=symbiyjz_saapp" name="Connection1" login="symbiyjz_saapp" catalog="symbiyjz_saapp" typeMode="Expert" serverSameAsDesign="True" connection="Connection1" password="sharda@23" addSchemaName="False" DBDateFormat="mm/dd/yyyy HH:nn:ss" DBBooleanFormat="true;false"/>
+			</Connections>
+		</Profile>
+		<Profile name="Server2" FTPPassiveMode="True" FTPSecureConnection="False" FTPpublishingAllMask="html;js;asp;php;jsp;cfm;cfc;pl;pm;cgi;mdb;gif;jpg;png;css;xml;java;asax;ascx;aspx;asmx;cs;vb;vbproj;resx;config;vsdisco;csproj;webinfo;bat;tld;jar;properties;inc;txt;resources;dll;swf;master;res;ico" FTPpublishingExceptMask="ccs;ccp" FTPpublishingType="Project" fileExtension=".php" location="FTP" publishingAllMask="html;js;asp;php;jsp;cfm;cfc;pl;pm;cgi;mdb;gif;jpg;png;css;xml;java;asax;ascx;aspx;asmx;cs;vb;vbproj;resx;config;vsdisco;csproj;webinfo;bat;tld;jar;properties;inc;txt;resources;dll;swf;master;res;ico" publishingExceptMask="ccs;ccp" publishingType="Project">
+			<Connections>
+				<Connection id="1" serverDatabase="ANSI" DBNameUppercase="True" OptimizeSQL="True" PHPDBLib="MySQL" database="ANSI" showViews="True" showSynonyms="True" showSysTable="False" showSysView="False" showAliases="False" relationshipDiscovery="True" serverPersistentConnection="False" serverUseODBCCursor="0" name="Connection1"/>
+			</Connections>
+		</Profile>
+	</Profiles>
+	<Languages>
+		<Language name="en" defaultCountry="US" encoding="windows-1252">
+			<LocaleInfo language="en" country="US" encoding="windows-1252" msValue="1033" booleanFormat="Yes;No" decimalDigits="2" decimalSeparator="." groupSeparator="," monthNames="January;February;March;April;May;June;July;August;September;October;November;December" monthShortNames="Jan;Feb;Mar;Apr;May;Jun;Jul;Aug;Sep;Oct;Nov;Dec" weekdayNames="Sunday;Monday;Tuesday;Wednesday;Thursday;Friday;Saturday" weekdayShortNames="Sun;Mon;Tue;Wed;Thu;Fri;Sat" shortDate="m/d/yyyy" longDate="dddd, mmmm dd, yyyy" shortTime="h:nn tt" longTime="h:nn:ss tt" firstWeekDay="0" AMDesignator="AM" PMDesignator="PM" weekdayNarrowNames="S;M;T;W;T;F;S"/>
+		</Language>
+	</Languages>
+	<Events/>
+</Site>

@@ -1,0 +1,87 @@
+<!-- BEGIN Panel Head -->
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-6FA9DE6A
+</script>
+<script language="JavaScript" src="../ClientI18N.asp?file=Functions.js&amp;lang={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Contentstore_statusesButton_Delete_OnClick @28-53918659
+function Contentstore_statusesButton_Delete_OnClick()
+{
+    var result = true;
+//End Contentstore_statusesButton_Delete_OnClick
+
+//Confirmation Message @29-8243B274
+    return confirm('Delete record?');
+//End Confirmation Message
+
+//Close Contentstore_statusesButton_Delete_OnClick @28-BC33A33A
+    return result;
+}
+//End Close Contentstore_statusesButton_Delete_OnClick
+
+//Contentstore_statusesButton_Cancel_OnClick @30-02D6CDA9
+function Contentstore_statusesButton_Cancel_OnClick()
+{
+    disableValidation = true;
+    return true;
+}
+//End Contentstore_statusesButton_Cancel_OnClick
+
+//bind_events @1-56D98EB7
+function bind_events() {
+    try { AdmHeader_bind_events(); } catch(e) {}
+    try { AdmMenu_bind_events(); } catch(e) {}
+    addEventHandler("Contentstore_statusesButton_Delete", "click", Contentstore_statusesButton_Delete_OnClick);
+    addEventHandler("Contentstore_statusesButton_Cancel", "click", Contentstore_statusesButton_Cancel_OnClick);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+<title>AdmOrderStatusRecord </title>
+<!-- END Panel Head -->
+<!-- BEGIN Panel Content -->
+<!-- BEGIN Record store_statuses -->
+<form id="Contentstore_statuses" method="post" action="{Action}" name="{HTMLFormName}"> 
+<table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+  <table cellspacing="0" cellpadding="0" border="0" class="Header">
+	<tr>
+	  <td class="HeaderLeft"><img src="{CCS_PathToMasterPage}images/spacer.gif" alt=""></td>
+	  <td class="th"><strong>Edit Store Status</strong></td>
+	  <td class="HeaderRight"><img src="{CCS_PathToMasterPage}images/spacer.gif" alt=""></td>
+	</tr>
+   </table>
+  <table cellspacing="0" cellpadding="0" class="Record" style="width: 10px">
+    <!-- BEGIN Error -->
+    <tr class="Error">
+      <td>{Error}</td> 
+    </tr>
+ <!-- END Error -->
+    <tr class="Controls">
+      <td><input type="text" name="{status_name_Name}" value="{status_name}" maxlength="50" size="50" id="Contentstore_statusesstatus_name"></td> 
+    </tr>
+ 
+    <tr class="Bottom">
+      <td style="text-align: right">
+        <!-- BEGIN Button Button_Insert --><input name="{Button_Name}" type="submit" value="Add" alt="Add" id="Contentstore_statusesButton_Insert" class="Button"><!-- END Button Button_Insert -->
+        <!-- BEGIN Button Button_Update --><input name="{Button_Name}" type="submit" value="Submit" alt="Submit" id="Contentstore_statusesButton_Update" class="Button"><!-- END Button Button_Update -->
+        <!-- BEGIN Button Button_Delete --><input name="{Button_Name}" type="submit" value="Delete" alt="Delete" id="Contentstore_statusesButton_Delete" class="Button"><!-- END Button Button_Delete -->
+        <!-- BEGIN Button Button_Cancel --><input name="{Button_Name}" type="submit" value="Cancel" alt="Cancel" id="Contentstore_statusesButton_Cancel" class="Button"><!-- END Button Button_Cancel --></td> 
+    </tr>
+ 
+  </table>
+     </td>
+    </tr>
+  </table>
+ </form>
+<!-- END Record store_statuses --> 
+<!-- END Panel Content -->
+<!-- BEGIN Panel Menu -->{AdmHeader}<!-- END Panel Menu -->
+<!-- BEGIN Panel Sidebar -->{AdmMenu}&nbsp;<!-- END Panel Sidebar -->

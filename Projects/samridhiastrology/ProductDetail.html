@@ -1,0 +1,52 @@
+<!-- BEGIN Panel Head -->
+<title>ProductDetail</title>
+<!-- END Panel Head -->
+<!-- BEGIN Panel Content -->
+
+<!-- BEGIN Record add_to_cart -->
+<form id="Contentadd_to_cart" method="post" action="{Action}" name="{HTMLFormName}"> 
+<table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+  <!-- BEGIN Error -->
+  <p>{Error}</p>
+ <!-- END Error -->
+  <div style="display:inline; position: relative;">
+    <label>Qty:</label> <input type="text" name="{quantity_Name}" value="{quantity}" maxlength="7" id="Contentadd_to_cartquantity">
+    <div style="display:inline; position:absolute;top:-2px;">
+      <!-- BEGIN Button Button_Insert --><input name="{Button_Name}" type="submit" value="Add to Cart" alt="Add to Cart" id="Contentadd_to_cartButton_Insert" class="Button"><!-- END Button Button_Insert -->
+    </div>
+ 
+  </div>
+ <input type="hidden" name="{shopping_cart_id_Name}" value="{shopping_cart_id}" id="Contentadd_to_cartshopping_cart_id"><input type="hidden" name="{product_id_Name}" value="{product_id}" id="Contentadd_to_cartproduct_id">
+     </td>
+    </tr>
+  </table>
+ </form>
+<!-- END Record add_to_cart -->
+
+<!-- BEGIN Record store_products -->
+<h3>{product_name}</h3>
+<form id="Contentstore_products" method="post" action="{Action}" name="{HTMLFormName}"> 
+<table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+  <table class="Record" cellspacing="0" cellpadding="0">
+    <tr>
+      <td style="border: 0px;"><img src="{image_url}" alt="" id="Contentstore_productsimage_url"></td>
+      <td style="border: 0px;">
+      	<p><b>Category</b>: {Category}</p>
+      	<p><b>Price</b>: {price}</p>
+        <p align="justify">{description1}</p>
+      </td> 
+    </tr>
+ 
+  </table>
+     </td>
+    </tr>
+  </table>
+ </form>
+<!-- END Record store_products --> 
+<!-- END Panel Content -->
+<!-- BEGIN Panel Menu -->{Header}<!-- END Panel Menu -->
+<!-- BEGIN Panel Sidebar -->{Search}{Categories}{Recommended}<!-- END Panel Sidebar -->

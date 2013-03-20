@@ -1,0 +1,51 @@
+<!-- BEGIN Panel Head -->
+<title>Login</title>
+<!-- END Panel Head -->
+<!-- BEGIN Panel Content -->
+<!-- BEGIN Record Login -->
+<form id="ContentLogin" method="post" action="{Action}" name="{HTMLFormName}"> 
+<table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+  <table cellspacing="0" cellpadding="0" border="0" class="Header">
+	<tr>
+	  <td class="HeaderLeft"><img src="{CCS_PathToMasterPage}Images/Spacer.gif" alt=""></td>
+	  <td class="th"><strong>Sign In</strong></td>
+	  <td class="HeaderRight"><img src="{CCS_PathToMasterPage}Images/Spacer.gif" alt=""></td>
+	</tr>
+   </table>
+  <table class="Record">
+    <!-- BEGIN Error -->
+    <tr class="Error">
+      <td colspan="2">{Error}</td> 
+    </tr>
+ <!-- END Error -->
+    <tr class="Controls">
+      <td class="th"><label>Login</label></td> 
+      <td><input type="text" name="{login_Name}" value="{login}" maxlength="100" size="20" id="ContentLoginlogin"></td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th"><label>Password</label></td> 
+      <td><input type="password" name="{password_Name}" value="{password}" maxlength="100" size="20" id="ContentLoginpassword"></td> 
+    </tr>
+ 
+    <tr class="Bottom">
+      <td style="text-align: center" colspan="2">admin/admin<br>
+        guest/guest&nbsp;</td> 
+    </tr>
+ 
+    <tr class="Bottom">
+      <td colspan="2" style="text-align: right">&nbsp; 
+        <!-- BEGIN Button Button_DoLogin --><input name="{Button_Name}" type="submit" value="Login" alt="Login" id="ContentLoginButton_DoLogin" class="Button"><!-- END Button Button_DoLogin --></td> 
+    </tr>
+ 
+  </table>
+     </td>
+    </tr>
+  </table>
+ </form>
+<!-- END Record Login --> 
+<!-- END Panel Content -->
+<!-- BEGIN Panel Menu -->{Header}<!-- END Panel Menu -->
+<!-- BEGIN Panel Sidebar1 -->{AdminMenu}&nbsp;<!-- END Panel Sidebar1 -->

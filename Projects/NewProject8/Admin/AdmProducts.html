@@ -1,0 +1,136 @@
+<!-- BEGIN Panel Head -->
+<title>AdmProducts</title>
+<!-- END Panel Head -->
+<!-- BEGIN Panel Content -->
+<!-- BEGIN Record Search -->
+<form method="post" action="{Action}" name="{HTMLFormName}"> 
+<table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+  <table cellspacing="0" cellpadding="0" border="0" class="Header">
+	<tr>
+	  <td class="HeaderLeft"><img src="{CCS_PathToMasterPage}images/spacer.gif" alt=""></td>
+	  <td class="th"><strong>Search Product</strong></td>
+	  <td class="HeaderRight"><img src="{CCS_PathToMasterPage}images/spacer.gif" alt=""></td>
+	</tr>
+   </table>
+  <table class="Record">
+    <!-- BEGIN Error -->
+    <tr class="Error">
+      <td colspan="2">{Error}</td> 
+    </tr>
+ <!-- END Error -->
+    <tr class="Controls">
+      <td><label for="ContentSearchs_product_name">Name</label></td>
+      <td><input name="{s_product_name_Name}" value="{s_product_name}" class="NoiseInput" id="ContentSearchs_product_name">&nbsp;</td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td><label for="ContentSearchproduct_category">Category</label></td>
+      <td>
+        <select name="{product_category_Name}" id="ContentSearchproduct_category">
+          <option value="" selected>All Categories</option>
+ {product_category_Options} 
+        </select>
+ </td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td><label for="ContentSearchs_is_recommended">Is Recommended</label></td> 
+      <td>
+        <select name="{s_is_recommended_Name}" class="NoiseSelect" id="ContentSearchs_is_recommended">
+          <option value="" selected>All Values</option>
+ {s_is_recommended_Options} 
+        </select>
+ </td> 
+    </tr>
+ 
+    <tr class="Bottom">
+      <td colspan="2" style="text-align: right">
+        <!-- BEGIN Button Search --><input name="{Button_Name}" class="Button" type="submit" alt="{res:CCS_Search}" value="{res:CCS_Search}"><!-- END Button Search --></td> 
+    </tr>
+ 
+  </table>
+  </td>
+  </tr>
+  
+  </table>
+</form>
+<!-- END Record Search --><br><br>
+<!-- BEGIN Grid store_products -->
+<table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+  <table cellspacing="0" cellpadding="0" border="0" class="Header">
+	<tr>
+	  <td class="HeaderLeft"><img src="{CCS_PathToMasterPage}images/spacer.gif" alt=""></td>
+	  <td class="th"><strong>List of Store Products</strong></td>
+	  <td class="HeaderRight"><img src="{CCS_PathToMasterPage}images/spacer.gif" alt=""></td>
+	</tr>
+   </table>
+<table class="Grid" cellspacing="0" cellpadding="0">
+  <tr class="Caption">
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_product_name --><span class="Sorter">Product Name 
+    <!-- BEGIN Asc_On --><img src="{CCS_PathToMasterPage}/images/SorterAscActive.png" alt="Ascending"><!-- END Asc_On -->
+    <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="Contentstore_productsSorter_product_name"><img src="{CCS_PathToMasterPage}/images/SorterAscPassive.png" alt="Ascending"></a><!-- END Asc_Off -->
+    <!-- BEGIN Desc_On --><img src="{CCS_PathToMasterPage}/images/SorterDescActive.png" alt="Descending"><!-- END Desc_On -->
+    <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="Contentstore_productsSorter_product_name"><img src="{CCS_PathToMasterPage}/images/SorterDescPassive.png" alt="Descending"></a><!-- END Desc_Off --></span><!-- END Sorter Sorter_product_name --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_category_name --><span class="Sorter">Category 
+    <!-- BEGIN Asc_On --><img src="{CCS_PathToMasterPage}/images/SorterAscActive.png" alt="Ascending"><!-- END Asc_On -->
+    <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="Contentstore_productsSorter_category_name"><img src="{CCS_PathToMasterPage}/images/SorterAscPassive.png" alt="Ascending"></a><!-- END Asc_Off -->
+    <!-- BEGIN Desc_On --><img src="{CCS_PathToMasterPage}/images/SorterDescActive.png" alt="Descending"><!-- END Desc_On -->
+    <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="Contentstore_productsSorter_category_name"><img src="{CCS_PathToMasterPage}/images/SorterDescPassive.png" alt="Descending"></a><!-- END Desc_Off --></span><!-- END Sorter Sorter_category_name --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_price --><span class="Sorter">Price 
+    <!-- BEGIN Asc_On --><img src="{CCS_PathToMasterPage}/images/SorterAscActive.png" alt="Ascending"><!-- END Asc_On -->
+    <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="Contentstore_productsSorter_price"><img src="{CCS_PathToMasterPage}/images/SorterAscPassive.png" alt="Ascending"></a><!-- END Asc_Off -->
+    <!-- BEGIN Desc_On --><img src="{CCS_PathToMasterPage}/images/SorterDescActive.png" alt="Descending"><!-- END Desc_On -->
+    <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="Contentstore_productsSorter_price"><img src="{CCS_PathToMasterPage}/images/SorterDescPassive.png" alt="Descending"></a><!-- END Desc_Off --></span><!-- END Sorter Sorter_price --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_is_recommended --><span class="Sorter">Recommended 
+    <!-- BEGIN Asc_On --><img src="{CCS_PathToMasterPage}/images/SorterAscActive.png" alt="Ascending"><!-- END Asc_On -->
+    <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="Contentstore_productsSorter_is_recommended"><img src="{CCS_PathToMasterPage}/images/SorterAscPassive.png" alt="Ascending"></a><!-- END Asc_Off -->
+    <!-- BEGIN Desc_On --><img src="{CCS_PathToMasterPage}/images/SorterDescActive.png" alt="Descending"><!-- END Desc_On -->
+    <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="Contentstore_productsSorter_is_recommended"><img src="{CCS_PathToMasterPage}/images/SorterDescPassive.png" alt="Descending"></a><!-- END Desc_Off --></span><!-- END Sorter Sorter_is_recommended --></th>
+ 
+  </tr>
+ 
+  <!-- BEGIN Row -->
+  <tr class="Row">
+    <td><a href="{product_name_Src}" id="Contentstore_productsproduct_name_{store_products:rowNumber}">{product_name}</a>&nbsp;</td> 
+    <td>{category_name}&nbsp;</td> 
+    <td>{price}&nbsp;</td> 
+    <td>{is_recommended}&nbsp;</td> 
+  </tr>
+ <!-- END Row -->
+  <!-- BEGIN NoRecords -->
+  <tr class="NoRecords">
+    <td colspan="4">No records</td> 
+  </tr>
+ <!-- END NoRecords -->
+  <tr class="Footer">
+    <td colspan="4">
+      <!-- BEGIN Navigator Navigator --><span class="Navigator">
+      <!-- BEGIN First_On --><a href="{First_URL}">First </a> <!-- END First_On -->
+      <!-- BEGIN Prev_On --><a href="{Prev_URL}">Prev </a> <!-- END Prev_On -->&nbsp; 
+      <!-- BEGIN Pages -->
+      <!-- BEGIN Page_On --><a href="{Page_URL}">{Page_Number}</a>&nbsp;<!-- END Page_On -->
+      <!-- BEGIN Page_Off -->{Page_Number}&nbsp;<!-- END Page_Off --><!-- END Pages -->of&nbsp;{Total_Pages}&nbsp; 
+      <!-- BEGIN Next_On --><a href="{Next_URL}">Next </a> <!-- END Next_On -->
+      <!-- BEGIN Last_On --><a href="{Last_URL}">Last </a> <!-- END Last_On --></span><!-- END Navigator Navigator -->&nbsp;</td> 
+  </tr>
+ 
+</table>
+     </td>
+    </tr>
+  </table>
+<!-- END Grid store_products -->
+<a href="{Link1_Src}">Add New</a> &nbsp;
+<!-- END Panel Content -->
+<!-- BEGIN Panel Menu -->{AdmHeader}<!-- END Panel Menu -->
+<!-- BEGIN Panel Sidebar -->{AdmMenu}&nbsp;<!-- END Panel Sidebar -->

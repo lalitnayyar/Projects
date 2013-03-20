@@ -1,0 +1,297 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>Dependent ListBox3</title>
+<link href="Styles/Spring/Style_doctype.css" type="text/css" rel="stylesheet">
+<link href="cchelpstyle.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-D3B5F5BF
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//bind_events @1-47AD86DA
+function bind_events() {
+    try { header_bind_events(); } catch(e) {}
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+</head>
+
+<body>
+
+<p>{header}</p>
+<h1>Ajax example: Three Dependent Listboxes &amp; Autofill</h1>
+<h2>Description</h2>
+<p>This example demonstrates how to implement three dependent dependent
+drop-down menus (dependent listboxes) using Ajax. Additionally, company
+information is automatically displayed based on the selection in the last
+listbox.</p>
+<h2><strong>Usage</strong></h2>
+<ol>
+  <li>Select Category <em>&quot;Computers and Internet&quot;</em>. The
+    subcategory listbox populates automatically without the page being
+    refreshed.</li>
+  <li>Select Subcategory <em>&quot;Software&quot;</em>. The company listbox
+    populates automatically without the page being refreshed.</li>
+  <li>Select a <em>Company</em>. Company information is displayed without the
+    page being refreshed.</li>
+</ol>
+<h2>Steps to recreate</h2>
+<ol>
+  <li>Use the Forms tab of the Toolbox to create a <strong>Record form</strong>
+    on the page. In the &quot;Add Record Form&quot; dialog set the following
+    properties:
+    <ul style="margin-left: 5px">
+      <li><b>Name:</b> <em>directory_items_statesSearch</em></li>
+      <li><b>Rows:</b> <i>3</i></li>
+      <li><i>Listbox</i> as type of controls</li>
+      <li>Uncheck <b>Allow Insert</b>, <b>Allow Update</b>, <b>Allow Delete</b>
+        options</li>
+    </ul>
+  </li>
+  <li>Rename the three listboxes to <i>s_category_id</i>, <i>s_subcategory_id</i>
+    and <i>s_item_id</i> and while in the design mode, modify listbox properties
+    as follows:<br>
+    <ul style="margin-left: 5px">
+      <li>For the <i>s_category_id</i> listbox, set the <b>Connection</b>
+        property to InternetDB, select <i>directory_categories</i> in the <b>Data
+        Source</b> property, <i>category_id</i> in the <b>Bound Column</b>
+        property, <i>category_name</i> in the <b>Text Column</b> property and <i>Single</i>
+        in the <b>Data Type property</b>. Then open the <b>'Data Source'</b>
+        dialog and add the following Where parameters:<br>
+        - <i>category_id_parent</i> (is null) , with the <b>Parameter Name</b>
+        set to 1 and <b>Parameter Type</b> set to <i>Expression</i>. Also
+        set And/Or property to Or.<br>
+        - <i>category_id_parent</i> equals(=) <i>0</i>, with the <b>Parameter
+        Type</b> set to <i>Expression</i>.</li>
+      <li>For the <i>s_subcategory_id</i> listbox, set the <b>Connection</b>
+        property to InternetDB, select <i>directory_categories</i> in the <b>Data
+        Source</b> property, <i>category_id</i> in the <b>Bound Column</b>
+        property, <i>category_name</i> in the <b>Text Column</b> property and <i>Single</i>
+        in the <b>Data Type</b> property. Then open the <b>'Data Source'</b>
+        dialog and add the following Where parameter:<br>
+        - <i>category_id</i> equals(=) <i>0</i>, <b>Parameter Type</b>
+        set to <i>Expression</i></li>
+      <li>For the <i>s_item_id</i> listbox, set the <b>Connection</b> property
+        to InternetDB , select <i>directory_items</i> in the <b>Data Source</b>
+        property, <i>item_id</i> in the <b>Bound Column</b> property, <i>item_name</i>
+        in the <b>Text Column</b> property and <i>Single</i> in the <b>Data Type</b>
+        property. Then open the <b>'Data Source'</b> dialog and create the
+        following Where parameter:<br>
+        - <i>category_id</i> equals(=) <i>0</i>, with <b>Parameter Type</b>
+        set to <i>Expression</i></li>
+    </ul>
+  </li>
+  <li>Create record form &quot;directory_items_states&quot; using the Forms tab
+    of the Toolbox.<br>
+    In the Add Record Form dialog specify the following:
+    <ul style="margin-left: 5px">
+      <li>set the number of rows to 9</li>
+      <li>select <b>Label</b> as the type of controls</li>
+      <li>uncheck <b>Allow Insert, Allow Update, Allow Delete</b> options</li>
+    </ul>
+  </li>
+  <li>Rename the Labels on the <i>directory_items_states</i> form to be:
+    item_name, address, city, zip, state_name, phone, note, email, url. These
+    labels are placeholders for the name, address, sity, zip etc. information.</li>
+  <li>Switch to HTML mode and add <b>span</b> elements next to each of the
+    labels:<br>
+    <pre class="code">
+{item_name}&lt;span id=&quot;directory_items_statesitem_name&quot;&gt; &lt;/span&gt;
+{address}&lt;span id=&quot;directory_items_statesaddress&quot;&gt; &lt;/span&gt;
+{city}&lt;span id=&quot;directory_items_statescity&quot;&gt; &lt;/span&gt;
+etc.
+</pre>
+  </li>
+  <li>Run the Builders &gt; <b>Dependent ListBoxes</b> Builder<br>
+    <ul style="margin-left: 5px">
+      <li>On <em>Connection</em> step select the exiting connection to the <i>Internet</i> database</li>
+      <li>On <em>Settings</em> step use the following settings:<br>
+        <b>Master ListBox</b>: s_category_id<br>
+        <b>Slave Listbox</b>: s_subcategory_id<br>
+        <b>DataSource</b>: directory_categories<br>
+        <b>Bound Column</b>: category_id<br>
+        <b>Text Column</b>: category_name<br>
+        <b>Dependent Field</b>: category_id_parent<br>
+      </li>
+    </ul>
+  </li>
+  <li>Run the Builders &gt; <b>Dependent ListBoxes</b> Builder again to create the second pair of
+    dependent listboxes.
+    <ul style="margin-left: 5px">
+      <li>On <em>Connection</em> step select the exiting connection to the <i>Internet</i> database</li>
+      <li>On <em>Settings</em> step use the following settings:<br>
+        <b>Master ListBox</b>: s_subcategory_id<br>
+        <b>Slave Listbox</b>: s_item_id<br>
+        <b>DataSource</b>: directory_items<br>
+        <b>Bound Column</b>: item_id<br>
+        <b>Text Column</b>: item_name<br>
+        <b>Dependent Field</b>: category_id<br>
+    </ul>
+  </li>
+  <li>Run the Builders &gt; <b>Autofill</b> Builder once again to create Ajax Autofill feature.
+    <ul style="margin-left: 5px">
+      <li>On <em>Connection</em> step select the exiting connection to the <i>Internet</i> database</li>
+      <li>On <em>Settings</em> step use the following settings:<br>
+        <b>Target Control</b>: s_item_id<br>
+        <b>DataSource</b>: click <b>Build Query</b> button and create inner join of <i>directory_items</i> and states tables by <i>state_id</i> field.<br> 
+				<b>Search Field</b>: item_id<br>
+				<p>
+  				<strong>Filled Controls</strong>:<br>
+          <strong>Control name</strong>: directory_items_statesitem_name<br>
+          <strong>Field name</strong>: item_name<br>
+          <strong>Target</strong>: innerHTML<br>
+				</p>
+				<p>
+          <strong>Control name</strong>: directory_items_statesaddress<br>
+          <strong>Field name</strong>: address<br>
+          <strong>Target</strong>: innerHTML<br>
+				</p>
+				<p>
+          <strong>Control name</strong>: directory_items_statescity<br>
+          <strong>Field name</strong>: city<br>
+          <strong>Target</strong>: innerHTML<br>
+				</p>
+				<p>
+          <strong>Control name</strong>: directory_items_stateszip<br>
+          <strong>Field name</strong>: zip<br>
+          <strong>Target</strong>: innerHTML<br>
+				</p>
+				<p>
+          <strong>Control name</strong>: directory_items_statesstate_name<br>
+          <strong>Field name</strong>: state_name<br>
+          <strong>Target</strong>: innerHTML<br>
+				</p>
+				<p>
+          <strong>Control name</strong>: directory_items_statesphone<br>
+          <strong>Field name</strong>: phone<br>
+          <strong>Target</strong>: innerHTML<br>
+				</p>
+				<p>
+          <strong>Control name</strong>: directory_items_statesnote<br>
+          <strong>Field name</strong>: note<br>
+          <strong>Target</strong>: innerHTML<br>
+				</p>
+				<p>
+          <strong>Control name</strong>: directory_items_statesemail<br>
+          <strong>Field name</strong>: email<br>
+          <strong>Target</strong>: innerHTML<br>
+				</p>
+				<p>
+          <strong>Control name</strong>: directory_items_statesurl<br>
+          <strong>Field name</strong>: url<br>
+          <strong>Target</strong>: innerHTML<br>
+				</p>
+				<p>
+          <strong>Control name</strong>: directory_items_statesurl<br>
+          <strong>Field name</strong>: url<br>
+          <strong>Target</strong>: href<br>
+				</p>
+			</li>
+    </ul>
+  </li>
+  <li>Open <i>s_item_id</i> features and set <b>Start event</b> for the Ajax
+    Autofill feature you’ve created.<br>
+    <b>Start event</b>:<br>
+		directory_items_statesSearchs_subcategory_id.onchange;directory_items_statesSearchs_subcategory_idPTDependentListBox1.onsuccess;
+		directory_items_statesSearchs_subcategory_idPTDependentListBox1.onfailure;directory_items_statesSearchs_item_id.onchange;
+		directory_items_statesSearchs_item_idPTDependentListBox2.onsuccess;directory_items_statesSearchs_item_idPTDependentListBox2.onfailure;
+	</li>
+  <li>Open <b>Ajax Autofill</b> feature’s service page (<i>services/NewPage1_directory_items_statesSearch_s_item_id_PTAutoFill1</i>
+    page in the example) and modify its html code to look like:<br>
+    <pre class="code">&lt;!-- BEGIN Grid directory_items_states1 --&gt;[&lt;!-- BEGIN Row --&gt;
+{
+&quot;item_id&quot; : &quot;{item_id}&quot;,
+&quot;category_id&quot; : &quot;{category_id}&quot;,
+&quot;item_name&quot; : &quot;{item_name}&quot;,
+&quot;address&quot; : &quot;{address}&quot;,
+&quot;city&quot; : &quot;{city}&quot;,
+&quot;zip&quot; : &quot;{zip}&quot;,
+&quot;directory_items.state_id&quot; : &quot;{directory_items_state_id}&quot;,
+&quot;phone&quot; : &quot;{phone}&quot;,
+&quot;note&quot; : &quot;{note}&quot;,
+&quot;email&quot; : &quot;{email}&quot;,
+&quot;url&quot; : &quot;{url}&quot;,
+&quot;states.state_id&quot; : &quot;{states_state_id}&quot;,
+&quot;state_name&quot; : &quot;{state_name}&quot;
+}
+&lt;!-- END Row --&gt;
+&lt;!-- BEGIN Separator --&gt;,&lt;!-- END Separator --&gt;
+&lt;!-- BEGIN NoRecords --&gt;{
+&quot;item_id&quot;:&quot;&quot;,
+&quot;category_id&quot;:&quot;&quot;,
+&quot;item_name&quot;:&quot;&quot;,
+&quot;address&quot;:&quot;&quot;,
+&quot;city&quot;:&quot;&quot;,
+&quot;zip&quot;:&quot;&quot;,
+&quot;state_name&quot;:&quot;&quot;,
+&quot;phone&quot;:&quot;&quot;,
+&quot;note&quot;:&quot;&quot;,
+&quot;email&quot;:&quot;&quot;,
+&quot;url&quot;:&quot;&quot;
+}&lt;!-- END NoRecords --&gt;
+]&lt;!-- END Grid directory_items_states1 --&gt;</pre>
+  </li>
+  <li>Open <i>s_subcategory_id</i> control features and add <b>ClientCustomCode</b>
+    feature using the <i>directory_items_statesSearchs_subcategory_idPTDependentListBox1.onstart;</i>
+    as a start event.
+<pre class="code">
+var lb = document.getElementById(&quot;directory_items_statesSearchs_subcategory_id&quot;);
+lb.options[0].text = &quot;please wait&quot;;
+lb.disabled = true;
+lb = document.getElementById(&quot;directory_items_statesSearchs_item_id&quot;);
+lb.options[0].text = &quot;please wait&quot;;
+lb.disabled = true;
+</pre>
+  </li>
+  <li>Add another <b>ClientCustomCode2</b> feature to the same <i>s_subcategory_id</i>
+    control using <i>directory_items_statesSearchs_subcategory_idPTDependentListBox1.onfailure;directory_items_statesSearchs_subcategory_idPTDependentListBox1.onsuccess;</i>
+    as a Start event.
+<pre class="code">
+var lb = document.getElementById(&quot;directory_items_statesSearchs_subcategory_id&quot;);
+lb.options[0].text = &quot;Select Value&quot;;
+lb.disabled = false;
+directory_items_statesSearchs_item_idPTDependentListBox3_start(lb);
+lb = document.getElementById(&quot;directory_items_statesSearchs_item_id&quot;);
+lb.options[0].text = &quot;Select Value&quot;;
+lb.disabled = false;
+</pre>
+  </li>
+  <li>Open <i>s_item_id</i> control features and add two <b>ClientCustomCode</b>
+    features as well.
+    <ul style="margin-left: 5px">
+      <li><b>ClientCustomCode1</b>:<br>
+        <i>Start event&nbsp;</i>:
+        directory_items_statesSearchs_item_idPTDependentListBox2.onstart;<br>
+<pre class="code">
+var lb = document.getElementById(&quot;directory_items_statesSearchs_item_id&quot;);
+lb.options[0].text = &quot;please wait&quot;;
+lb.disabled = true;
+</pre>
+      </li>
+      <li><b>ClientCustomCode2</b>:<br>
+        <i>Start event&nbsp;</i>:
+        directory_items_statesSearchs_item_idPTDependentListBox2.onfailure;directory_items_statesSearchs_item_idPTDependentListBox2.onsuccess;<br>
+<pre class="code">
+var lb = document.getElementById(&quot;directory_items_statesSearchs_item_id&quot;);
+lb.options[0].text = &quot;Select Value&quot;;
+lb.disabled = false;
+</pre>
+      </li>
+    </ul>
+  </li>
+  <li>Make cosmetic changes as needed by modifying the text and captions within
+    the HTML.</li>
+</ol>
+<h2>Database Tables used:</h2>
+<p>Database: <em>Internet</em></p>
+<p>Tables: <em>store_categories, store_products </em></p>
+</body>
+</html>

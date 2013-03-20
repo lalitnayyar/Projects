@@ -1,0 +1,113 @@
+<!-- BEGIN Panel Head -->
+<title>Member Administration</title>
+<!-- END Panel Head -->
+<!-- BEGIN Panel Content -->
+<!-- BEGIN Record membersSearch -->
+<form id="Contentmembers1" method="" action="{Action}" name="{HTMLFormName}"> 
+<table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+  <table cellspacing="0" cellpadding="0" border="0" class="Header">
+	<tr>
+	  <td class="HeaderLeft"><img src="{CCS_PathToMasterPage}Images/Spacer.gif" alt=""></td>
+	  <td class="th"><strong>Search</strong></td>
+	  <td class="HeaderRight"><img src="{CCS_PathToMasterPage}Images/Spacer.gif" alt=""></td>
+	</tr>
+   </table>
+  <table cellspacing="0" cellpadding="0" class="Record">
+    <!-- BEGIN Error -->
+    <tr class="Error">
+      <td colspan="2">{Error}</td> 
+    </tr>
+ <!-- END Error -->
+    <tr class="Controls">
+      <td class="th"><label>Login (Name)</label></td> 
+      <td><input type="text" name="{s_user_login_Name}" value="{s_user_login}" maxlength="20" size="20" id="ContentmembersSearchs_user_login"></td> 
+    </tr>
+ 
+    <tr class="Bottom">
+      <td colspan="2" style="text-align: right">&nbsp; 
+        <!-- BEGIN Button Button_DoSearch --><input name="{Button_Name}" type="submit" value="Search" alt="Search" id="ContentmembersSearchButton_DoSearch" class="Button"><!-- END Button Button_DoSearch --></td> 
+    </tr>
+ 
+  </table>
+     </td>
+    </tr>
+  </table>
+ </form>
+<!-- END Record membersSearch --><br>
+<!-- BEGIN Grid members -->
+<table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+  <table cellspacing="0" cellpadding="0" border="0" class="Header">
+	<tr>
+	  <td class="HeaderLeft"><img src="{CCS_PathToMasterPage}Images/Spacer.gif" alt=""></td>
+	  <td class="th"><strong>SVEC - Members Administration</strong></td>
+	  <td class="HeaderRight"><img src="{CCS_PathToMasterPage}Images/Spacer.gif" alt=""></td>
+	</tr>
+   </table>
+<table class="Grid" cellspacing="0" cellpadding="0">
+  <tr class="Caption">
+    <th scope="col"></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_first_name --><span class="Sorter"><a href="{Sort_URL}" id="ContentmembersSorter_first_name">First Name</a> 
+    <!-- BEGIN Asc_On --><img src="{CCS_PathToMasterPage}/images/SorterAscActive.png" alt="Ascending"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img src="{CCS_PathToMasterPage}/images/SorterDescActive.png" alt="Descending"><!-- END Desc_On --></span><!-- END Sorter Sorter_first_name --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_last_name --><span class="Sorter"><a href="{Sort_URL}" id="ContentmembersSorter_last_name">Last Name</a> 
+    <!-- BEGIN Asc_On --><img src="{CCS_PathToMasterPage}/images/SorterAscActive.png" alt="Ascending"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img src="{CCS_PathToMasterPage}/images/SorterDescActive.png" alt="Descending"><!-- END Desc_On --></span><!-- END Sorter Sorter_last_name --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_user_login --><span class="Sorter"><a href="{Sort_URL}" id="ContentmembersSorter_user_login">Login</a> 
+    <!-- BEGIN Asc_On --><img src="{CCS_PathToMasterPage}/images/SorterAscActive.png" alt="Ascending"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img src="{CCS_PathToMasterPage}/images/SorterDescActive.png" alt="Descending"><!-- END Desc_On --></span><!-- END Sorter Sorter_user_login --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_group_name --><span class="Sorter"><a href="{Sort_URL}" id="ContentmembersSorter_group_name">Group Name</a> 
+    <!-- BEGIN Asc_On --><img src="{CCS_PathToMasterPage}/images/SorterAscActive.png" alt="Ascending"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img src="{CCS_PathToMasterPage}/images/SorterDescActive.png" alt="Descending"><!-- END Desc_On --></span><!-- END Sorter Sorter_group_name --></th>
+ 
+  </tr>
+ 
+  <!-- BEGIN Row -->
+  <tr class="Row">
+    <td><a href="{user_id_Src}" id="Contentmembersuser_id_{members:rowNumber}">Edit</a>&nbsp;</td> 
+    <td>{first_name}&nbsp;</td> 
+    <td>{last_name}&nbsp;</td> 
+    <td>{user_login}&nbsp;</td> 
+    <td>{group_name}&nbsp;</td> 
+  </tr>
+ <!-- END Row -->
+  <!-- BEGIN NoRecords -->
+  <tr class="NoRecords">
+    <td colspan="5">No records</td> 
+  </tr>
+ <!-- END NoRecords -->
+  <tr class="Footer">
+    <td colspan="5">
+      <!-- BEGIN Navigator Navigator --><span class="Navigator">
+      <!-- BEGIN First_On --><a href="{First_URL}"><img src="{CCS_PathToMasterPage}/images/NavigatorFirst.png" alt="{First_URL}"></a> <!-- END First_On -->
+      <!-- BEGIN First_Off --><img src="{CCS_PathToMasterPage}/images/NavigatorFirstOff.png" alt="{First_URL}"><!-- END First_Off -->
+      <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img src="{CCS_PathToMasterPage}/images/NavigatorPrev.png" alt="{Prev_URL}"></a> <!-- END Prev_On -->
+      <!-- BEGIN Prev_Off --><img src="{CCS_PathToMasterPage}/images/NavigatorPrevOff.png" alt="{Prev_URL}"><!-- END Prev_Off -->&nbsp; 
+      <!-- BEGIN Pages -->
+      <!-- BEGIN Page_On --><a href="{Page_URL}">{Page_Number}</a>&nbsp;<!-- END Page_On -->
+      <!-- BEGIN Page_Off -->{Page_Number}&nbsp;<!-- END Page_Off --><!-- END Pages -->of&nbsp;{Total_Pages}&nbsp; 
+      <!-- BEGIN Next_On --><a href="{Next_URL}"><img src="{CCS_PathToMasterPage}/images/NavigatorNext.png" alt="{Next_URL}"></a> <!-- END Next_On -->
+      <!-- BEGIN Next_Off --><img src="{CCS_PathToMasterPage}/images/NavigatorNextOff.png" alt="{Next_URL}"><!-- END Next_Off -->
+      <!-- BEGIN Last_On --><a href="{Last_URL}"><img src="{CCS_PathToMasterPage}/images/NavigatorLast.png" alt="{Last_URL}"></a> <!-- END Last_On -->
+      <!-- BEGIN Last_Off --><img src="{CCS_PathToMasterPage}/images/NavigatorLastOff.png" alt="{Last_URL}"><!-- END Last_Off --></span><!-- END Navigator Navigator -->&nbsp;</td> 
+  </tr>
+ 
+</table>
+     </td>
+    </tr>
+  </table>
+<!-- END Grid members --><a href="{Link2_Src}"><strong>Add New</strong></a> 
+<!-- END Panel Content -->
+<!-- BEGIN Panel Menu -->{Header}<!-- END Panel Menu -->
+<!-- BEGIN Panel Sidebar1 -->{AdminMenu}&nbsp;<!-- END Panel Sidebar1 -->

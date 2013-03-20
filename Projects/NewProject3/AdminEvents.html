@@ -1,0 +1,108 @@
+<!-- BEGIN Panel Head -->
+<title>Article Administration</title>
+<!-- END Panel Head -->
+<!-- BEGIN Panel Content -->
+
+<!-- BEGIN Record eventsSearch -->
+<form id="Contentevents1" method="" action="{Action}" name="{HTMLFormName}"> 
+<table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+  <table cellspacing="0" cellpadding="0" border="0" class="Header">
+	<tr>
+	  <td class="HeaderLeft"><img src="{CCS_PathToMasterPage}Images/Spacer.gif" alt=""></td>
+	  <td class="th"><strong>Search</strong></td>
+	  <td class="HeaderRight"><img src="{CCS_PathToMasterPage}Images/Spacer.gif" alt=""></td>
+	</tr>
+   </table>
+  <table cellspacing="0" cellpadding="0" class="Record" style="width: 10px">
+    <!-- BEGIN Error -->
+    <tr class="Error">
+      <td colspan="2">{Error}</td> 
+    </tr>
+ <!-- END Error -->
+    <tr class="Controls">
+      <td class="th"><label>Event</label></td> 
+      <td><input type="text" name="{s_event_name_Name}" value="{s_event_name}" maxlength="30" id="ContenteventsSearchs_event_name"></td> 
+    </tr>
+ 
+    <tr class="Bottom">
+      <td colspan="2" style="text-align: right">&nbsp; 
+        <!-- BEGIN Button Button_DoSearch --><input name="{Button_Name}" type="submit" value="Search" alt="Search" id="ContenteventsSearchButton_DoSearch" class="Button"><!-- END Button Button_DoSearch --></td> 
+    </tr>
+ 
+  </table>
+     </td>
+    </tr>
+  </table>
+ </form>
+<!-- END Record eventsSearch --><br>
+<!-- BEGIN Grid events -->
+<table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+  <table cellspacing="0" cellpadding="0" border="0" class="Header">
+	<tr>
+	  <td class="HeaderLeft"><img src="{CCS_PathToMasterPage}Images/Spacer.gif" alt=""></td>
+	  <td class="th"><strong>SVEC - Events Administration</strong></td>
+	  <td class="HeaderRight"><img src="{CCS_PathToMasterPage}Images/Spacer.gif" alt=""></td>
+	</tr>
+   </table>
+<table class="Grid" cellspacing="0" cellpadding="0">
+  <tr class="Caption">
+    <th scope="col"></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_date_start --><span class="Sorter"><a href="{Sort_URL}" id="ContenteventsSorter_date_start">Date Start</a> 
+    <!-- BEGIN Asc_On --><img src="{CCS_PathToMasterPage}/images/SorterAscActive.png" alt="Ascending"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img src="{CCS_PathToMasterPage}/images/SorterDescActive.png" alt="Descending"><!-- END Desc_On --></span><!-- END Sorter Sorter_date_start --></th>
+ 
+    <th scope="col">Name</th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_presenter --><span class="Sorter"><a href="{Sort_URL}" id="ContenteventsSorter_presenter">Presenter</a> 
+    <!-- BEGIN Asc_On --><img src="{CCS_PathToMasterPage}/images/SorterAscActive.png" alt="Ascending"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img src="{CCS_PathToMasterPage}/images/SorterDescActive.png" alt="Descending"><!-- END Desc_On --></span><!-- END Sorter Sorter_presenter --></th>
+ 
+    <th scope="col">Location</th>
+ 
+  </tr>
+ 
+  <!-- BEGIN Row -->
+  <tr class="Row">
+    <td><a href="{event_id_Src}" id="Contenteventsevent_id_{events:rowNumber}">Edit</a>&nbsp;</td> 
+    <td>{date_start}&nbsp;</td> 
+    <td>{event_name}&nbsp;</td> 
+    <td>{presenter}&nbsp;</td> 
+    <td>{location}&nbsp;</td> 
+  </tr>
+ <!-- END Row -->
+  <!-- BEGIN NoRecords -->
+  <tr class="NoRecords">
+    <td colspan="5">No records</td> 
+  </tr>
+ <!-- END NoRecords -->
+  <tr class="Footer">
+    <td colspan="5">
+      <!-- BEGIN Navigator Navigator --><span class="Navigator">
+      <!-- BEGIN First_On --><a href="{First_URL}"><img src="{CCS_PathToMasterPage}/images/NavigatorFirst.png" alt="{First_URL}"></a> <!-- END First_On -->
+      <!-- BEGIN First_Off --><img src="{CCS_PathToMasterPage}/images/NavigatorFirstOff.png" alt="{First_URL}"><!-- END First_Off -->
+      <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img src="{CCS_PathToMasterPage}/images/NavigatorPrev.png" alt="{Prev_URL}"></a> <!-- END Prev_On -->
+      <!-- BEGIN Prev_Off --><img src="{CCS_PathToMasterPage}/images/NavigatorPrevOff.png" alt="{Prev_URL}"><!-- END Prev_Off -->&nbsp; 
+      <!-- BEGIN Pages -->
+      <!-- BEGIN Page_On --><a href="{Page_URL}">{Page_Number}</a>&nbsp;<!-- END Page_On -->
+      <!-- BEGIN Page_Off -->{Page_Number}&nbsp;<!-- END Page_Off --><!-- END Pages -->of&nbsp;{Total_Pages}&nbsp; 
+      <!-- BEGIN Next_On --><a href="{Next_URL}"><img src="{CCS_PathToMasterPage}/images/NavigatorNext.png" alt="{Next_URL}"></a> <!-- END Next_On -->
+      <!-- BEGIN Next_Off --><img src="{CCS_PathToMasterPage}/images/NavigatorNextOff.png" alt="{Next_URL}"><!-- END Next_Off -->
+      <!-- BEGIN Last_On --><a href="{Last_URL}"><img src="{CCS_PathToMasterPage}/images/NavigatorLast.png" alt="{Last_URL}"></a> <!-- END Last_On -->
+      <!-- BEGIN Last_Off --><img src="{CCS_PathToMasterPage}/images/NavigatorLastOff.png" alt="{Last_URL}"><!-- END Last_Off --></span><!-- END Navigator Navigator -->&nbsp;</td> 
+  </tr>
+ 
+</table>
+     </td>
+    </tr>
+  </table>
+<!-- END Grid events --><a href="{Link2_Src}"><strong>Add New</strong></a>  
+<!-- END Panel Content -->
+<!-- BEGIN Panel Menu -->{Header}<!-- END Panel Menu -->
+<!-- BEGIN Panel Sidebar1 -->{AdminMenu}&nbsp;<!-- END Panel Sidebar1 -->

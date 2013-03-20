@@ -1,0 +1,138 @@
+<!-- BEGIN Panel Head -->
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-63DF9707
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&lang={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" src="ClientI18N.php?file=DatePicker.js&lang={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-A328438A
+</script>
+<script language="JavaScript" src="js/yui/build/yahoo-dom-event/yahoo-dom-event.js" type="text/javascript"></script>
+<script language="JavaScript" src="js/yui/build/calendar/calendar-min.js" type="text/javascript"></script>
+<script language="JavaScript" src="js/yui/datepicker-commons.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="{CCS_PathToMasterPage}ccs-yui-calendar.css">
+<script language="JavaScript" type="text/javascript">
+//End Include User Scripts
+
+//Contentlinksportal_Delete_OnClick @55-1B6094A5
+function Contentlinksportal_Delete_OnClick()
+{
+    disableValidation = true;
+    return true;
+}
+//End Contentlinksportal_Delete_OnClick
+
+//Contentlinksportal_Cancel_OnClick @56-C1510E13
+function Contentlinksportal_Cancel_OnClick()
+{
+    disableValidation = true;
+    return true;
+}
+//End Contentlinksportal_Cancel_OnClick
+
+//Handle Contentlinksdate_approvedInlineDatePicker2 @50-EEE98B03
+function Contentlinksdate_approvedInlineDatePicker2_start(sender) {
+    if (!sender || sender === window) return;
+    generateDatePicker(sender.id, "mm/dd/yyyy","");
+}
+//End Handle Contentlinksdate_approvedInlineDatePicker2
+
+//bind_events @1-6426A691
+function bind_events() {
+    try { Header_bind_events(); } catch(e) {}
+    try { AdminMenu_bind_events(); } catch(e) {}
+    addEventHandler("Contentlinksdate_approved", "load", Contentlinksdate_approvedInlineDatePicker2_start);
+    addEventHandler("Contentlinksportal_Delete", "click", Contentlinksportal_Delete_OnClick);
+    addEventHandler("Contentlinksportal_Cancel", "click", Contentlinksportal_Cancel_OnClick);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+<title>Edit Link</title>
+
+<!-- END Panel Head -->
+<!-- BEGIN Panel Content -->
+
+<!-- BEGIN Record links -->
+<form action="{Action}" method="post" name="{HTMLFormName}"> 
+<table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+  <table cellspacing="0" cellpadding="0" border="0" class="Header">
+	<tr>
+	  <td class="HeaderLeft"><img src="{CCS_PathToMasterPage}Images/Spacer.gif" alt=""></td>
+	  <td class="th"><strong>Add/Edit Link</strong></td>
+	  <td class="HeaderRight"><img src="{CCS_PathToMasterPage}Images/Spacer.gif" alt=""></td>
+	</tr>
+   </table>
+  <table class="Record">
+    <!-- BEGIN Error -->
+    <tr class="Error">
+      <td colspan="2">{Error}</td> 
+    </tr>
+ <!-- END Error -->
+    <tr class="Controls">
+      <td class="th"><label for="Contentlinkscategory_id">Category *</label></td> 
+      <td>
+        <select name="category_id" id="Contentlinkscategory_id">
+          <option value="" selected>Select Value</option>
+ {category_id_Options} 
+        </select>
+ </td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th"><label for="Contentlinkslink_name">Link Title *</label></td> 
+      <td><input maxlength="50" name="link_name" size="50" value="{link_name}" id="Contentlinkslink_name" /></td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th"><label for="Contentlinkslink_url">URL *</label></td> 
+      <td><input maxlength="50" name="link_url" size="50" value="{link_url}" id="Contentlinkslink_url" /></td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th"><label for="Contentlinksaddress">Address *</label></td> 
+      <td><textarea cols="50" name="address" rows="3" id="Contentlinksaddress">{address}</textarea></td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th"><label for="Contentlinksapproved">Approved</label></td> 
+      <td><input type="checkbox" name="approved" value="1" {approved} id="Contentlinksapproved" /></td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th"><label for="Contentlinksdate_approved">Date Approved</label></td> 
+      <td>
+        <!-- BEGIN TextBox date_approved --><input maxlength="10" name="date_approved" value="{date_approved}" id="Contentlinksdate_approved" /><!-- END TextBox date_approved -->&nbsp;(mm/dd/yyyy)</td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th"><label for="Contentlinkslink_desc">Description</label></td> 
+      <td><textarea cols="50" name="link_desc" rows="3" id="Contentlinkslink_desc">{link_desc}</textarea></td> 
+    </tr>
+ 
+    <tr class="Bottom">
+      <td style="text-align: right" colspan="2">
+        <!-- BEGIN Button portal_Insert --><input type="submit" name="portal_Insert" class="Button" alt="{res:CCS_Insert}" value="{res:CCS_Insert}"><!-- END Button portal_Insert -->
+        <!-- BEGIN Button portal_Update --><input type="submit" name="portal_Update" class="Button" alt="{res:CCS_Update}" value="{res:CCS_Update}"><!-- END Button portal_Update -->
+        <!-- BEGIN Button portal_Delete --><input type="submit" name="portal_Delete" class="Button" alt="{res:CCS_Delete}" value="{res:CCS_Delete}"><!-- END Button portal_Delete -->
+        <!-- BEGIN Button portal_Cancel --><input type="submit" name="portal_Cancel" class="Button" alt="{res:CCS_Cancel}" value="{res:CCS_Cancel}"><!-- END Button portal_Cancel --></td> 
+    </tr>
+ 
+  </table>
+ <input type="hidden" name="date_added" value="{date_added}" />
+     </td>
+    </tr>
+  </table>
+ </form>
+<!-- END Record links --> 
+<!-- END Panel Content -->
+<!-- BEGIN Panel Menu -->{Header}<!-- END Panel Menu -->
+<!-- BEGIN Panel Sidebar1 -->{AdminMenu}&nbsp;<!-- END Panel Sidebar1 -->

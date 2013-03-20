@@ -1,0 +1,173 @@
+<!-- BEGIN Panel Head -->
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-DA1BEFC0
+</script>
+<script language="JavaScript" src="../ClientI18N.php?file=Functions.js&amp;lang={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//ContentusersButton_Delete_OnClick @42-C5E894F9
+function ContentusersButton_Delete_OnClick()
+{
+    var result = true;
+//End ContentusersButton_Delete_OnClick
+
+//Confirmation Message @43-8243B274
+    return confirm('Delete record?');
+//End Confirmation Message
+
+//Close ContentusersButton_Delete_OnClick @42-BC33A33A
+    return result;
+}
+//End Close ContentusersButton_Delete_OnClick
+
+//ContentusersButton_Cancel_OnClick @44-2FAF894D
+function ContentusersButton_Cancel_OnClick()
+{
+    disableValidation = true;
+    return true;
+}
+//End ContentusersButton_Cancel_OnClick
+
+//bind_events @1-7C9306B2
+function bind_events() {
+    try { AdmHeader_bind_events(); } catch(e) {}
+    try { AdmMenu_bind_events(); } catch(e) {}
+    addEventHandler("ContentusersButton_Delete", "click", ContentusersButton_Delete_OnClick);
+    addEventHandler("ContentusersButton_Cancel", "click", ContentusersButton_Cancel_OnClick);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+<title>AdmUserRecord</title>
+<!-- END Panel Head -->
+<!-- BEGIN Panel Content -->
+<!-- BEGIN Record users -->
+<form id="Contentusers" method="post" action="{Action}" name="{HTMLFormName}"> 
+<table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+  <table cellspacing="0" cellpadding="0" border="0" class="Header">
+	<tr>
+	  <td class="HeaderLeft"><img src="{CCS_PathToMasterPage}images/spacer.gif" alt=""></td>
+	  <td class="th"><strong>Add/Edit Users</strong></td>
+	  <td class="HeaderRight"><img src="{CCS_PathToMasterPage}images/spacer.gif" alt=""></td>
+	</tr>
+   </table>
+  <table cellspacing="0" cellpadding="0" class="Record">
+    <!-- BEGIN Error -->
+    <tr class="Error">
+      <td colspan="2">{Error}</td> 
+    </tr>
+ <!-- END Error -->
+    <tr class="Controls">
+      <td class="th"><label>Login&nbsp;*</label></td> 
+      <td><input type="text" name="{user_login_Name}" value="{user_login}" maxlength="20" size="20" id="Contentusersuser_login"></td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th"><label>Password&nbsp;*</label></td> 
+      <td><input type="text" name="{user_password_Name}" value="{user_password}" maxlength="20" size="20" id="Contentusersuser_password"></td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th"><label>First Name&nbsp;*</label></td> 
+      <td><input type="text" name="{first_name_Name}" value="{first_name}" maxlength="50" size="50" id="Contentusersfirst_name"></td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th"><label>Last Name&nbsp;*</label></td> 
+      <td><input type="text" name="{last_name_Name}" value="{last_name}" maxlength="50" size="50" id="Contentuserslast_name"></td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th"><label>Group&nbsp;*</label></td> 
+      <td>
+        <select name="{group_id_Name}" id="Contentusersgroup_id">
+          <option value="">Select Value</option>
+ {group_id_Options} 
+        </select>
+ </td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th"><label>Phone Home</label></td> 
+      <td><input type="text" name="{phone_home_Name}" value="{phone_home}" maxlength="50" size="50" id="Contentusersphone_home"></td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th"><label>Phone Work</label></td> 
+      <td><input type="text" name="{phone_work_Name}" value="{phone_work}" maxlength="50" size="50" id="Contentusersphone_work"></td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th"><label>Email</label></td> 
+      <td><input type="text" name="{email_Name}" value="{email}" maxlength="50" size="50" id="Contentusersemail"></td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th"><label>Card Number</label></td> 
+      <td><input type="text" name="{card_number_Name}" value="{card_number}" maxlength="50" size="50" id="Contentuserscard_number"></td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th" nowrap><label>Card Expire Date</label></td> 
+      <td><input type="text" name="{card_expire_date_Name}" value="{card_expire_date}" maxlength="10" size="10" id="Contentuserscard_expire_date"></td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th"><label>Country</label></td> 
+      <td>
+        <select name="{country_id_Name}" id="Contentuserscountry_id">
+          <option value="">Select Value</option>
+ {country_id_Options} 
+        </select>
+ </td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th"><label>State</label></td> 
+      <td>
+        <select name="{state_id_Name}" id="Contentusersstate_id">
+          <option value="">Select Value</option>
+ {state_id_Options} 
+        </select>
+ </td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th"><label>City</label></td> 
+      <td><input type="text" name="{city_Name}" value="{city}" maxlength="30" size="30" id="Contentuserscity"></td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th"><label>Zip</label></td> 
+      <td><input type="text" name="{zip_Name}" value="{zip}" maxlength="10" size="10" id="Contentuserszip"></td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th"><label>Address</label></td> 
+      <td><input type="text" name="{address1_Name}" value="{address1}" maxlength="250" size="50" id="Contentusersaddress1"></td> 
+    </tr>
+ 
+    <tr class="Bottom">
+      <td colspan="2" style="text-align: right">
+        <!-- BEGIN Button Button_Insert --><input name="{Button_Name}" type="submit" value="Add" alt="Add" id="ContentusersButton_Insert" class="Button"><!-- END Button Button_Insert -->
+        <!-- BEGIN Button Button_Update --><input name="{Button_Name}" type="submit" value="Submit" alt="Submit" id="ContentusersButton_Update" class="Button"><!-- END Button Button_Update -->
+        <!-- BEGIN Button Button_Delete --><input name="{Button_Name}" type="submit" value="Delete" alt="Delete" id="ContentusersButton_Delete" class="Button"><!-- END Button Button_Delete -->
+        <!-- BEGIN Button Button_Cancel --><input name="{Button_Name}" type="submit" value="Cancel" alt="Cancel" id="ContentusersButton_Cancel" class="Button"><!-- END Button Button_Cancel --></td> 
+    </tr>
+ 
+  </table>
+     </td>
+    </tr>
+  </table>
+ </form>
+<!-- END Record users --> 
+<!-- END Panel Content -->
+<!-- BEGIN Panel Menu -->{AdmHeader}<!-- END Panel Menu -->
+<!-- BEGIN Panel Sidebar -->{AdmMenu}&nbsp;<!-- END Panel Sidebar -->
