@@ -1,0 +1,80 @@
+
+<!-- BEGIN Panel Head -->
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-AD0F1E4D
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;lang={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//_OnLoad @1-9C4F01C0
+function _OnLoad()
+{
+    var result = true;
+//End _OnLoad
+
+//Set Focus @8-BFDACC34
+    if (document.forms["Login"] && document.forms["Login"].login)
+        try{document.forms["Login"].login.focus();}catch(e){}
+//End Set Focus
+
+//Close _OnLoad @1-BC33A33A
+    return result;
+}
+//End Close _OnLoad
+
+//bind_events @1-F3506C42
+function bind_events() {
+    try { Header_bind_events(); } catch(e) {}
+    try { Search_bind_events(); } catch(e) {}
+    addEventHandler("", "load", _OnLoad);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+<title>Login</title>
+<style type="text/css">
+ .Record td { border: 0px; }
+</style>
+<!-- END Panel Head -->
+<!-- BEGIN Panel Content -->
+<!-- BEGIN Record Login -->
+<form id="ContentLogin" method="post" action="{Action}" name="{HTMLFormName}">
+  <div style="text-align: center;">
+  <h1>Login</h1>
+ <center>
+  <table cellspacing="0" cellpadding="0" class="Record">
+    <!-- BEGIN Error -->
+    <tr class="Error">
+      <td colspan="2">{Error}</td> 
+  </tr>
+ <!-- END Error -->
+  <tr class="Controls">
+    <td class="th"><label>Login</label></td> 
+    <td><input type="text" name="{login_Name}" value="{login}" maxlength="100" size="20" id="ContentLoginlogin"></td> 
+  </tr>
+ 
+  <tr class="Controls">
+    <td class="th"><label>Password</label></td> 
+    <td><input type="password" name="{password_Name}" value="{password}" maxlength="100" size="20" id="ContentLoginpassword"></td> 
+  </tr>
+ 
+  <tr class="Bottom">
+    <td style="text-align: center; color: gray;" colspan="2">admin/admin<br>
+      guest/guest&nbsp;</td> 
+  </tr>
+ 
+  <tr class="Bottom">
+    <td colspan="2" style="text-align: right; border:0px;">
+      <!-- BEGIN Button Button_DoLogin --><input name="{Button_Name}" type="submit" value="Login" alt="Login" id="ContentLoginButton_DoLogin" class="Button"><!-- END Button Button_DoLogin --></td> 
+  </tr></table></center>
+  </div>
+</form>
+<!-- END Record Login --><br>
+<!-- END Panel Content -->
+<!-- BEGIN Panel Menu -->{Header}<!-- END Panel Menu -->
+<!-- BEGIN Panel Sidebar1 -->{Search}<!-- END Panel Sidebar1 -->

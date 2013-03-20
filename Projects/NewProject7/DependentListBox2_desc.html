@@ -1,0 +1,165 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<head>
+<title>Dependent ListBox2</title>
+<link href="Styles/Spring/Style_doctype.css" type="text/css" rel="stylesheet">
+<link href="cchelpstyle.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-D3B5F5BF
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//bind_events @1-47AD86DA
+function bind_events() {
+    try { header_bind_events(); } catch(e) {}
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+</head>
+
+<body>
+
+<p>{header}</p>
+<h1>Ajax example: Two Dependent Listboxes &amp; Autofill</h1>
+<h2>Description</h2>
+<p>This example demonstrates how to implement dependent drop-down menus
+(dependent listboxes) using Ajax. Additionally, product information is
+automatically displayed based on the 2nd listbox selection.</p>
+<h2><strong>Usage</strong></h2>
+<ol>
+  <li>Select a category. The product listbox populates automatically without the
+    page being refreshed.</li>
+  <li>Select a product. Product information is displayed without the page being
+    refreshed.</li>
+</ol>
+<h2>Steps to recreate</h2>
+<ol>
+  <li>Add a <strong>Record form</strong> using the Forms tab in the Toolbox
+    panel. In the &quot;Add Record Form&quot; dialog set the following
+    properties:
+    <ul style="margin-left: 5px">
+      <li><em>store_productsSearch</em> in the Name field</li>
+      <li>set the number of rows to <i>2</i></li>
+      <li>select <i>Listbox</i> as the type of controls</li>
+      <li>uncheck <b>Allow Insert</b>, <b>Allow Update</b>, <b>Allow Delete</b>
+        options</li>
+    </ul>
+		Rename both textboxes in records to <em>s_category_id</em> and <em>s_product_id</em>.
+  </li>
+  <li>While in the Design mode, modify listbox properties as follows:
+    <ul style="margin-left: 5px">
+      <li>For the <em>s_category_id</em> listbox, set the <strong>Connection</strong>
+        property to <i>InternetDB</i> , select <em>store_categories</em> in the <strong>Data
+        Source</strong> property, <em>category_id</em> in the <strong>Bound
+        Column</strong> property, <em>category_name</em> in the <strong>Text
+        Column</strong> property and <em>Single</em> in the <strong>Data Type</strong>
+        property.</li>
+      <li>For the s_product_id Listbox, set the <b>Connection</b> property to <i>InternetDB</i>
+        , select <i>store_products</i> in the <b>Data Source</b> property, <i>product_id</i>
+        in the <b>Bound Column</b> property, <i>product_name</i> in the <b>Text
+        Column</b> Property and <i>integer</i> in the <b>Data Type</b> property.
+        Then open the <b>Visual Query Builder</b> by clicking the [...] button
+        next to the <b>Data Source</b> property, add <i>Where</i> parameter with
+        the condition: <i>product_id equals(=) 0</i> and set the <b>Parameter
+        Source Type</b> to <i>Expression</i>.&lt;&gt;</li>
+    </ul>
+  </li>
+  <li>Add another <strong>Record form</strong> (<em>store_products</em> ) to
+    your page using the Forms tab in the Toolbox panel. In the &quot;Add Record
+    Form&quot; dialog:
+    <ul style="margin-left: 5px">
+      <li>specify <em>store_products</em> in the Name field</li>
+      <li>set the number of rows to 3</li>
+      <li>select <strong>Label</strong> type of controls</li>
+      <li>uncheck <b>Allow Insert</b>, <b>Allow Update</b>, <b>Allow Delete</b>
+        options</li>
+    </ul>
+  </li>
+  <li>Rename <em>Label1</em> to <i>price</i>, <em>Label2</em> to <i>description</i> and <em>Label3</em> to <i>product_name</i>.</li>
+  <li>Use the <strong>Insert Row</strong> option to insert a row between the
+    price and description rows.</li>
+  <li>Add <strong>Image</strong> control the new row using the image option
+    available in the Forms Tab of the Toolbox, then name it <em>image_url</em></li>
+  <li>Switch to the HTML mode and add the <strong>span</strong> tags after the <em>product_name</em>,
+    <em>price</em> and <em>product_description</em> labels as shown in the
+    example:
+    <pre class="code">
+{product_name}&lt;span id=&quot;store_productsproduct_name&quot;&gt;&lt;/span&gt;
+{price}&lt;span id=&quot;store_productsprice&quot;&gt;&lt;/span&gt;
+{description}&lt;span id=&quot;store_productsdescription&quot;&gt;&lt;/span&gt;
+</pre>
+  </li>
+  <li>Run the <strong>Dependent Listboxes</strong> Builder using the Builders tab in the Toolbox panel:
+    <ul style="margin-left: 5px">
+      <li>On <em>Connection</em> step select the exiting connection to the <i>Internet</i> database</li>
+      <li>On <em>Settings</em> step use the following settings:<br>
+        <strong>Master ListBox</strong>: s_category_id<br>
+        <strong>Slave Listbox</strong>: s_product_id<br>
+        <strong>DataSource</strong>: store_products<br>
+        <strong>Bound Column</strong>: product_id<br>
+        <strong>Text Column</strong>: product_name<br>
+        <strong>Dependent Field</strong>: category_id</li>
+    </ul>
+  </li>
+  <li>Run the <strong>Autofill</strong> Builder using the Builders tab in the Toolbox panel:
+    <ul style="margin-left: 5px">
+      <li>On <em>Connection</em> step select the exiting connection to the <i>Internet</i> database</li>
+      <li>On <em>Settings</em> step use the following settings:<br>
+        <strong>Target Control</strong>: s_product_id<br>
+        <strong>DataSource</strong>: store_products<br>
+        <strong>Search Field</strong>: product_id
+        <p><strong>Filled Controls</strong>:<br>
+        <strong>Control Name</strong>: store_productsproduct_name<br>
+        <strong>Field Name</strong>: product_name<br>
+        <strong>Target</strong>: innerHTML</p>
+        <strong>Control Name</strong>: store_productsprice<br>
+        <strong>Field Name</strong>: price<br>
+        <strong>Target</strong>: innerHTML</p>
+        <p><strong>Control Name</strong>: store_productsimage_url<br>
+        <strong>Field Name</strong>: image_url<br>
+        <strong>Target</strong>: innerHTML</p>
+        <p><strong>Control Name</strong>: store_productsdescription<br>
+        <strong>Field Name</strong>: description<br>
+        <strong>Target</strong>: innerHTML</p>
+      </li>
+    </ul>
+  </li>
+  <li>Open the features property dialog for&nbsp; the <em>s_product_id</em>
+    control and add the <strong>Ajax Condition</strong> feature to determine
+    whether a product is selected in the s_product_id listbox.<br>
+    <p style="margin-left: 15px">
+      <strong>Condition</strong>: equals(=)<br>
+      <strong>Parameter1</strong>: store_productsSearchs_product_id<br>
+      <strong>Source Type</strong>: Control<br>
+      <strong>Parameter2</strong>: &quot;&quot;<br>
+      <strong>Source Type</strong>: Expression<br>
+      <strong>Start event</strong>:<br>
+		</p>
+    store_productsSearch.onload;store_productsSearchs_product_id.onchange;store_productsSearchs_product_idPTDependentListBox1.onsuccess;</li>
+  <li>In the same <em>s_product_id</em> features dialog add <strong>Ajax
+    Hide-Show</strong> feature to be used to hide <em>store_products form</em>
+    when the above <strong>Condition</strong> is false (no product is selected
+    in the <em>s_product_id</em> listbox) and show the form only when the <strong>Condition</strong>
+    is true (there is some product selected in the <em>s_product_id</em>
+    listbox).
+    <p style="margin-left: 15px">
+      <strong>Control Id</strong>: store_products<br>
+      <strong>Show event</strong>: store_productsSearchs_product_idCondition1.onfalse;<br>
+      <strong>Hide event</strong>: store_productsSearchs_product_idCondition1.ontrue;<br>
+    </p>
+	</li>
+  <li>Make cosmetic changes as needed by modifying the text and captions within
+    the HTML.</li>
+</ol>
+<h2>Database Tables used:</h2>
+<p>Database: <em>Internet</em></p>
+<p>Tables: <em>store_categories, store_products</em></p>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!-- BEGIN Panel Head -->
+<title>My Details</title>
+<style type="text/css">
+ .Record td { border: 0px; }
+</style>
+<!-- END Panel Head -->
+<!-- BEGIN Panel Content -->
+<!-- BEGIN Record users -->
+<form id="Contentusers" method="post" action="{Action}" name="{HTMLFormName}">
+<table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table cellspacing="0" cellpadding="0" border="0" class="Header">
+          <tr>
+            <td class="HeaderLeft"><img src="{CCS_PathToMasterPage}Images/Spacer.gif" alt=""></td> 
+            <td class="th"><strong>Change My Details</strong></td> 
+            <td class="HeaderRight"><img src="{CCS_PathToMasterPage}Images/Spacer.gif" alt=""></td> 
+          </tr>
+        </table><br>
+ 
+        <table width="100%" cellspacing="0" cellpadding="0" class="Record">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td> 
+          </tr>
+ <!-- END Error -->
+          <tr class="Controls">
+            <td class="th">Login</td> 
+            <td>{user_login}</td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label>Password *</label></td> 
+            <td><input type="text" name="{user_password_Name}" value="{user_password}" maxlength="20" size="20" id="Contentusersuser_password"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label>First Name *</label></td> 
+            <td><input type="text" name="{first_name_Name}" value="{first_name}" style="width:100%" maxlength="50" id="Contentusersfirst_name"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label>Last Name *</label></td> 
+            <td><input type="text" name="{last_name_Name}" value="{last_name}" style="width:100%" maxlength="50" id="Contentuserslast_name"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label>Email *</label></td> 
+            <td><input type="text" name="{email_Name}" value="{email}" maxlength="50" id="Contentusersemail"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label>Address</label></td> 
+            <td><input type="text" name="{address1_Name}" style="width:100%" value="{address1}" maxlength="250" id="Contentusersaddress1"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"></td> 
+            <td><input type="text" name="{address2_Name}" value="{address2}" style="width:100%" maxlength="50" id="Contentusersaddress2"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"></td> 
+            <td><input type="text" name="{address3_Name}" value="{address3}" style="width:100%" maxlength="50" id="Contentusersaddress3"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label>City</label></td> 
+            <td><input type="text" name="{city_Name}" value="{city}" maxlength="30" id="Contentuserscity"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label>State</label></td> 
+            <td>
+              <select name="{state_id_Name}" id="Contentusersstate_id">
+                <option value="">Select Value</option>
+ {state_id_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label>Zip</label></td> 
+            <td><input type="text" name="{zip_Name}" value="{zip}" maxlength="10" size="10" id="Contentuserszip"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label>Country *</label></td> 
+            <td>
+              <select name="{country_id_Name}" id="Contentuserscountry_id">
+                <option value="">Select Value</option>
+ {country_id_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label>Phone Home</label></td> 
+            <td><input type="text" name="{phone_home_Name}" value="{phone_home}" maxlength="30" id="Contentusersphone_home"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label>Phone Work</label></td> 
+            <td><input type="text" name="{phone_work_Name}" value="{phone_work}" maxlength="30" id="Contentusersphone_work"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label>Language</label></td> 
+            <td>
+              <select name="{language_id_Name}" id="Contentuserslanguage_id">
+                <option value="">Select Value</option>
+ {language_id_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label>Age</label></td> 
+            <td>
+              <select name="{age_id_Name}" id="Contentusersage_id">
+                <option value="">Select Value</option>
+ {age_id_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label>Gender *</label></td> 
+            <td>
+              <select name="{gender_id_Name}" id="Contentusersgender_id">
+                <option value="">Select Value</option>
+ {gender_id_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label>Education</label></td> 
+            <td>
+              <select name="{education_id_Name}" id="Contentuserseducation_id">
+                <option value="">Select Value</option>
+ {education_id_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label>Income</label></td> 
+            <td>
+              <select name="{income_id_Name}" id="Contentusersincome_id">
+                <option value="">Select Value</option>
+ {income_id_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label>Describe Yourself</label></td> 
+            <td><textarea name="{notes_Name}" style="width:100%" rows="5" id="Contentusersnotes">{notes}</textarea></td> 
+          </tr>
+ 
+          <tr class="Bottom">
+            <td colspan="2" style="text-align: right">
+              <!-- BEGIN Button Button_Update --><input name="{Button_Name}" type="submit" value="Submit" alt="Submit" id="ContentusersButton_Update" class="Button"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Delete --><input name="{Button_Name}" type="submit" value="Delete" alt="Delete" id="ContentusersButton_Delete" class="Button"><!-- END Button Button_Delete -->
+              <!-- BEGIN Button Button_Cancel --><input name="{Button_Name}" type="submit" value="Cancel" alt="Cancel" id="ContentusersButton_Cancel" class="Button"><!-- END Button Button_Cancel --></td> 
+          </tr>
+ 
+        </table>
+ </td> 
+    </tr>
+ 
+  </table>
+ 
+</form>
+<!-- END Record users --><br><!-- END Panel Content -->
+<!-- BEGIN Panel Menu -->{Header}<!-- END Panel Menu -->
+<!-- BEGIN Panel Sidebar1 -->{Search}<!-- END Panel Sidebar1 -->

@@ -1,0 +1,53 @@
+<!-- BEGIN Panel Head --><title>Add/Edit Employee</title><!-- END Panel Head -->
+<!-- BEGIN Panel Content -->
+<!-- BEGIN Record employees -->
+<form id="Contentemployees" method="post" name="{HTMLFormName}" action="{Action}">
+<h1>Add/Edit Employee</h1>
+<table class="Record">
+  <!-- BEGIN Error -->
+  <tr class="Error">
+    <td colspan="2">{Error}</td>
+  </tr>
+  <!-- END Error -->
+  <tr class="Controls">
+    <td class="th"><label>Name *</label></td> 
+    <td><input id="Contentemployeesemp_name" value="{emp_name}" maxlength="50" size="50" name="{emp_name_Name}"></td>
+  </tr>
+
+  <tr class="Controls">
+    <td class="th"><label>Email *</label></td> 
+    <td><input id="Contentemployeesemail" value="{email}" maxlength="50" size="50" name="{email_Name}"></td>
+  </tr>
+
+  <tr class="Controls">
+    <td class="th"><label>Login *</label></td> 
+    <td><input id="Contentemployeesemp_login" value="{emp_login}" maxlength="20" name="{emp_login_Name}" size="20"></td>
+  </tr>
+
+  <tr class="Controls">
+    <td class="th"><label>Password *</label></td> 
+    <td><input type="password" id="Contentemployeesemp_password" value="{emp_password}" maxlength="20" name="{emp_password_Name}"></td>
+  </tr>
+
+  <tr class="Controls">
+    <td class="th" nowrap><label>Security Level *</label></td> 
+    <td>
+      <select id="Contentemployeesgroup_id" name="{group_id_Name}">
+        <option selected value="">Select Value</option>
+        {group_id_Options}
+      </select>
+</td>
+  </tr>
+
+  <tr class="Bottom">
+    <td style="TEXT-ALIGN: right" colspan="2">
+      <!-- BEGIN Button Button_Insert --><input type="submit" id="ContentemployeesButton_Insert" class="Button" value="Add" alt="Add" name="{Button_Name}"><!-- END Button Button_Insert -->
+      <!-- BEGIN Button Button_Update --><input type="submit" id="ContentemployeesButton_Update" class="Button" value="Submit" alt="Submit" name="{Button_Name}"><!-- END Button Button_Update -->
+      <!-- BEGIN Button Button_Delete --><input type="submit" id="ContentemployeesButton_Delete" class="Button" value="Delete" alt="Delete" name="{Button_Name}"><!-- END Button Button_Delete -->
+      <!-- BEGIN Button Button_Cancel --><input type="submit" id="ContentemployeesButton_Cancel" class="Button" value="Cancel" alt="Cancel" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+  </tr>
+</table>
+</form>
+<!-- END Record employees --><!-- END Panel Content -->
+<!-- BEGIN Panel Menu -->{Header}<!-- END Panel Menu -->
+<!-- BEGIN Panel Sidebar1 -->{Administration}<!-- END Panel Sidebar1 -->

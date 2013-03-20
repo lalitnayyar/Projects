@@ -1,0 +1,45 @@
+<!-- BEGIN Panel Head -->
+<title>AdmEditCategoryRecord </title>
+<!-- END Panel Head -->
+<!-- BEGIN Panel Content -->
+
+
+<!-- BEGIN Record store_editorial -->
+<form id="Contentstore_editorial" method="post" action="{Action}" name="{HTMLFormName}"> 
+<table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+  <table cellspacing="0" cellpadding="0" border="0" class="Header">
+	<tr>
+	  <td class="HeaderLeft"><img src="{CCS_PathToMasterPage}images/spacer.gif" alt=""></td>
+	  <td class="th"><strong>Add/Edit Store Editorial Categories</strong></td>
+	  <td class="HeaderRight"><img src="{CCS_PathToMasterPage}images/spacer.gif" alt=""></td>
+	</tr>
+   </table>
+  <table cellspacing="0" cellpadding="0" class="Record">
+    <!-- BEGIN Error -->
+    <tr class="Error">
+      <td colspan="2">{Error}</td> 
+    </tr>
+ <!-- END Error -->
+    <tr class="Controls">
+      <td nowrap class="th"><label>Category Name</label></td> 
+      <td><input type="text" name="{category_name_Name}" value="{category_name}" maxlength="50" size="50" id="Contentstore_editorialcategory_name"></td> 
+    </tr>
+ 
+    <tr class="Bottom">
+      <td colspan="2" style="text-align: right">
+        <!-- BEGIN Button Button_Insert --><input name="{Button_Name}" type="submit" value="Add" alt="Add" id="Contentstore_editorialButton_Insert" class="Button"><!-- END Button Button_Insert -->
+        <!-- BEGIN Button Button_Update --><input name="{Button_Name}" type="submit" value="Submit" alt="Submit" id="Contentstore_editorialButton_Update" class="Button"><!-- END Button Button_Update -->
+        <!-- BEGIN Button Button_Cancel --><input name="{Button_Name}" type="submit" value="Cancel" alt="Cancel" id="Contentstore_editorialButton_Cancel" class="Button"><!-- END Button Button_Cancel --></td> 
+    </tr>
+ 
+  </table>
+     </td>
+    </tr>
+  </table>
+ </form>
+<!-- END Record store_editorial --> 
+<!-- END Panel Content -->
+<!-- BEGIN Panel Menu -->{AdmHeader}<!-- END Panel Menu -->
+<!-- BEGIN Panel Sidebar -->{AdmMenu}&nbsp;<!-- END Panel Sidebar -->

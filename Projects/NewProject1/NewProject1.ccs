@@ -1,0 +1,63 @@
+<Site id="0" language="ASPTemplates" siteLanguage="en" securityType="Table" urlType="Relative" server="IIS4" userIDStoreMethod="Session" userIDVariable="UserID" userLoginVariable="UserLogin" groupIDVariable="RegFormGroupID" IISApplication="False" higherLevel="True" securityConnection="internet" usersTable="users" userIDField="user_id" userLoginField="user_login" userPasswordField="user_password" userGroupField="group_id" loginPage="Default.ccp" automatedLogin="False" useCCSCultureFormats="True" startPage="Default.ccp" defaultDateFormat="mm/dd/yyyy" LSEnableQueryString="True" LSQueryStringName="lang" LSEnableHTTPHeader="True" LSEnableSession="True" LSSessionName="lang" LSEnableCookie="False" LSCookieName="lang" LSCookieExpired="365" cachingMethod="None" useI18nFeatures="False" emailProgID="CDONTS.NewMail" includeType="Virtual" LSLanguageSessionName="lang" showDepreciatedStyles="Styles" useDynamicStyles="False" SSEnableQueryString="True" SSQueryStringName="style" SSEnableSession="True" SSSessionName="style" SSEnableCookie="False" SSCookieName="style" SSCookieExpired="365" defaultStyle="School" omitIfEmpty="True" htmlTemplateType="HTML" isSection508="True" createIdsForControls="False" createIdsForNonEditableControls="False" createLablesForControls="False" ccsVersion="5.0.0.16254" PHPEncodeExtension="iconv" connection="internet" generateJS="True" useDynamicDesigns="True" DDEnableQueryString="True" DDQueryStringName="design" DDEnableSession="True" DDSessionName="design" DDEnableCookie="False" DDCookieName="design" DDCookieExpired="365" designFolder="Designs" defaultDesign="Simple" name="NewProject1">
+	<Components>
+	</Components>
+	<Connections>
+		<Connection id="1" database="MSAccess" showViews="True" showSynonyms="True" serverSameAsDesign="True" serverConnectionType="String" connectionType="String" connectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Program Files\CodeChargeStudio5\Examples\Internet\Internet.mdb;Persist Security Info=False" name="internet" login="Admin" connection="internet" DBDateFormat="yyyy-mm-dd HH:nn" serverDatabase="MSAccess" serverLongReadLen="1000" DBNameUppercase="True" OptimizeSQL="True"/>
+	</Connections>
+	<CodeFiles>
+		<CodeFile id="Templates" language="ASPTemplates" name="Template.asp" comment="'" forShow="False"/>
+		<CodeFile id="Common" language="ASPTemplates" name="Common.asp" comment="'" forShow="False"/>
+		<CodeFile id="Cache" language="ASPTemplates" name="Cache.asp" comment="'" forShow="False"/>
+		<CodeFile id="Sorter" language="ASPTemplates" name="Sorter.asp" comment="'" forShow="False"/>
+		<CodeFile id="Navigator" language="ASPTemplates" name="Navigator.asp" comment="'" forShow="False"/>
+		<CodeFile id="Classes" language="ASPTemplates" name="Classes.asp" comment="'" forShow="False"/>
+		<CodeFile id="ADOVBS" language="ASPTemplates" name="Adovbs.asp" comment="'" forShow="False"/>
+		<CodeFile id="JSFunctions" language="ASPTemplates" name="Functions.js" comment="//" forShow="False" codePage="utf-8"/>
+		<CodeFile id="JSDatePickerHTML" language="ASPTemplates" name="DatePicker.html" comment="&lt;!--" commentEnd="--&gt;" forShow="False"/>
+		<CodeFile id="JSDatePicker" language="ASPTemplates" name="DatePicker.js" comment="//" forShow="False" codePage="utf-8"/>
+		<CodeFile id="ClientI18N.asp" language="ASPTemplates" name="ClientI18N.asp" forShow="False" comment="'"/>
+	</CodeFiles>
+	<Groups>
+		<Group id="23" name="User" value="1"/>
+		<Group id="24" name="Admin" value="2"/>
+	</Groups>
+	<Events/>
+	<Profiles>
+		<Profile name="Server1" FTPPassiveMode="True" FTPSecureConnection="False" FTPpublishingAllMask="html;js;asp;php;jsp;cfm;cfc;pl;pm;cgi;mdb;gif;jpg;png;css;xml;java;asax;ascx;aspx;asmx;cs;vb;vbproj;resx;config;vsdisco;csproj;webinfo;bat;tld;jar;properties;inc;txt;resources;dll;swf;master;res;ico" FTPpublishingExceptMask="ccs;ccp" FTPpublishingType="Project" location="Local" publishingAllMask="html;js;asp;php;jsp;cfm;cfc;pl;pm;cgi;mdb;gif;jpg;png;css;xml;java;asax;ascx;aspx;asmx;cs;vb;vbproj;resx;config;vsdisco;csproj;webinfo;bat;tld;jar;properties;inc;txt;resources;dll;swf;master;res;ico" publishingExceptMask="" publishingType="AllMask">
+<Connections>
+				<Connection id="1" database="MSAccess" showViews="True" showSynonyms="True" serverSameAsDesign="True" serverConnectionType="String" connectionType="String" connectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Program Files\CodeChargeStudio5\Examples\Internet\Internet.mdb;Persist Security Info=False" name="internet" login="Admin" connection="internet" DBDateFormat="yyyy-mm-dd HH:nn" serverDatabase="MSAccess" serverLongReadLen="1000" DBNameUppercase="True" OptimizeSQL="True"/>
+			</Connections>
+		</Profile>
+<Profile name="Server2" FTPPassiveMode="True" FTPSecureConnection="False" FTPpublishingAllMask="html;js;asp;php;jsp;cfm;cfc;pl;pm;cgi;mdb;gif;jpg;png;css;xml;java;asax;ascx;aspx;asmx;cs;vb;vbproj;resx;config;vsdisco;csproj;webinfo;bat;tld;jar;properties;inc;txt;resources;dll;swf;master;res;ico" FTPpublishingExceptMask="ccs;ccp" FTPpublishingType="Project" location="FTP" publishingAllMask="" publishingExceptMask="" publishingType="">
+<Connections>
+				<Connection id="1" database="MSAccess" showViews="True" showSynonyms="True" serverSameAsDesign="True" serverConnectionType="String" connectionType="String" connectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Program Files\CodeChargeStudio5\Examples\Internet\Internet.mdb;Persist Security Info=False" name="internet" login="Admin" connection="internet" DBDateFormat="yyyy-mm-dd HH:nn" serverDatabase="MSAccess" serverLongReadLen="1000" DBNameUppercase="True" OptimizeSQL="True"/>
+			</Connections>
+		</Profile>
+</Profiles>
+	<Languages>
+		<Language name="en" encoding="iso-8859-1" defaultCountry="US">
+			<LocaleInfo overrideDateFormats="False" booleanFormat="Yes;No;" overrideNumberFormats="False" msValue="1033" phpValue=""/>
+		</Language>
+	</Languages>
+	<Styles>
+		<Style id="4" name="School" caption="School"/>
+	</Styles>
+	<CustomButtons>
+		<CustomButton id="7" name="ButtonCancel" value="Cancel"/>
+		<CustomButton id="8" name="ButtonDelete" value="Delete"/>
+		<CustomButton id="9" name="ButtonInsert" value="Add"/>
+		<CustomButton id="10" name="ButtonLogin" value="Login"/>
+		<CustomButton id="11" name="ButtonLogout" value="Logout"/>
+		<CustomButton id="12" name="ButtonSearch" value="Search"/>
+		<CustomButton id="13" name="ButtonToday" value="Today  "/>
+		<CustomButton id="14" name="ButtonUpdate" value="Submit"/>
+		<CustomButton id="15" name="ButtonLast" value="Last"/>
+		<CustomButton id="16" name="ButtonLastOff" value="Last"/>
+		<CustomButton id="17" name="ButtonFirst" value="First"/>
+		<CustomButton id="18" name="ButtonFirstOff" value="First"/>
+		<CustomButton id="19" name="ButtonNext" value="Next"/>
+		<CustomButton id="20" name="ButtonNextOff" value="Next"/>
+		<CustomButton id="21" name="ButtonPrev" value="Prev"/>
+		<CustomButton id="22" name="ButtonPrevOff" value="Prev"/>
+	</CustomButtons>
+</Site>

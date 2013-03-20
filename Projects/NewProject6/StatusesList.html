@@ -1,0 +1,29 @@
+<!-- BEGIN Panel Head --><title>List of Statuses</title>
+<!-- END Panel Head -->
+<!-- BEGIN Panel Content -->
+<!-- BEGIN Grid statuses -->
+<h1>List of Statuses <a href="{Link1_Src}" alt="Add New Status">[+]</a></h1>
+<table class="Grid" style="width:200px;">
+  <tr class="Caption">
+    <th scope="col">    
+	<!-- BEGIN Sorter Sorter_status_name --><span class="Sorter">Status <!-- BEGIN Asc_On --><img src="{CCS_PathToMasterPage}Images/SorterAscActive.png" alt="Ascending"><!-- END Asc_On -->
+	<!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="ContentstatusesSorter_status_name"><img src="{CCS_PathToMasterPage}Images/SorterAscPassive.png" alt="Ascending"></a><!-- END Asc_Off -->
+	<!-- BEGIN Desc_On --><img src="{CCS_PathToMasterPage}Images/SorterDescActive.png" alt="Descending"><!-- END Desc_On -->
+	<!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="ContentstatusesSorter_status_name"><img src="{CCS_PathToMasterPage}Images/SorterDescPassive.png" alt="Descending"></a><!-- END Desc_Off --></span><!-- END Sorter Sorter_status_name --></th>
+  </tr>
+ 
+  <!-- BEGIN Row -->
+  <tr class="Row">
+    <td><a href="{status_name_Src}" id="Contentstatusesstatus_name_{statuses:rowNumber}">{status_name}</a>&nbsp;</td> 
+  </tr>
+ <!-- END Row -->
+  <!-- BEGIN NoRecords -->
+  <tr class="NoRecords">
+    <td colspan="1">No records</td> 
+  </tr>
+ <!-- END NoRecords -->
+</table>
+<!-- END Grid statuses --><br>
+<!-- END Panel Content -->
+<!-- BEGIN Panel Menu -->{Header}<!-- END Panel Menu -->
+<!-- BEGIN Panel Sidebar1 -->{Administration}<!-- END Panel Sidebar1 -->

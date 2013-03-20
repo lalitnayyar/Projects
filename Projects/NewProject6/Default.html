@@ -1,0 +1,66 @@
+<!-- BEGIN Panel Head --><title>Task Manager</title><!-- END Panel Head -->
+<!-- BEGIN Panel Content -->
+<!-- BEGIN Grid tasks -->
+<h1>Task Manager <a href="{Link1_Src}" alt="Add New Task">[+]</a></h1>
+<table style="WIDTH: 100%" class="Grid">
+  <tr class="Caption">
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_task_name --><span class="Sorter"><a href="{Sort_URL}" id="ContenttasksSorter_task_name">Task</a> 
+    <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On --></span><!-- END Sorter Sorter_task_name --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_project_name --><span class="Sorter"><a href="{Sort_URL}" id="ContenttasksSorter_project_name">Project</a> 
+    <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On --></span><!-- END Sorter Sorter_project_name --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_priority_name --><span class="Sorter"><a href="{Sort_URL}" id="ContenttasksSorter_priority_name">Priority</a> 
+    <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On --></span><!-- END Sorter Sorter_priority_name --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_status_name --><span class="Sorter"><a href="{Sort_URL}" id="ContenttasksSorter_status_name">Status</a> 
+    <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On --></span><!-- END Sorter Sorter_status_name --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_type_name --><span class="Sorter"><a href="{Sort_URL}" id="ContenttasksSorter_type_name">Type</a> 
+    <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On --></span><!-- END Sorter Sorter_type_name --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_emp_name --><span class="Sorter"><a href="{Sort_URL}" id="ContenttasksSorter_emp_name">Employee</a> 
+    <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On --></span><!-- END Sorter Sorter_emp_name --></th>
+  </tr>
+ 
+  <!-- BEGIN Row -->
+  <tr class="Row">
+    <td><a href="{task_name_Src}" id="Contenttaskstask_name_{tasks:rowNumber}">{task_name}</a>&nbsp;</td> 
+    <td>{project_name}&nbsp;</td> 
+    <td>{priority_name}&nbsp;</td> 
+    <td>{status_name}&nbsp;</td> 
+    <td>{type_name}&nbsp;</td> 
+    <td>{emp_name}&nbsp;</td>
+  </tr>
+ <!-- END Row -->
+  <!-- BEGIN NoRecords -->
+  <tr class="NoRecords">
+    <td colspan="6">No records</td>
+  </tr>
+  <!-- END NoRecords -->
+  <tr class="Footer">
+  <td style="text-align:center" colspan="6">
+    <!-- BEGIN Navigator Navigator --><span class="Navigator">
+    <!-- BEGIN Prev_On --><a href="{Prev_URL}">Prev </a> <!-- END Prev_On -->
+    <!-- BEGIN Prev_Off -->Prev <!-- END Prev_Off -->&nbsp;{Page_Number}&nbsp; 
+    <!-- BEGIN Next_On --><a href="{Next_URL}">Next </a> <!-- END Next_On -->
+    <!-- BEGIN Next_Off -->Next <!-- END Next_Off --></span><!-- END Navigator Navigator -->&nbsp;</td> 
+</tr>
+
+</table>
+<!-- END Grid tasks --><br>
+ <!-- END Panel Content -->
+<!-- BEGIN Panel Menu -->{Header}<!-- END Panel Menu -->
+<!-- BEGIN Panel Sidebar1 -->&nbsp;{Search}<!-- END Panel Sidebar1 -->

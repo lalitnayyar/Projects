@@ -2,7 +2,7 @@
   <catalog allSchemes="True" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="False">
     <schema SCHEMA_NAME="information_schema" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
     <schema SCHEMA_NAME="symbiyjz_saapp" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="True" allAliases="False" allSynonyms="True" allSystemTables="False" allSystemViews="False" allViews="True" allProcedures="False" allProcedureParameters="False" full="True">
-      <table TABLE_NAME="saconsult" TABLE_TYPE="Table" DESCRIPTION="" allColumns="True" allPrimaryKeys="True" allForeignKeys="False" full="True">
+      <table TABLE_NAME="saconsult" DESCRIPTION="" allColumns="True" allPrimaryKeys="True" allForeignKeys="False" full="True">
         <primaryKey PK_COLUMN_NAME="Pkey" KEY_NAME="PRIMARY" ENABLED="True" full="True" />
         <column COLUMN_NAME="Pkey" ORDINAL_POSITION="1" DATA_TYPE="3" CCS_TYPE="CCInteger" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" DESCRIPTION="" full="True" />
         <column COLUMN_NAME="sacon_registration" ORDINAL_POSITION="2" DATA_TYPE="3" CCS_TYPE="CCInteger" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="True" DESCRIPTION="" full="True" />

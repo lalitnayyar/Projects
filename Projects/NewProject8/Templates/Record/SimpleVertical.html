@@ -1,0 +1,23 @@
+<form id="formId" method="post" action="{Action}" name="{HTMLFormName}">
+{Title}
+<table cellspacing="0" cellpadding="0" class="Record" style="width: 10px" >
+  <!-- BEGIN Error -->
+  <tr class="Error">
+    <td colspan="2">{Error}</td> 
+  </tr>
+<!-- END Error -->
+  <!-- BEGIN ControlContent -->
+  <tr class="Controls">
+    <td class="th">{ControlTitle}</td> 
+    <td>{ControlTemplate}</td> 
+  </tr>
+<!-- END ControlContent -->
+  <!-- BEGIN Footer -->
+  <tr class="Bottom">
+    <td colspan="2" style="text-align: right">
+		{Buttons}
+    </td> 
+  </tr>
+<!-- END Footer -->
+</table>
+</form>

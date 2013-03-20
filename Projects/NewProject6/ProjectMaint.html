@@ -1,0 +1,30 @@
+<!-- BEGIN Panel Head --><title>Add/Edit Project</title>
+<!-- END Panel Head -->
+<!-- BEGIN Panel Content -->
+<!-- BEGIN Record projects -->
+<form id="Contentprojects" method="post" action="{Action}" name="{HTMLFormName}"> 
+<h1>Add/Edit Project</h1>
+  <table cellspacing="0" cellpadding="0" class="Record">
+    <!-- BEGIN Error -->
+    <tr class="Error">
+      <td colspan="2">{Error}</td> 
+    </tr>
+ <!-- END Error -->
+    <tr class="Controls">
+      <td class="th"><label>Project *</label></td> 
+      <td><input type="text" name="{project_name_Name}" value="{project_name}" maxlength="50" size="50" id="Contentprojectsproject_name"></td> 
+    </tr>
+ 
+    <tr class="Bottom">
+      <td colspan="2" style="text-align: right">
+        <!-- BEGIN Button Button_Insert --><input name="{Button_Name}" type="submit" value="Add" alt="Add" id="ContentprojectsButton_Insert" class="Button"><!-- END Button Button_Insert -->
+        <!-- BEGIN Button Button_Update --><input name="{Button_Name}" type="submit" value="Submit" alt="Submit" id="ContentprojectsButton_Update" class="Button"><!-- END Button Button_Update -->
+        <!-- BEGIN Button Button_Delete --><input name="{Button_Name}" type="submit" value="Delete" alt="Delete" id="ContentprojectsButton_Delete" class="Button"><!-- END Button Button_Delete -->
+        <!-- BEGIN Button Button_Cancel --><input name="{Button_Name}" type="submit" value="Cancel" alt="Cancel" id="ContentprojectsButton_Cancel" class="Button" class="Button"><!-- END Button Button_Cancel --></td> 
+    </tr> 
+  </table>
+ </form>
+<!-- END Record projects -->
+<!-- END Panel Content -->
+<!-- BEGIN Panel Menu -->{Header}<!-- END Panel Menu -->
+<!-- BEGIN Panel Sidebar1 -->{Administration}<!-- END Panel Sidebar1 -->

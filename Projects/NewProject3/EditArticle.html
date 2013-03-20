@@ -1,0 +1,123 @@
+<!-- BEGIN Panel Head -->
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-63DF9707
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&lang={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" src="ClientI18N.php?file=DatePicker.js&lang={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-A328438A
+</script>
+<script language="JavaScript" src="js/yui/build/yahoo-dom-event/yahoo-dom-event.js" type="text/javascript"></script>
+<script language="JavaScript" src="js/yui/build/calendar/calendar-min.js" type="text/javascript"></script>
+<script language="JavaScript" src="js/yui/datepicker-commons.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="{CCS_PathToMasterPage}ccs-yui-calendar.css">
+<script language="JavaScript" type="text/javascript">
+//End Include User Scripts
+
+//Contentarticlesportal_Delete_OnClick @44-5BAED90B
+function Contentarticlesportal_Delete_OnClick()
+{
+    disableValidation = true;
+    return true;
+}
+//End Contentarticlesportal_Delete_OnClick
+
+//Contentarticlesportal_Cancel_OnClick @45-819F43BD
+function Contentarticlesportal_Cancel_OnClick()
+{
+    disableValidation = true;
+    return true;
+}
+//End Contentarticlesportal_Cancel_OnClick
+
+//Handle Contentarticlesdate_expireInlineDatePicker2 @41-60F88FD6
+function Contentarticlesdate_expireInlineDatePicker2_start(sender) {
+    if (!sender || sender === window) return;
+    generateDatePicker(sender.id, "mm/dd/yyyy","");
+}
+//End Handle Contentarticlesdate_expireInlineDatePicker2
+
+//bind_events @1-36256229
+function bind_events() {
+    try { Header_bind_events(); } catch(e) {}
+    try { AdminMenu_bind_events(); } catch(e) {}
+    addEventHandler("Contentarticlesdate_expire", "load", Contentarticlesdate_expireInlineDatePicker2_start);
+    addEventHandler("Contentarticlesportal_Delete", "click", Contentarticlesportal_Delete_OnClick);
+    addEventHandler("Contentarticlesportal_Cancel", "click", Contentarticlesportal_Cancel_OnClick);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+<title>Edit Article</title>
+
+<!-- END Panel Head -->
+<!-- BEGIN Panel Content -->
+
+
+<!-- BEGIN Record articles -->
+<form name="{HTMLFormName}" action="{Action}" method="post"> 
+<table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+  <table cellspacing="0" cellpadding="0" border="0" class="Header">
+	<tr>
+	  <td class="HeaderLeft"><img src="{CCS_PathToMasterPage}Images/Spacer.gif" alt=""></td>
+	  <td class="th"><strong>SVEC - Add/Edit Article</strong></td>
+	  <td class="HeaderRight"><img src="{CCS_PathToMasterPage}Images/Spacer.gif" alt=""></td>
+	</tr>
+   </table>
+  <table class="Record">
+    <!-- BEGIN Error -->
+    <tr class="Error">
+      <td colspan="2">{Error}</td> 
+    </tr>
+ <!-- END Error -->
+    <tr class="Controls">
+      <td class="th"><label for="Contentarticlesarticle_title">Title *</label></td> 
+      <td><textarea id="Contentarticlesarticle_title" name="article_title" rows="8" cols="50">{article_title}</textarea></td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th"><label for="Contentarticlescategory_id">Category *</label></td> 
+      <td>
+        <select id="Contentarticlescategory_id" name="category_id">
+          <option value="" selected>Select Value</option>
+ {category_id_Options} 
+        </select>
+ </td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th"><label for="Contentarticlesarticle_desc">Description *</label></td> 
+      <td><textarea id="Contentarticlesarticle_desc" name="article_desc" rows="8" cols="50">{article_desc}</textarea></td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th"><label for="Contentarticlesdate_expire">Expiration Date</label></td> 
+      <td>
+        <!-- BEGIN TextBox date_expire --><input id="Contentarticlesdate_expire" maxlength="20" value="{date_expire}" name="date_expire"><!-- END TextBox date_expire -->&nbsp;(mm/dd/yyyy)</td> 
+    </tr>
+ 
+    <tr class="Bottom">
+      <td style="text-align: right" colspan="2">
+        <!-- BEGIN Button portal_Insert --><input type="submit" class="Button" alt="{res:CCS_Insert}" value="{res:CCS_Insert}" name="portal_Insert"><!-- END Button portal_Insert -->
+        <!-- BEGIN Button portal_Update --><input type="submit" class="Button" alt="{res:CCS_Update}" value="{res:CCS_Update}" name="portal_Update"><!-- END Button portal_Update -->
+        <!-- BEGIN Button portal_Delete --><input type="submit" class="Button" alt="{res:CCS_Delete}" value="{res:CCS_Delete}" name="portal_Delete"><!-- END Button portal_Delete -->
+        <!-- BEGIN Button portal_Cancel --><input type="submit" class="Button" alt="{res:CCS_Cancel}" value="{res:CCS_Cancel}" name="portal_Cancel"><!-- END Button portal_Cancel --></td> 
+    </tr>
+ 
+  </table>
+     </td>
+    </tr>
+  </table>
+ </form>
+<!-- END Record articles --> 
+<!-- END Panel Content -->
+<!-- BEGIN Panel Menu -->{Header}<!-- END Panel Menu -->
+<!-- BEGIN Panel Sidebar1 -->{AdminMenu}&nbsp;<!-- END Panel Sidebar1 -->

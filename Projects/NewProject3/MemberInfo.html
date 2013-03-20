@@ -1,0 +1,76 @@
+<!-- BEGIN Panel Head -->
+<title>Member Information</title>
+<!-- END Panel Head -->
+<!-- BEGIN Panel Content -->
+<!-- BEGIN Record users_countries_states -->
+<form id="Contentusers_countries_states" method="post" action="{Action}" name="{HTMLFormName}"> 
+<table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+  <table cellspacing="0" cellpadding="0" border="0" class="Header">
+	<tr>
+	  <td class="HeaderLeft"><img src="{CCS_PathToMasterPage}Images/Spacer.gif" alt=""></td>
+	  <td class="th"><strong>Member Info</strong></td>
+	  <td class="HeaderRight"><img src="{CCS_PathToMasterPage}Images/Spacer.gif" alt=""></td>
+	</tr>
+   </table>
+  <table cellspacing="0" cellpadding="0" class="Record" style="width: 10px;">
+    <!-- BEGIN Error -->
+    <tr class="Error">
+      <td colspan="2">{Error}</td> 
+    </tr>
+ <!-- END Error -->
+    <tr class="Controls">
+      <td class="th">User Login</td> 
+      <td>{user_login}</td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th">First Name</td> 
+      <td>{first_name}</td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th">Last Name</td> 
+      <td>{last_name}</td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th">Email</td> 
+      <td><a href="mailto:{email_Src}" id="Contentusers_countries_statesemail">{email}</a></td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th">City</td> 
+      <td>{city}</td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th">State Name</td> 
+      <td>{state_name}</td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th">Country Name</td> 
+      <td>{country_name}</td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th">Phone Day</td> 
+      <td>{phone_day}</td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td nowrap class="th">Phone Evening</td> 
+      <td>{phone_evening}</td> 
+    </tr>
+ 
+  </table>
+     </td>
+    </tr>
+  </table>
+ </form>
+<!-- END Record users_countries_states -->
+<!-- END Panel Content -->
+<!-- BEGIN Panel Menu -->{Header}<!-- END Panel Menu -->
+<!-- BEGIN Panel Sidebar1 -->&nbsp;<!-- END Panel Sidebar1 -->

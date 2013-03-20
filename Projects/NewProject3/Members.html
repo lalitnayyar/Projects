@@ -1,0 +1,56 @@
+
+<!-- BEGIN Panel Head -->
+<title>Members</title>
+<!-- END Panel Head -->
+<!-- BEGIN Panel Content -->
+<!-- BEGIN Grid users -->
+<table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td valign="top">
+      <table cellspacing="0" cellpadding="0" border="0" class="Header">
+        <tr>
+          <td class="HeaderLeft"><img src="{CCS_PathToMasterPage}Images/Spacer.gif" alt=""></td> 
+          <td class="th"><strong>Members</strong></td> 
+          <td class="HeaderRight"><img src="{CCS_PathToMasterPage}Images/Spacer.gif" alt=""></td>
+        </tr>
+ 
+      </table>
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Caption">
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_user_login --><span class="Sorter"><a href="{Sort_URL}" id="ContentusersSorter_user_login">Login</a> 
+          <!-- BEGIN Asc_On --><img src="{CCS_PathToMasterPage}/images/SorterAscActive.png" alt="Ascending"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="{CCS_PathToMasterPage}/images/SorterDescActive.png" alt="Descending"><!-- END Desc_On --></span><!-- END Sorter Sorter_user_login --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_first_name --><span class="Sorter"><a href="{Sort_URL}" id="ContentusersSorter_first_name">First Name</a> 
+          <!-- BEGIN Asc_On --><img src="{CCS_PathToMasterPage}/images/SorterAscActive.png" alt="Ascending"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="{CCS_PathToMasterPage}/images/SorterDescActive.png" alt="Descending"><!-- END Desc_On --></span><!-- END Sorter Sorter_first_name --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_last_name --><span class="Sorter"><a href="{Sort_URL}" id="ContentusersSorter_last_name">Last Name</a> 
+          <!-- BEGIN Asc_On --><img src="{CCS_PathToMasterPage}/images/SorterAscActive.png" alt="Ascending"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="{CCS_PathToMasterPage}/images/SorterDescActive.png" alt="Descending"><!-- END Desc_On --></span><!-- END Sorter Sorter_last_name --></th>
+ 
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td><a href="{user_login_Src}" id="Contentusersuser_login_{users:rowNumber}">{user_login}</a>&nbsp;</td> 
+          <td>{first_name}&nbsp;</td> 
+          <td>{last_name}&nbsp;</td> 
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="3">No records</td> 
+        </tr>
+ <!-- END NoRecords -->
+      </table>
+ </td> 
+  </tr>
+ 
+</table>
+<!-- END Grid users --><!-- END Panel Content -->
+<!-- BEGIN Panel Menu -->{Header}<!-- END Panel Menu -->
+<!-- BEGIN Panel Sidebar1 -->{Search}<!-- END Panel Sidebar1 -->

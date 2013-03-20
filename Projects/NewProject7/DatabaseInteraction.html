@@ -1,0 +1,291 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Database Interaction</title>
+<meta content="CodeCharge Studio 3.99.99.9" name="GENERATOR">
+<link href="Styles/Spring/Style_doctype.css" type="text/css" rel="stylesheet">
+<!--[if IE 6]><link rel="stylesheet" type="text/css" href="Styles/Spring/Style_ie6.css"><![endif]-->
+<script language="JavaScript" type="text/javascript">
+</script>
+<link href="Styles/Spring/Style.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-D3B5F5BF
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-05F6F493
+</script>
+<script language="JavaScript" src="js/yui/build/yahoo-dom-event/yahoo-dom-event.js" type="text/javascript"></script>
+<script language="JavaScript" src="js/yui/build/element/element-min.js" type="text/javascript"></script>
+<script language="JavaScript" src="js/yui/build/connection/connection-min.js" type="text/javascript"></script>
+<script language="JavaScript" src="js/yui/build/tabview/tabview-min.js" type="text/javascript"></script>
+<script language="JavaScript" src="js/pt/prototype.js" type="text/javascript"></script>
+<script language="JavaScript" src="js/pt/ajaxpanel.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="js/yui/build/tabview/assets/tabview.css">
+<link rel="stylesheet" type="text/css" href="js/yui/build/tabview/assets/tabview-core.css">
+<link rel="stylesheet" type="text/css" href="Styles/Spring/ccs-yui-tabs.css">
+<script language="JavaScript" type="text/javascript">
+//End Include User Scripts
+
+//Panel1Panel2Panel4officers1Button_Delete_OnClick @21-37E6094E
+function Panel1Panel2Panel4officers1Button_Delete_OnClick()
+{
+    disableValidation = true;
+    return true;
+}
+//End Panel1Panel2Panel4officers1Button_Delete_OnClick
+
+//Start Panel1 @2-6F19DF97
+function Panel1_start(sender) {
+    var panel = $("Panel1");
+    if (!panel) return;
+    panel.onrefresh = function() {
+    };
+    AjaxPanel.init(panel);
+    AjaxPanel._bind(panel);
+    Panel1_bind(sender);
+}
+//End Start Panel1
+
+//Refresh Panel1 @2-BA99E6BA
+function Panel1_bind(sender) {
+    Panel1Panel2YahooTabbedView1_start();
+    addEventHandler("Panel1Panel2Panel4officers1Button_Delete", "click", Panel1Panel2Panel4officers1Button_Delete_OnClick);
+}
+//End Refresh Panel1
+
+//Panel1Panel2YahooTabbedView1 Start @29-10EF69F6
+function Panel1Panel2YahooTabbedView1_start() {
+    var panel = document.getElementById("Panel1Panel2");
+    if (!panel) return;
+    panel.className = "yui-skin-sam";
+    Panel1Panel2YahooTabbedView1 = new YAHOO.widget.TabView();
+    panel = document.getElementById("Panel1Panel2Panel3");
+    if (panel) {
+        var Panel3_tab = new YAHOO.widget.Tab({
+            label: "View",
+            active: true,
+            contentEl: panel
+        });
+        Panel1Panel2YahooTabbedView1.addTab(Panel3_tab);
+    }
+    panel = document.getElementById("Panel1Panel2Panel4");
+    if (panel) {
+        var Panel4_tab = new YAHOO.widget.Tab({
+            label: "Edit",
+            contentEl: panel
+        });
+        Panel1Panel2YahooTabbedView1.addTab(Panel4_tab);
+    }
+    YAHOO.util.Event.onContentReady("Panel1Panel2", function() {
+        Panel1Panel2YahooTabbedView1.appendTo(this);
+    });
+}
+//End Panel1Panel2YahooTabbedView1 Start
+
+//Refresh Panel1UpdatePanel @3-B0171027
+function Panel1UpdatePanel_refresh(sender) {
+    var panel = $("Panel1");
+    if (!panel) return;
+    AjaxPanel.reload(panel);
+}
+//End Refresh Panel1UpdatePanel
+
+//bind_events @1-F4089B96
+function bind_events() {
+    try { header_bind_events(); } catch(e) {}
+    try { footer_bind_events(); } catch(e) {}
+    Panel1_start(window);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+</head>
+<body>
+<p>{header}</p>
+<h1>Ajax example: Database Interaction (Silent Data Update) and Tabbed View</h1>
+<strong>
+<p><a href="{Link1_Src}">View more information about this example</a></p>
+</strong>
+<p><strong>Information is retrieved from&nbsp;a database and updated without page refresh.<br>
+Two tabs are available for viewing and editing information.</strong></p>
+<p>Usage instructions:<br>
+1. Click on an employee in the list. Employee information&nbsp;is displayed without page refresh.<br>
+2. Click the Edit tab, modify information and click "Save". The data will be saved in the background and the employee list and information updated on the page.</p>
+<!-- BEGIN Panel Panel1 -->&nbsp; 
+<table border="0">
+  <tr>
+    <td style="WIDTH: 100px" valign="top">
+      <!-- BEGIN Grid officers -->
+      <table cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td valign="top">
+            <table class="Header" cellspacing="0" cellpadding="0" border="0">
+              <tr>
+                <td class="HeaderLeft"><img src="Styles/Spring/Images/Spacer.gif" border="0"></td> 
+                <th>Employee List</th>
+ 
+                <td class="HeaderRight"><img src="Styles/Spring/Images/Spacer.gif" border="0"></td>
+              </tr>
+            </table>
+ 
+            <table class="Grid" cellspacing="0" cellpadding="0">
+              <tr class="Caption">
+                <th>
+                <!-- BEGIN Sorter Sorter_officer_name --><a href="{Sort_URL}">Name</a> 
+                <!-- BEGIN Asc_On --><img src="Styles/Spring/Images/Asc.gif" border="0"><!-- END Asc_On -->
+                <!-- BEGIN Desc_On --><img src="Styles/Spring/Images/Desc.gif" border="0"><!-- END Desc_On -->&nbsp;<!-- END Sorter Sorter_officer_name --></th>
+              </tr>
+ 
+              <!-- BEGIN Row -->
+              <tr class="Row">
+                <td><a href="{officer_name_Src}" id="Panel1officersofficer_name">{officer_name}</a>&nbsp;</td>
+              </tr>
+ <!-- END Row -->
+              <!-- BEGIN NoRecords -->
+              <tr class="NoRecords">
+                <td>No records</td>
+              </tr>
+              <!-- END NoRecords -->
+              <tr class="Footer">
+                <td><a href="{officers_Insert_Src}" id="Panel1officersofficers_Insert">Add New</a>&nbsp; 
+                  <!-- BEGIN Navigator Navigator -->
+                  <form style="DISPLAY: inline" method="get">
+                    <!-- BEGIN Page_Parameter --><input type="hidden" value="{Value}" name="{Name}"><!-- END Page_Parameter -->Per page: 
+                    <select onchange="submit()" name="{FormName}PageSize">
+                      <option value="" selected>-</option>
+ {PageSize_Options}
+                    </select>
+ 
+                  </form>
+                  <!-- BEGIN First_On --><a href="{First_URL}">First</a> <!-- END First_On -->
+                  <!-- BEGIN First_Off -->First <!-- END First_Off -->
+                  <!-- BEGIN Prev_On --><a href="{Prev_URL}">Prev</a> <!-- END Prev_On -->
+                  <!-- BEGIN Prev_Off -->Prev <!-- END Prev_Off -->&nbsp; 
+                  <!-- BEGIN Pages -->
+                  <!-- BEGIN Page_On --><a href="{Page_URL}">{Page_Number}</a><!-- END Page_On -->
+                  <!-- BEGIN Page_Off -->{Page_Number}<!-- END Page_Off --><!-- END Pages -->of &nbsp;{Total_Pages}&nbsp; 
+                  <!-- BEGIN Next_On --><a href="{Next_URL}">Next</a> <!-- END Next_On -->
+                  <!-- BEGIN Next_Off -->Next <!-- END Next_Off -->
+                  <!-- BEGIN Last_On --><a href="{Last_URL}">Last</a> <!-- END Last_On -->
+                  <!-- BEGIN Last_Off -->Last <!-- END Last_Off -->&nbsp;<!-- END Navigator Navigator -->&nbsp;</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <!-- END Grid officers --></td> 
+    <td valign="top">&nbsp;&nbsp; </td> 
+    <td valign="top">
+      <!-- BEGIN Panel Panel2 -->
+      <!-- BEGIN Panel Panel3 -->&nbsp; 
+      <!-- BEGIN Record officers2 -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <table height="160" cellspacing="0" cellpadding="0" width="400" border="0">
+          <tr>
+            <td valign="top">
+              <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td class="HeaderLeft"><img src="Styles/Spring/Images/Spacer.gif" border="0"></td> 
+                  <th>Employee Information</th>
+ 
+                  <td class="HeaderRight"><img src="Styles/Spring/Images/Spacer.gif" border="0"></td>
+                </tr>
+              </table>
+ 
+              <table class="Record" cellspacing="0" cellpadding="0">
+                <!-- BEGIN Error -->
+                <tr class="Error">
+                  <td colspan="2">{Error}</td>
+                </tr>
+                <!-- END Error -->
+                <tr class="Controls" height="35">
+                  <th width="40">Name</th>
+ 
+                  <td>{officer_name}&nbsp;</td>
+                </tr>
+ 
+                <tr class="Controls" height="35">
+                  <th width="40">Position</th>
+ 
+                  <td>{officer_position}&nbsp;</td>
+                </tr>
+ 
+                <tr class="Controls" height="35">
+                  <th width="40">Email</th>
+ 
+                  <td>{officer_email}&nbsp;</td>
+                </tr>
+ 
+                <tr class="Bottom" height="35">
+                  <td align="right" colspan="2">&nbsp; </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </form>
+      &nbsp;<!-- END Record officers2 --><!-- END Panel Panel3 -->
+      <!-- BEGIN Panel Panel4 -->&nbsp; 
+      <!-- BEGIN Record officers1 -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <table height="160" cellspacing="0" cellpadding="0" width="400" border="0">
+          <tr>
+            <td valign="top">
+              <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td class="HeaderLeft"><img src="Styles/Spring/Images/Spacer.gif" border="0"></td> 
+                  <th>Add/Edit an Employee</th>
+ 
+                  <td class="HeaderRight"><img src="Styles/Spring/Images/Spacer.gif" border="0"></td>
+                </tr>
+              </table>
+ 
+              <table class="Record" cellspacing="0" cellpadding="0">
+                <!-- BEGIN Error -->
+                <tr class="Error">
+                  <td colspan="2">{Error}</td>
+                </tr>
+                <!-- END Error -->
+                <tr class="Controls" height="35">
+                  <th width="40">Name</th>
+ 
+                  <td><input id="Panel1Panel2Panel4officers1officer_name" maxlength="50" size="50" value="{officer_name}" name="{officer_name_Name}"></td>
+                </tr>
+ 
+                <tr class="Controls" height="35">
+                  <th width="40">Position</th>
+ 
+                  <td><input id="Panel1Panel2Panel4officers1officer_position" maxlength="50" size="50" value="{officer_position}" name="{officer_position_Name}"></td>
+                </tr>
+ 
+                <tr class="Controls" height="35">
+                  <th width="40">Email</th>
+ 
+                  <td><input id="Panel1Panel2Panel4officers1officer_email" maxlength="30" size="30" value="{officer_email}" name="{officer_email_Name}"></td>
+                </tr>
+ 
+                <tr class="Bottom" height="35">
+                  <td align="right" colspan="2">
+                    <!-- BEGIN Button Button_Insert --><input class="Button" id="Panel1Panel2Panel4officers1Button_Insert" type="submit" value="Add" name="{Button_Name}"><!-- END Button Button_Insert -->
+                    <!-- BEGIN Button Button_Update --><input class="Button" id="Panel1Panel2Panel4officers1Button_Update" type="submit" value="Save" name="{Button_Name}"><!-- END Button Button_Update -->
+                    <!-- BEGIN Button Button_Delete --><input class="Button" id="Panel1Panel2Panel4officers1Button_Delete" type="submit" value="Delete" name="{Button_Name}"><!-- END Button Button_Delete --></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </form>
+      &nbsp;<!-- END Record officers1 --><!-- END Panel Panel4 --><!-- END Panel Panel2 --></td>
+  </tr>
+</table>
+<!-- END Panel Panel1 --><br>
+{footer} 
+</body>
+</html>

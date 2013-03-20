@@ -1,0 +1,28 @@
+<!-- BEGIN Panel Head --><title>List of Types</title>
+<!-- END Panel Head -->
+<!-- BEGIN Panel Content -->
+<!-- BEGIN Grid types -->
+<h1>List of Types <a href="{Link1_Src}" alt="Add New Type">[+]</a></h1>
+<table class="Grid" cellspacing="0" cellpadding="0">
+  <tr class="Caption">
+    <th scope="col" style="width:200px;">
+	<!-- BEGIN Sorter Sorter_type_name --><span class="Sorter">Type <!-- BEGIN Asc_On --><img src="{CCS_PathToMasterPage}Images/SorterAscActive.png" alt="Ascending"><!-- END Asc_On -->
+	<!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="ContenttypesSorter_type_name"><img src="{CCS_PathToMasterPage}Images/SorterAscPassive.png" alt="Ascending"></a><!-- END Asc_Off -->
+	<!-- BEGIN Desc_On --><img src="{CCS_PathToMasterPage}Images/SorterDescActive.png" alt="Descending"><!-- END Desc_On -->
+	<!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="ContenttypesSorter_type_name"><img src="{CCS_PathToMasterPage}Images/SorterDescPassive.png" alt="Descending"></a><!-- END Desc_Off --></span><!-- END Sorter Sorter_type_name --></th>			 
+  </tr>			 
+  <!-- BEGIN Row -->
+  <tr class="Row">
+    <td><a href="{type_name_Src}" id="Contenttypestype_name_{types:rowNumber}">{type_name}</a>&nbsp;</td> 
+  </tr>
+ <!-- END Row -->
+  <!-- BEGIN NoRecords -->
+  <tr class="NoRecords">
+    <td colspan="1">No records</td> 
+  </tr>
+ <!-- END NoRecords -->
+</table>
+<!-- END Grid types --><br> 
+<!-- END Panel Content -->
+<!-- BEGIN Panel Menu -->{Header}<!-- END Panel Menu -->
+<!-- BEGIN Panel Sidebar1 -->{Administration}<!-- END Panel Sidebar1 -->

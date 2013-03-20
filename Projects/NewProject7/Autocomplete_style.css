@@ -1,0 +1,16 @@
+/*Page Style @modal-56276963*/
+.ModalShowDiv {
+	position: absolute;
+	margin: 100px auto;
+	background-color: #fff;
+	border:1px solid #000;
+	padding:0px;
+	text-align:center;
+	z-index: 200;
+	display: none;
+	top: 100px;
+	left: 50%;
+	margin-left: -134px;
+}
+/*End Page Style*/
+

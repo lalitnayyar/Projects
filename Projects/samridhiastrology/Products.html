@@ -1,0 +1,55 @@
+<!-- BEGIN Panel Head -->
+<style type="text/css">
+.Grid td {
+ 	border: 0pt none;
+	text-align: center; 
+	vertical-align: middle; 	
+}
+</style>
+<title>Search Results</title>
+<!-- END Panel Head -->
+<!-- BEGIN Panel Content -->
+
+<!-- BEGIN Grid products -->
+<table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+  <table cellspacing="0" cellpadding="0" border="0" class="Header">
+	<tr>
+	  <td class="HeaderLeft"><img src="{CCS_PathToMasterPage}images/spacer.gif" alt=""></td>
+	  <td class="th"></td>
+	  <td class="HeaderRight"><img src="{CCS_PathToMasterPage}images/spacer.gif" alt=""></td>
+	</tr>
+   </table><br><strong>Search Results:</strong>&nbsp;{products_found} products found. <br><br>
+<table class="Grid">
+  <!-- BEGIN Row -->
+  <tr class="Row">
+    <td><a href="{image_url}"><img src="{image_url_Src}" alt="{image_url}" /></a></td> 
+    <td><strong><a href="{product_name_Src}">{product_name}</a></strong><br>
+      <p align="center">Price: {price}</p>
+ </td> 
+  </tr>
+ 
+  <tr class="Row">
+    <td colspan="2"><img src="{CCS_PathToMasterPage}images/spacer.gif" alt="" /><br><br></td> 
+  </tr>
+ <!-- END Row -->
+  <tr class="Footer">
+    <td colspan="2">
+      <!-- BEGIN Navigator Navigator --><span class="Navigator">
+      <!-- BEGIN First_On --><a href="{First_URL}">First </a> <!-- END First_On -->
+      <!-- BEGIN Prev_On -->&nbsp;<a href="{Prev_URL}">Prev</a><!-- END Prev_On -->
+      <!-- BEGIN Pages -->
+      <!-- BEGIN Page_On --><a href="{Page_URL}">{Page_Number}</a>&nbsp;<!-- END Page_On -->
+      <!-- BEGIN Page_Off -->{Page_Number}&nbsp;<!-- END Page_Off --><!-- END Pages -->of {Total_Pages}&nbsp; 
+      <!-- BEGIN Next_On --><a href="{Next_URL}">Next </a> &nbsp;<!-- END Next_On -->
+      <!-- BEGIN Last_On --><a href="{Last_URL}">Last </a> <!-- END Last_On --></span><!-- END Navigator Navigator -->&nbsp;</td> 
+  </tr>
+</table>
+     </td>
+    </tr>
+  </table>
+<!-- END Grid products -->
+<!-- END Panel Content -->
+<!-- BEGIN Panel Menu -->{Header} <!-- END Panel Menu -->
+<!-- BEGIN Panel Sidebar -->{Search}{Categories}{Recommended}<!-- END Panel Sidebar -->

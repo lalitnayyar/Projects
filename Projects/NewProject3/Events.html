@@ -1,0 +1,97 @@
+<!-- BEGIN Panel Head --><!-- END Panel Head -->
+<!-- BEGIN Panel Content -->
+<!-- BEGIN Grid events -->
+<table class="MainTable" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td class="HeaderLeft"><img alt="" src="{CCS_PathToMasterPage}Images/Spacer.gif"></td> 
+          <td class="th"><strong>SVEC - Events</strong></td> 
+          <td class="HeaderRight"><img alt="" src="{CCS_PathToMasterPage}Images/Spacer.gif"></td>
+        </tr>
+      </table>
+      <input type="hidden" id="ContenteventsRecords" name="{Records_Name}" value="{Records}">
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Caption">
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_date_start --><span class="Sorter"><a href="{Sort_URL}" id="ContenteventsSorter_date_start">Date Start</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}/images/SorterAscActive.png"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}/images/SorterDescActive.png"><!-- END Desc_On --></span><!-- END Sorter Sorter_date_start --></th>
+ 
+          <th scope="col">Name</th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_presenter --><span class="Sorter"><a href="{Sort_URL}" id="ContenteventsSorter_presenter">Presenter</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}/images/SorterAscActive.png"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}/images/SorterDescActive.png"><!-- END Desc_On --></span><!-- END Sorter Sorter_presenter --></th>
+ 
+          <th scope="col">Location</th>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td>{date_start}&nbsp;</td> 
+          <td><a href="{event_name_Src}" id="Contenteventsevent_name_{events:rowNumber}">{event_name}</a>&nbsp;</td> 
+          <td>{presenter}&nbsp;</td> 
+          <td>{location}&nbsp;</td>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="4">No records</td>
+        </tr>
+        <!-- END NoRecords -->
+        <tr class="Footer">
+          <td colspan="4">
+            <!-- BEGIN Navigator Navigator --><span class="Navigator">
+            <!-- BEGIN First_On --><a href="{First_URL}"><img alt="{First_URL}" src="{CCS_PathToMasterPage}/images/NavigatorFirst.png"></a> <!-- END First_On -->
+            <!-- BEGIN First_Off --><img alt="{First_URL}" src="{CCS_PathToMasterPage}/images/NavigatorFirstOff.png"><!-- END First_Off -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img alt="{Prev_URL}" src="{CCS_PathToMasterPage}/images/NavigatorPrev.png"></a> <!-- END Prev_On -->
+            <!-- BEGIN Prev_Off --><img alt="{Prev_URL}" src="{CCS_PathToMasterPage}/images/NavigatorPrevOff.png"><!-- END Prev_Off -->&nbsp; 
+            <!-- BEGIN Pages -->
+            <!-- BEGIN Page_On --><a href="{Page_URL}">{Page_Number}</a>&nbsp;<!-- END Page_On -->
+            <!-- BEGIN Page_Off -->{Page_Number}&nbsp;<!-- END Page_Off --><!-- END Pages -->of&nbsp;{Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a href="{Next_URL}"><img alt="{Next_URL}" src="{CCS_PathToMasterPage}/images/NavigatorNext.png"></a> <!-- END Next_On -->
+            <!-- BEGIN Next_Off --><img alt="{Next_URL}" src="{CCS_PathToMasterPage}/images/NavigatorNextOff.png"><!-- END Next_Off -->
+            <!-- BEGIN Last_On --><a href="{Last_URL}"><img alt="{Last_URL}" src="{CCS_PathToMasterPage}/images/NavigatorLast.png"></a> <!-- END Last_On -->
+            <!-- BEGIN Last_Off --><img alt="{Last_URL}" src="{CCS_PathToMasterPage}/images/NavigatorLastOff.png"><!-- END Last_Off --></span><!-- END Navigator Navigator -->&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Grid events --><br>
+<!-- BEGIN Record events1 -->
+<form id="Contentevents1" method="post" name="{HTMLFormName}" action="{Action}">
+  <table class="MainTable" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td class="HeaderLeft"><img alt="" src="{CCS_PathToMasterPage}Images/Spacer.gif"></td> 
+            <td class="th"><strong>Event details</strong></td> 
+            <td class="HeaderRight"><img alt="" src="{CCS_PathToMasterPage}Images/Spacer.gif"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td>{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td valign="top"><br>
+              <h3>{event_name1}</h3>
+              <br>
+              {event_desc1} </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record events1 --><!-- END Panel Content -->
+<!-- BEGIN Panel Menu -->{Header}<!-- END Panel Menu -->
+<!-- BEGIN Panel Sidebar1 -->{Search}&nbsp;<!-- END Panel Sidebar1 -->

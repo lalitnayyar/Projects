@@ -1,0 +1,32 @@
+<form id="formId" method="post" action="{Action}" name="{HTMLFormName}">
+<table cellspacing="0" cellpadding="0" border="0" class="MainTable">
+<tr>
+  <td valign="top">
+    <table cellspacing="0" cellpadding="0" border="0" class="Header">
+      <tr>
+  <td class="HeaderLeft">&nbsp;</td> 
+  <td class="th"><strong>{Title}</strong></td> 
+  <td class="HeaderRight">&nbsp;</td></tr>
+    </table>
+    <table cellspacing="0" cellpadding="0" class="Record">
+<!-- BEGIN Error -->
+      <tr class="Error">
+        <td colspan="{Record:numberOfColumns}">{Error}</td>
+      </tr>
+<!-- END Error -->
+      <tr class="Controls"><!-- BEGIN ControlContent -->
+        <td class="th">{ControlTitle}</td>
+        <td>{ControlTemplate}</td>
+<!-- END ControlContent --></tr>
+      <!-- BEGIN Footer -->
+      <tr class="Bottom">
+        <td style="text-align: right" colspan="{Record:numberOfColumns}">
+			{Buttons}
+		</td>
+      </tr>
+<!-- END Footer -->
+	  </table>
+</td> 
+</tr>
+</table>
+</form>

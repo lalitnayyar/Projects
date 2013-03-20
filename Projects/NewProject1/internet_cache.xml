@@ -1,0 +1,52 @@
+<LldlCache allCatalogs="True" allSchemes="True" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="True" allAliases="False" allSynonyms="True" allSystemTables="False" allSystemViews="False" allViews="True" allProcedures="False" allProcedureParameters="False">
+  <catalog allSchemes="True" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="True" allAliases="False" allSynonyms="True" allSystemTables="False" allSystemViews="False" allViews="True" allProcedures="False" allProcedureParameters="False" full="False">
+    <schema allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="True" allAliases="False" allSynonyms="True" allSystemTables="False" allSystemViews="False" allViews="True" allProcedures="False" allProcedureParameters="False" full="False">
+      <table TABLE_NAME="ages" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="articles" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="blog_categories" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="blog_comments" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="blog_posts" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="countries" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="directory_categories" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="directory_items" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="educations" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="event_categories" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="events" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="forum_messages" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="genders" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="incomes" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="languages" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="link_categories" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="links" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="MSysAccessObjects" TABLE_TYPE="3" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="MSysAccessXML" TABLE_TYPE="3" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="MSysACEs" TABLE_TYPE="3" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="MSysIMEXColumns" TABLE_TYPE="3" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="MSysIMEXSpecs" TABLE_TYPE="3" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="MSysNameMap" TABLE_TYPE="3" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="MSysNavPaneGroupCategories" TABLE_TYPE="3" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="MSysNavPaneGroups" TABLE_TYPE="3" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="MSysNavPaneGroupToObjects" TABLE_TYPE="3" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="MSysNavPaneObjectIDs" TABLE_TYPE="3" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="MSysObjects" TABLE_TYPE="3" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="MSysQueries" TABLE_TYPE="3" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="MSysRelationships" TABLE_TYPE="3" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="news" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="officers" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="smiles" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="states" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="store_categories" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="store_editorial_categories" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="store_editorial_products" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="store_order_items" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="store_orders" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="store_products" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="store_shopping_cart_items" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="store_shopping_carts" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="store_statuses" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="user_groups" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="users" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="wishes" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+    </schema>
+  </catalog>
+</LldlCache>

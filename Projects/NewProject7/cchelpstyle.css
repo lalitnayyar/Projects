@@ -1,0 +1,8 @@
+PRE.code	{ margin: 5px 50px 5px 10px;  background-color: #eeeeee; border: 1px solid Silver; padding: 5px}
+.flow		{ margin: 5px 10px 5px 0px; background-color: #eeeeee; border: 1px solid Silver; padding: 5px}
+.hrow		{ background-color: #D8F1F1; font-weight: bold; }
+P.flow a:link		{ font-size: 12px; text-decoration: none; color: blue;}
+P.flow a:visited	{ font-size: 12px; text-decoration: none; color: blue;}
+P.flow a:hover		{ font-size: 12px; text-decoration: underline; color: blue;}
+P.flow a:active		{ font-size: 12px; text-decoration: underline; color: blue;}
+.nobr				{ white-space: nowrap;}

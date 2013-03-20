@@ -1,0 +1,62 @@
+<!-- BEGIN Panel Head -->
+<title>AdmOrderStatuses</title>
+<!-- END Panel Head -->
+<!-- BEGIN Panel Content -->
+
+
+<!-- BEGIN Grid store_statuses -->
+<table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+  <table cellspacing="0" cellpadding="0" border="0" class="Header">
+	<tr>
+	  <td class="HeaderLeft"><img src="{CCS_PathToMasterPage}images/spacer.gif" alt=""></td>
+	  <td class="th"><strong>List of Store Statuses</strong></td>
+	  <td class="HeaderRight"><img src="{CCS_PathToMasterPage}images/spacer.gif" alt=""></td>
+	</tr>
+   </table>
+<table class="Grid" cellspacing="0" cellpadding="0">
+  <tr class="Caption">
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_status_name --><span class="Sorter">Status Name 
+    <!-- BEGIN Asc_On --><img src="{CCS_PathToMasterPage}/images/SorterAscActive.png" alt="Ascending"><!-- END Asc_On -->
+    <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="Contentstore_statusesSorter_status_name"><img src="{CCS_PathToMasterPage}/images/SorterAscPassive.png" alt="Ascending"></a><!-- END Asc_Off -->
+    <!-- BEGIN Desc_On --><img src="{CCS_PathToMasterPage}/images/SorterDescActive.png" alt="Descending"><!-- END Desc_On -->
+    <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="Contentstore_statusesSorter_status_name"><img src="{CCS_PathToMasterPage}/images/SorterDescPassive.png" alt="Descending"></a><!-- END Desc_Off --></span><!-- END Sorter Sorter_status_name --></th>
+ 
+  </tr>
+ 
+  <!-- BEGIN Row -->
+  <tr class="Row">
+    <td><a href="{status_name_Src}" id="Contentstore_statusesstatus_name_{store_statuses:rowNumber}">{status_name}</a>&nbsp;</td> 
+  </tr>
+ <!-- END Row -->
+  <!-- BEGIN NoRecords -->
+  <tr class="NoRecords">
+    <td colspan="1">No records</td> 
+  </tr>
+ <!-- END NoRecords -->
+  <tr class="Footer">
+    <td colspan="1">
+      <!-- BEGIN Navigator Navigator --><span class="Navigator">
+      <!-- BEGIN First_On --><a href="{First_URL}">First </a> <!-- END First_On -->
+      <!-- BEGIN First_Off -->First <!-- END First_Off -->
+      <!-- BEGIN Prev_On --><a href="{Prev_URL}">Prev </a> <!-- END Prev_On -->
+      <!-- BEGIN Prev_Off -->Prev <!-- END Prev_Off -->&nbsp; 
+      <!-- BEGIN Pages -->
+      <!-- BEGIN Page_On --><a href="{Page_URL}">{Page_Number}</a>&nbsp;<!-- END Page_On -->
+      <!-- BEGIN Page_Off -->{Page_Number}&nbsp;<!-- END Page_Off --><!-- END Pages -->of&nbsp;{Total_Pages}&nbsp; 
+      <!-- BEGIN Next_On --><a href="{Next_URL}">Next </a> <!-- END Next_On -->
+      <!-- BEGIN Next_Off -->Next <!-- END Next_Off -->
+      <!-- BEGIN Last_On --><a href="{Last_URL}">Last </a> <!-- END Last_On -->
+      <!-- BEGIN Last_Off -->Last <!-- END Last_Off --></span><!-- END Navigator Navigator -->&nbsp;</td> 
+  </tr>
+ 
+</table>
+     </td>
+    </tr>
+  </table>
+<!-- END Grid store_statuses --> 
+<!-- END Panel Content -->
+<!-- BEGIN Panel Menu -->{AdmHeader}<!-- END Panel Menu -->
+<!-- BEGIN Panel Sidebar -->{AdmMenu}&nbsp;<!-- END Panel Sidebar -->
