@@ -1,0 +1,168 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Autocomplete and Autofill example</title>
+<link href="Styles/Spring/Style_doctype.css" type="text/css" rel="stylesheet">
+<link href="cchelpstyle.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-D3B5F5BF
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//bind_events @1-47AD86DA
+function bind_events() {
+    try { header_bind_events(); } catch(e) {}
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+</head>
+<body>
+<p>{header}</p>
+<h1>Ajax example: Autocomplete and Autofill (Automated Data Retrieval)</h1>
+<h2>Description</h2>
+<p>This example demonstrates how to create a text field with the Ajax
+autocomplete feature that automatically suggests results from the database while
+typing, and how to populate forms with data related to entered value.<br>
+In this example as soon as a user starts typing text in the Name field, a list
+of matching employee names is shown. After an employee is selected, the employee
+information is automatically retrieved from the database and used to populate
+form fields.</p>
+<h2>Usage</h2>
+<ol>
+  <li>Type a character into the Name field, for example &quot;a&quot;. Matching
+    names will be displayed automatically.
+  <li>Select a name from the list. Employee information will be retrieved and
+    shown automatically in the remaining form fields.
+</ol>
+<h2>Steps to recreate</h2>
+<ol>
+  <li>Use <strong>Record Builder</strong> to create a Record form with the
+    desired textbox and listbox controls based on the 'employees' table fields.
+    Use Toolbox &gt; Forms &gt; Hidden to add a Hidden control called emp_id at the bottom of
+    the form.
+  <li>Run the <strong>Builders &gt; Autocomplete</strong> to add <strong>Autocomplete</strong>
+    feature to the <em>emp_name</em> textbox.
+
+    <ul style="margin-left: 5px">
+      <li><strong>Target control:</strong> <em>emp_name</em>
+      <li><strong>Data source:</strong> <em>employees</em>
+      <li><strong>Search field:</strong> <em>emp_name</em>
+		</ul>
+  <li>Open <em>emp_name</em> textbox <strong>Features</strong> (Property
+    Window &gt; Data tab) and add a <strong>Condition</strong> feature called <em>Condition2</em>
+    with the following settings:
+    <ul style="margin-left: 5px">
+      <li><strong>Condition:</strong> <em>does not equal (&lt;&gt;)</em>
+      <li><strong>Name:</strong> <em>employeesemp_name</em>
+      <li><strong>Source Type:</strong> <em>Control</>
+      <li><strong>Name:</strong> <em>&quot;&quot;</em>
+      <li><strong>Source Type:</strong> <em>Expression</em>
+      <li><strong>Start event:</strong> <em>employeesemp_name.OnFocus;employeesemp_name.OnKeyUp;</em>
+    </ul>
+    <p>This condition will be used to check that the <em>emp_name</em> textbox
+    is not empty.
+  <li>Run the <strong>Builders &gt; Autofill</strong> Builder
+    feature. Use <em>emp_name</em> field as the target control, <em>employees</em> table as Data Source and <em>emp_name</em> as Search Field. Then add the
+    following fields in the <strong>Filled controls</strong> list: emp_id,
+    emp_login, emp_password, emp_name, title, group_id, department_id, email,
+    picture, phone_home, phone_work, phone_cell, fax, city, zip, address. Use the same name as Field name, and <em>value</em> as Target.
+  <li>Use <strong>OnTrue</strong> event of the above <em>Condition2</em> as the
+    starting point for the Autofill feature: <strong>Start event:</strong> <em>employeesemp_nameCondition2.ontrue;</em>
+  <li>Switch to the <strong>HTML</strong> mode and add <em>id=&quot;employeespicture1&quot;</em>
+    attribute to the &lt;tr&gt; tag of the row where the image is located. The
+    resulting html will look as follows:
+    <pre class="code">&lt;tr class="Controls" id=&quot;employeespicture1&quot;&gt;
+  &lt;td class="th"&gt;Picture&lt;/td&gt;
+  &lt;td&gt;&lt;img src="{picture}" alt="" id="employeespicture"&gt;&lt;/td&gt;
+&lt;/tr&gt;</pre>
+  <li>Under <em>emp_name</em> textbox features add the <strong>Hide-Show</strong>
+    feature to be used to hide or show employee’s picture. The picture will
+    initially be hidden and will display only when the Autofill action is
+    successful:
+    <ul style="margin-left: 5px">
+      <li><strong>Enabled:</strong> <em>Yes</em>
+      <li><strong>Name:</strong> <em>HideShow1</em>
+      <li><strong>ControlId:</strong> <em>employeespicture1</em>
+      <li><strong>Show event:</strong> <em>employeesemp_namePTAutoFill1.onsuccess;</em>
+      <li><strong>Hide event:</strong> <em>employees.onload;</em>
+    </ul>
+  <li>Use <strong>Edit &gt; Controls &gt; Button</strong> option to add an <em>Update</em>
+    button to the record form. Switch to <strong>HTML</strong> mode and check
+    the button’s code:
+    <pre class="code">
+&lt;input class=&quot;Button&quot; id=&quot;Update&quot; type=&quot;button&quot; value=&quot;Update&quot; name=&quot;Update&quot;&gt;</pre>
+  <li>Add the <em>id</em> attribute to the <em>&lt;tr&gt;</em> tag of the row
+    where the <em>Update</em> button is located. The row's html will look like:
+    <pre class="code">
+&lt;tr class=&quot;Bottom&quot; id=&quot;updatep&quot;&gt; … &lt;/tr&gt;</pre>
+  <li>Add the following html code near the Update button code:
+    <pre class="code">
+&lt;span id=&quot;updateindicator&quot; style=&quot;DISPLAY: none&quot;&gt;Updating. Please wait...&lt;/span&gt;</pre>
+    The resulting row code should be:
+    <pre class="code">
+&lt;td align=&quot;right&quot; colspan=&quot;2&quot;&gt;&lt;span id=&quot;updateindicator&quot; style=&quot;DISPLAY: none&quot;&gt;Updating. Please wait...&lt;/span&gt;
+&lt;label for=&quot;Update&quot; style=&quot;display: none;&quot;&gt;Update&lt;/label&gt;
+&lt;input id=&quot;employeesemp_id&quot; type=&quot;hidden&quot; value=&quot;{emp_id}&quot; name=&quot;{emp_id_Name}&quot;&gt;&lt;input class=&quot;Button&quot; id=&quot;Update&quot; type=&quot;button&quot; value=&quot;Update&quot; name=&quot;Update&quot;&gt;
+&lt;/td&gt;</pre>
+  <li>Add the <strong>UpdateDB</strong> feature to update the current database
+    record based on the <em>emp_id</em> control value.
+    <ul style="margin-left: 5px">
+			<li><strong>Start event:</strong> Update.OnClick;</li>
+			<li><strong>Operation type:</strong> Update</li>
+    </ul>
+  <li>Add another <strong>Hide-Show</strong> feature to the <em>emp_name</em>
+    textbox to control visibility of the span control added on Step 10 above.
+    The span content should only be displayed while the UpdateDB feature is
+    working:
+    <ul style="margin-left: 5px">
+      <li><strong>Enabled:</strong> <em>Yes</em>
+      <li><strong>Name:</strong> <em>HideShow3</em>
+      <li><strong>ControlId:</strong> <em>updateindicator</em>
+      <li><strong>Show event:</strong> <em>employeesemp_nameUpdateDB1.onstart;</em>
+      <li><strong>Hide event:</strong> <em>employeesemp_nameUpdateDB1.onfailure;employeesemp_nameUpdateDB1.onsuccess;</em>
+    </ul>
+  <li>Also add the <strong>Condition</strong> feature to check that the <em>emp_id</em>
+    control is not empty. This feature should be run every time when any
+    control's value is changed.
+    <ul style="margin-left: 5px">
+      <li><strong>Condition:</strong> <em>does not equal (&lt;&gt;)</em>
+      <li><strong>Name:</strong> <em>employeesemp_id</em>
+      <li><strong>Source Type:</strong> <em>Control</em>
+      <li><strong>Name:</strong> <em>&quot;&quot;</em>
+      <li><strong>Source Type:</strong> <em>Expression</em>
+      <li><strong>Start event:</strong> <em>employees.onload;employeesemp_name.onchange;employeestitle.onchange;employeesdepartment_id.onchange;employeesemail.onchange;
+        employeesphone_home.onchange;employeesphone_work.onchange;employeesphone_cell.onchange;employeesfax.onchange;employeescity.onchange;
+        employeeszip.onchange;employeesaddress.onchange;</em>
+    </ul>
+  <li>When the above condition is true, the <em>Update</em> button should be
+    displayed on the form, therefore add another <strong>Hide-Show</strong>
+    feature to hide and show the button area:
+    <ul style="margin-left: 5px">
+      <li><strong>Enabled:</strong> <em>Yes</em>
+      <li><strong>Name:</strong> <em>HideShow4</em>
+      <li><strong>ControlId:</strong> <em>updatep</em>
+      <li><strong>Show event:</strong> <em>employeesemp_nameCondition3.ontrue;</em>
+      <li><strong>Hide event:</strong> <em>employees.onload;employeesemp_nameUpdateDB1.onsuccess;employeesemp_nameUpdateDB1.onfailure;employeesemp_namePTAutoFill1.onfailure;employeesemp_namePTAutoFill1.onsuccess;</em>
+    </ul>
+  <li>If needed to make the Autocomplete list display employee pictures, the
+    service page's html output should be changed to look as follows:
+    <pre class="code">
+&lt;!-- BEGIN Grid employees1 --&gt;&lt;ul&gt;&lt;!-- BEGIN Row --&gt;&lt;li style=&quot;height:50px;padding:0px;&quot;&gt;
+{emp_name}&lt;img style=&quot;right:0px;position:absolute;&quot; src=&quot;{Image1}&quot; height=&quot;50&quot;&gt;&lt;/li&gt;&lt;!-- END Row --&gt;&lt;/ul&gt;&lt;!-- END Grid employees1 --&gt;
+</pre>
+    The <em>picture</em> field should also be included in the <em>employees1</em>
+    grid’s <strong>DataSource</strong>.
+</ol>
+<h2>Database Tables used</h2>
+<p>Database: <em>Intranet</em></p>
+<p>Tables: <em>employees, departments</em></p>
+
+</body>
+</html>

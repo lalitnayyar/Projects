@@ -1,0 +1,54 @@
+
+<!-- BEGIN Panel Head --><!-- END Panel Head -->
+<!-- BEGIN Panel Content -->
+<!-- BEGIN Grid officers -->
+<table class="MainTable" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td class="HeaderLeft"><img alt="" src="{CCS_PathToMasterPage}Images/Spacer.gif"></td> 
+          <td class="th"><strong>SVEC - Club Officers</strong></td> 
+          <td class="HeaderRight"><img alt="" src="{CCS_PathToMasterPage}Images/Spacer.gif"></td> 
+        </tr>
+ 
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Caption">
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_officer_name --><span class="Sorter"><a href="{Sort_URL}" id="ContentofficersSorter_officer_name">Name</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}/images/SorterAscActive.png"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}/images/SorterDescActive.png"><!-- END Desc_On --></span><!-- END Sorter Sorter_officer_name --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_officer_position --><span class="Sorter"><a href="{Sort_URL}" id="ContentofficersSorter_officer_position">Position</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}/images/SorterAscActive.png"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}/images/SorterDescActive.png"><!-- END Desc_On --></span><!-- END Sorter Sorter_officer_position --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_officer_email --><span class="Sorter"><a href="{Sort_URL}" id="ContentofficersSorter_officer_email">Email</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}/images/SorterAscActive.png"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}/images/SorterDescActive.png"><!-- END Desc_On --></span><!-- END Sorter Sorter_officer_email --></th>
+ 
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td>{officer_name}&nbsp;</td> 
+          <td>{officer_position}&nbsp;</td> 
+          <td><a href="mailto:{officer_email_Src}" id="Contentofficersofficer_email_{officers:rowNumber}">{officer_email}</a>&nbsp;</td> 
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="3">No records</td> 
+        </tr>
+ <!-- END NoRecords -->
+      </table>
+ </td> 
+  </tr>
+</table>
+<!-- END Grid officers --><!-- END Panel Content -->
+<!-- BEGIN Panel Menu -->{Header}<!-- END Panel Menu -->
+<!-- BEGIN Panel Sidebar1 -->{Search}<!-- END Panel Sidebar1 -->

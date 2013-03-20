@@ -1,0 +1,135 @@
+<!-- BEGIN Panel Head -->
+<title>Edit Member</title>
+
+<!-- END Panel Head -->
+<!-- BEGIN Panel Content -->
+
+<!-- BEGIN Record members -->
+<form id="Contentmembers" method="post" action="{Action}" name="{HTMLFormName}"> 
+<table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+  <table cellspacing="0" cellpadding="0" border="0" class="Header">
+	<tr>
+	  <td class="HeaderLeft"><img src="{CCS_PathToMasterPage}Images/Spacer.gif" alt=""></td>
+	  <td class="th"><strong>Add/Edit Member</strong></td>
+	  <td class="HeaderRight"><img src="{CCS_PathToMasterPage}Images/Spacer.gif" alt=""></td>
+	</tr>
+   </table>
+  <table cellspacing="0" cellpadding="0" class="Record" style="width: 10px">
+    <!-- BEGIN Error -->
+    <tr class="Error">
+      <td colspan="2">{Error}</td> 
+    </tr>
+ <!-- END Error -->
+    <tr class="Controls">
+      <td class="th"><label>Login *</label></td> 
+      <td><input type="text" name="{user_login_Name}" value="{user_login}" maxlength="15" size="15" id="Contentmembersuser_login"></td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th"><label>Password *</label></td> 
+      <td><input type="password" name="{user_password_Name}" value="{user_password}" maxlength="15" id="Contentmembersuser_password" size="15"></td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td nowrap class="th"><label>Security Level *</label></td> 
+      <td>
+        <select name="{group_id_Name}" id="Contentmembersgroup_id">
+          <option value="">Select Value</option>
+ {group_id_Options} 
+        </select>
+ </td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th"><label>First Name *</label></td> 
+      <td><input type="text" name="{first_name_Name}" value="{first_name}" maxlength="20" id="Contentmembersfirst_name"></td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th"><label>Last Name *</label></td> 
+      <td><input type="text" name="{last_name_Name}" value="{last_name}" maxlength="20" id="Contentmemberslast_name"></td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th" rowspan="3"><label>Address</label></td> 
+      <td><input type="text" name="{address1_Name}" value="{address1}" maxlength="250" size="50" id="Contentmembersaddress1"></td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td><input type="text" name="{address2_Name}" value="{address2}" maxlength="50" size="50" id="Contentmembersaddress2"></td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td><input type="text" name="{address3_Name}" value="{address3}" maxlength="50" size="50" id="Contentmembersaddress3"></td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th"><label>City</label></td> 
+      <td><input type="text" name="{city_Name}" value="{city}" maxlength="30" size="30" id="Contentmemberscity"></td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th"><label>State</label></td> 
+      <td>
+        <select name="{state_id_Name}" id="Contentmembersstate_id">
+          <option value="">Select Value</option>
+ {state_id_Options} 
+        </select>
+ </td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th"><label>Zip</label></td> 
+      <td><input type="text" name="{zip_Name}" value="{zip}" maxlength="10" size="10" id="Contentmemberszip"></td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th"><label>Country</label></td> 
+      <td>
+        <select name="{country_id_Name}" id="Contentmemberscountry_id">
+          <option value="">Select Value</option>
+ {country_id_Options} 
+        </select>
+ </td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th"><label>Phone Day</label></td> 
+      <td><input type="text" name="{phone_day_Name}" value="{phone_day}" maxlength="20" size="20" id="Contentmembersphone_day"></td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th"><label>Phone Evening</label></td> 
+      <td><input type="text" name="{phone_evening_Name}" value="{phone_evening}" maxlength="20" size="20" id="Contentmembersphone_evening"></td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th"><label>Fax</label></td> 
+      <td><input type="text" name="{fax_Name}" value="{fax}" maxlength="20" size="20" id="Contentmembersfax"></td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th"><label>Email</label></td> 
+      <td><input type="text" name="{email_Name}" value="{email}" maxlength="50" size="50" id="Contentmembersemail"></td> 
+    </tr>
+ 
+    <tr class="Bottom">
+      <td colspan="2" style="text-align: right">
+        <!-- BEGIN Button Button_Insert --><input name="{Button_Name}" type="submit" value="Add" alt="Add" id="ContentmembersButton_Insert" class="Button"><!-- END Button Button_Insert -->
+        <!-- BEGIN Button Button_Update --><input name="{Button_Name}" type="submit" value="Submit" alt="Submit" id="ContentmembersButton_Update" class="Button"><!-- END Button Button_Update -->
+        <!-- BEGIN Button Button_Delete --><input name="{Button_Name}" type="submit" value="Delete" alt="Delete" id="ContentmembersButton_Delete" class="Button"><!-- END Button Button_Delete -->
+        <!-- BEGIN Button Button_Cancel --><input name="{Button_Name}" type="submit" value="Cancel" alt="Cancel" id="ContentmembersButton_Cancel" class="Button"><!-- END Button Button_Cancel --></td> 
+    </tr>
+ 
+  </table>
+ <input type="hidden" name="{ip_add_Name}" value="{ip_add}" id="Contentmembersip_add"><input type="hidden" name="{ip_update_Name}" value="{ip_update}" id="Contentmembersip_update"><input type="hidden" name="{date_add_Name}" value="{date_add}" id="Contentmembersdate_add"><input type="hidden" name="{date_last_login_Name}" value="{date_last_login}" id="Contentmembersdate_last_login">
+     </td>
+    </tr>
+  </table>
+ </form>
+<!-- END Record members -->  
+<!-- END Panel Content -->
+<!-- BEGIN Panel Menu -->{Header}<!-- END Panel Menu -->
+<!-- BEGIN Panel Sidebar1 -->{AdminMenu}&nbsp;<!-- END Panel Sidebar1 -->

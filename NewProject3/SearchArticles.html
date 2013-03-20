@@ -1,0 +1,46 @@
+<link rel="stylesheet" type="text/css" href="{page:pathToRoot}Styles/Basic/Style_Components_doctype.css">
+<!-- BEGIN Panel TemplatePanel -->
+<!-- BEGIN Panel Title -->Search SVEC<!-- END Panel Title -->
+<!-- BEGIN Panel Content -->
+
+<!-- BEGIN Record articles -->
+<form id="NewIncludablePage1TemplatePanelContentarticles" method="post" action="{Action}" name="{HTMLFormName}">
+  <table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+       
+        <table cellspacing="0" cellpadding="0" class="Record">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td> 
+          </tr>
+ <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label for="NewIncludablePage1TemplatePanelContentarticless_article_title">Keyword </label></td> 
+            <td><input type="text" name="{s_article_title_Name}" value="{s_article_title}" maxlength="125" id="NewIncludablePage1TemplatePanelContentarticless_article_title"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="NewIncludablePage1TemplatePanelContentarticless_category_id">Category </label></td> 
+            <td>
+              <select name="{s_category_id_Name}" id="NewIncludablePage1TemplatePanelContentarticless_category_id">
+                <option value="">All</option>
+ {s_category_id_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+          <tr class="Bottom">
+            <td colspan="2" style="text-align: right">
+              <!-- BEGIN Button Button_DoSearch --><input name="{Button_Name}" type="submit" value="Search" alt="Search" id="NewIncludablePage1TemplatePanelContentarticlesButton_DoSearch" class="Button"><!-- END Button Button_DoSearch --></td> 
+          </tr>
+ 
+        </table>
+ </td> 
+    </tr>
+ 
+  </table>
+</form>
+<!-- END Record articles --><br>
+<br>
+<!-- END Panel Content --><!-- END Panel TemplatePanel -->

@@ -1,0 +1,63 @@
+<!-- BEGIN Panel Head --><title>Employees List</title>
+<!-- END Panel Head -->
+<!-- BEGIN Panel Content -->
+<!-- BEGIN Grid employees -->
+<h1>Employees List <a href="{Link1_Src}" alt="Add New Employee">[+]</a></h1>
+<table class="Grid" style="width: 100%">
+  <tr class="Caption">
+	<th scope="col">	
+	<!-- BEGIN Sorter Sorter_emp_name --><span class="Sorter">Name <!-- BEGIN Asc_On --><img src="{CCS_PathToMasterPage}Images/SorterAscActive.png" alt="Ascending"><!-- END Asc_On -->
+	<!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="ContentemployeesSorter_emp_name"><img src="{CCS_PathToMasterPage}Images/SorterAscPassive.png" alt="Ascending"></a><!-- END Asc_Off -->
+	<!-- BEGIN Desc_On --><img src="{CCS_PathToMasterPage}Images/SorterDescActive.png" alt="Descending"><!-- END Desc_On -->
+	<!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="ContentemployeesSorter_emp_name"><img src="{CCS_PathToMasterPage}Images/SorterDescPassive.png" alt="Descending"></a><!-- END Desc_Off --></span><!-- END Sorter Sorter_emp_name --></th>
+	
+	<th scope="col">	
+	<!-- BEGIN Sorter Sorter_emp_login --><span class="Sorter">Login <!-- BEGIN Asc_On --><img src="{CCS_PathToMasterPage}Images/SorterAscActive.png" alt="Ascending"><!-- END Asc_On -->
+	<!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="ContentemployeesSorter_emp_login"><img src="{CCS_PathToMasterPage}Images/SorterAscPassive.png" alt="Ascending"></a><!-- END Asc_Off -->
+	<!-- BEGIN Desc_On --><img src="{CCS_PathToMasterPage}Images/SorterDescActive.png" alt="Descending"><!-- END Desc_On -->
+	<!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="ContentemployeesSorter_emp_login"><img src="{CCS_PathToMasterPage}Images/SorterDescPassive.png" alt="Descending"></a><!-- END Desc_Off --></span><!-- END Sorter Sorter_emp_login --></th>
+	
+	<th scope="col">	
+	<!-- BEGIN Sorter Sorter_email --><span class="Sorter">Email <!-- BEGIN Asc_On --><img src="{CCS_PathToMasterPage}Images/SorterAscActive.png" alt="Ascending"><!-- END Asc_On -->
+	<!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="ContentemployeesSorter_email"><img src="{CCS_PathToMasterPage}Images/SorterAscPassive.png" alt="Ascending"></a><!-- END Asc_Off -->
+	<!-- BEGIN Desc_On --><img src="{CCS_PathToMasterPage}Images/SorterDescActive.png" alt="Descending"><!-- END Desc_On -->
+	<!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="ContentemployeesSorter_email"><img src="{CCS_PathToMasterPage}Images/SorterDescPassive.png" alt="Descending"></a><!-- END Desc_Off --></span><!-- END Sorter Sorter_email --></th>
+	
+	<th scope="col">	
+	<!-- BEGIN Sorter Sorter_group_name --><span class="Sorter">Group <!-- BEGIN Asc_On --><img src="{CCS_PathToMasterPage}Images/SorterAscActive.png" alt="Ascending"><!-- END Asc_On -->
+	<!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="ContentemployeesSorter_group_name"><img src="{CCS_PathToMasterPage}Images/SorterAscPassive.png" alt="Ascending"></a><!-- END Asc_Off -->
+	<!-- BEGIN Desc_On --><img src="{CCS_PathToMasterPage}Images/SorterDescActive.png" alt="Descending"><!-- END Desc_On -->
+	<!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="ContentemployeesSorter_group_name"><img src="{CCS_PathToMasterPage}Images/SorterDescPassive.png" alt="Descending"></a><!-- END Desc_Off --></span><!-- END Sorter Sorter_group_name --></th>
+	</tr>
+	
+	<!-- BEGIN Row -->
+  <tr class="Row">
+    <td><a href="{emp_name_Src}" id="Contentemployeesemp_name_{employees:rowNumber}">{emp_name}</a>&nbsp;</td> 
+    <td>{emp_login}&nbsp;</td> 
+    <td><a href="mailto:{email_Src}" id="Contentemployeesemail_{employees:rowNumber}">{email}</a>&nbsp;</td> 
+    <td>{group_name}&nbsp;</td> 
+  </tr>
+ <!-- END Row -->
+  <!-- BEGIN NoRecords -->
+  <tr class="NoRecords">
+    <td colspan="4">No records</td> 
+  </tr>
+ <!-- END NoRecords -->
+  <tr class="Footer">
+    <td style="text-align:center" colspan="4">
+		<!-- BEGIN Navigator Navigator --><span class="Navigator">
+		<!-- BEGIN First_On --><a href="{First_URL}"><img src="{CCS_PathToMasterPage}Images/NavigatorFirst.png" alt="{First_URL}"></a> <!-- END First_On -->
+		<!-- BEGIN First_Off --><img src="{CCS_PathToMasterPage}Images/NavigatorFirstOff.png" alt="{First_URL}"><!-- END First_Off -->
+		<!-- BEGIN Prev_On --><a href="{Prev_URL}"><img src="{CCS_PathToMasterPage}Images/NavigatorPrev.png" alt="{Prev_URL}"></a> <!-- END Prev_On -->
+		<!-- BEGIN Prev_Off --><img src="{CCS_PathToMasterPage}Images/NavigatorPrevOff.png" alt="{Prev_URL}"><!-- END Prev_Off -->&nbsp;{Page_Number}&nbsp;of&nbsp;{Total_Pages}&nbsp; 
+		<!-- BEGIN Next_On --><a href="{Next_URL}"><img src="{CCS_PathToMasterPage}Images/NavigatorNext.png" alt="{Next_URL}"></a> <!-- END Next_On -->
+		<!-- BEGIN Next_Off --><img src="{CCS_PathToMasterPage}Images/NavigatorNextOff.png" alt="{Next_URL}"><!-- END Next_Off -->
+		<!-- BEGIN Last_On --><a href="{Last_URL}"><img src="{CCS_PathToMasterPage}Images/NavigatorLast.png" alt="{Last_URL}"></a> <!-- END Last_On -->
+		<!-- BEGIN Last_Off --><img src="{CCS_PathToMasterPage}Images/NavigatorLastOff.png" alt="{Last_URL}"><!-- END Last_Off --></span><!-- END Navigator Navigator -->&nbsp;</td> 
+  </tr> 
+</table>
+<!-- END Grid employees --><br>
+
+<!-- END Panel Content -->
+<!-- BEGIN Panel Menu -->{Header}<!-- END Panel Menu -->
+<!-- BEGIN Panel Sidebar1 -->{Administration}&nbsp;<!-- END Panel Sidebar1 -->

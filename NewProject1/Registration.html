@@ -1,0 +1,246 @@
+
+<!-- BEGIN Panel Head -->
+<title>Registration</title>
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-AD0F1E4D
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;lang={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Contentusersphone_home_OnLoad @73-1D995A4E
+function Contentusersphone_home_OnLoad()
+{
+    var result = true;
+//End Contentusersphone_home_OnLoad
+
+//Validate Entry @96-85744937
+    this.ccsRequired = false;
+    this.ccsMinLength = 14;
+    this.ccsMaxLength = 14;
+    this.ccsInputMask = "(000) 000-0000";
+    inputMaskInitialize(this, '_');
+    this.ccsCaption = "Phone Home";
+//End Validate Entry
+
+//Close Contentusersphone_home_OnLoad @73-BC33A33A
+    return result;
+}
+//End Close Contentusersphone_home_OnLoad
+
+//Contentusersphone_work_OnLoad @74-E33FD000
+function Contentusersphone_work_OnLoad()
+{
+    var result = true;
+//End Contentusersphone_work_OnLoad
+
+//Validate Entry @97-751093BA
+    this.ccsRequired = false;
+    this.ccsMinLength = 14;
+    this.ccsMaxLength = 14;
+    this.ccsInputMask = "(000) 000-0000";
+    inputMaskInitialize(this, '_');
+    this.ccsCaption = "Phone Work";
+//End Validate Entry
+
+//Close Contentusersphone_work_OnLoad @74-BC33A33A
+    return result;
+}
+//End Close Contentusersphone_work_OnLoad
+
+//ContentusersButton_Cancel_OnClick @58-2FAF894D
+function ContentusersButton_Cancel_OnClick()
+{
+    disableValidation = true;
+    return true;
+}
+//End ContentusersButton_Cancel_OnClick
+
+//bind_events @1-A69017F0
+function bind_events() {
+    try { Header_bind_events(); } catch(e) {}
+    try { Search_bind_events(); } catch(e) {}
+    addEventHandler("Contentusersphone_home", "load", Contentusersphone_home_OnLoad);
+    addEventHandler("Contentusersphone_work", "load", Contentusersphone_work_OnLoad);
+    addEventHandler("ContentusersButton_Cancel", "click", ContentusersButton_Cancel_OnClick);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+<style type="text/css">
+ .Record td { border: 0px; }
+</style>
+<!-- END Panel Head -->
+<!-- BEGIN Panel Content -->
+<!-- BEGIN Record users -->
+<form id="Contentusers" method="post" action="{Action}" name="{HTMLFormName}">
+  <table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table cellspacing="0" cellpadding="0" border="0" class="Header">
+          <tr>
+            <td class="HeaderLeft"><img src="{CCS_PathToMasterPage}Images/Spacer.gif" alt=""></td> 
+            <td class="th"><strong>User Registration Form</strong></td> 
+            <td class="HeaderRight"><img src="{CCS_PathToMasterPage}Images/Spacer.gif" alt=""></td> 
+          </tr> 
+        </table>
+ <br>
+        <table style="width:100%" cellspacing="0" cellpadding="0" class="Record">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td> 
+          </tr>
+ <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label>Login *</label></td> 
+            <td><input type="text" name="{user_login_Name}" value="{user_login}" maxlength="20" id="Contentusersuser_login"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label>Password *</label></td> 
+            <td><input type="text" name="{user_password_Name}" value="{user_password}" maxlength="20" id="Contentusersuser_password"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label>First Name *</label></td> 
+            <td><input type="text" name="{first_name_Name}" value="{first_name}" style="width:100%" maxlength="50" id="Contentusersfirst_name"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label>Last Name *</label></td> 
+            <td><input type="text" name="{last_name_Name}" value="{last_name}" style="width:100%" maxlength="50" id="Contentuserslast_name"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label>Email *</label></td> 
+            <td><input type="text" name="{email_Name}" value="{email}" maxlength="50" id="Contentusersemail"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label>Address</label></td> 
+            <td><input type="text" name="{address1_Name}" value="{address1}" maxlength="50" style="width:100%"  id="Contentusersaddress1"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"></td> 
+            <td><input type="text" name="{address2_Name}" value="{address2}" maxlength="50" style="width:100%"  id="Contentusersaddress2"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"></td> 
+            <td><input type="text" name="{address3_Name}" value="{address3}" maxlength="50" style="width:100%"  id="Contentusersaddress3"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label>City</label></td> 
+            <td><input type="text" name="{city_Name}" value="{city}" maxlength="30" id="Contentuserscity"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label>State</label></td> 
+            <td>
+              <select name="{state_id_Name}" id="Contentusersstate_id">
+                <option value="">Select Value</option>
+ {state_id_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label>Zip</label></td> 
+            <td><input type="text" name="{zip_Name}" value="{zip}" maxlength="10" size="10" id="Contentuserszip"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label>Country *</label></td> 
+            <td>
+              <select name="{country_id_Name}" id="Contentuserscountry_id">
+                <option value="">Select Value</option>
+ {country_id_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label>Phone Home</label></td> 
+            <td><input type="text" name="{phone_home_Name}" value="{phone_home}" maxlength="50" id="Contentusersphone_home"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label>Phone Work</label></td> 
+            <td><input type="text" name="{phone_work_Name}" value="{phone_work}" maxlength="50" id="Contentusersphone_work"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label>Language</label></td> 
+            <td>
+              <select name="{language_id_Name}" id="Contentuserslanguage_id">
+                <option value="">Select Value</option>
+ {language_id_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label>Age</label></td> 
+            <td>
+              <select name="{age_id_Name}" id="Contentusersage_id">
+                <option value="">Select Value</option>
+ {age_id_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label>Gender *</label></td> 
+            <td>
+              <select name="{gender_id_Name}" id="Contentusersgender_id">
+                <option value="">Select Value</option>
+ {gender_id_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label>Education</label></td> 
+            <td>
+              <select name="{education_id_Name}" id="Contentuserseducation_id">
+                <option value="">Select Value</option>
+ {education_id_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label>Income</label></td> 
+            <td>
+              <select name="{income_id_Name}" id="Contentusersincome_id">
+                <option value="">Select Value</option>
+ {income_id_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label>Describe Yourself</label></td> 
+            <td><textarea style="width:100%" name="{notes_Name}" rows="5" id="Contentusersnotes">{notes}</textarea></td> 
+          </tr>
+ 
+          <tr class="Bottom">
+            <td style="text-align: right" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input name="{Button_Name}" type="submit" value="Register" alt="Add" id="ContentusersButton_Insert" class="Button"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Cancel --><input name="{Button_Name}" type="submit" value="Cancel" alt="Cancel" id="ContentusersButton_Cancel" class="Button"><!-- END Button Button_Cancel --></td> 
+          </tr>
+           
+        </table>
+ <input type="hidden" name="{group_id_Name}" value="{group_id}" id="Contentusersgroup_id"></td>
+  </tr> 
+</table> 
+</form>
+<!-- END Record users --><br><!-- END Panel Content -->
+<!-- BEGIN Panel Menu -->{Header}<!-- END Panel Menu -->
+<!-- BEGIN Panel Sidebar1 -->{Search}<!-- END Panel Sidebar1 -->

@@ -1,0 +1,55 @@
+<!-- BEGIN Panel Head -->
+<title>Edit Officer</title>
+
+<!-- END Panel Head -->
+<!-- BEGIN Panel Content -->
+<!-- BEGIN Record officers -->
+<form id="Contentofficers" method="post" action="{Action}" name="{HTMLFormName}"> 
+<table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+  <table cellspacing="0" cellpadding="0" border="0" class="Header">
+	<tr>
+	  <td class="HeaderLeft"><img src="{CCS_PathToMasterPage}Images/Spacer.gif" alt=""></td>
+	  <td class="th"><strong>SVEC - Add/Edit Officer</strong></td>
+	  <td class="HeaderRight"><img src="{CCS_PathToMasterPage}Images/Spacer.gif" alt=""></td>
+	</tr>
+   </table>
+  <table cellspacing="0" cellpadding="0" class="Record" style="width: 10px">
+    <!-- BEGIN Error -->
+    <tr class="Error">
+      <td colspan="2">{Error}</td> 
+    </tr>
+ <!-- END Error -->
+    <tr class="Controls">
+      <td class="th"><label>Name *</label></td> 
+      <td><input type="text" name="{officer_name_Name}" value="{officer_name}" maxlength="50" size="50" id="Contentofficersofficer_name"></td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td nowrap class="th"><label>Position *</label></td> 
+      <td><input type="text" name="{officer_position_Name}" value="{officer_position}" maxlength="50" size="50" id="Contentofficersofficer_position"></td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th"><label>Email *</label></td> 
+      <td><input type="text" name="{officer_email_Name}" value="{officer_email}" maxlength="30" size="30" id="Contentofficersofficer_email"></td> 
+    </tr>
+ 
+    <tr class="Bottom">
+      <td colspan="2" style="text-align: right">
+        <!-- BEGIN Button Button_Insert --><input name="{Button_Name}" type="submit" value="Add" alt="Add" id="ContentofficersButton_Insert" class="Button"><!-- END Button Button_Insert -->
+        <!-- BEGIN Button Button_Update --><input name="{Button_Name}" type="submit" value="Submit" alt="Submit" id="ContentofficersButton_Update" class="Button"><!-- END Button Button_Update -->
+        <!-- BEGIN Button Button_Delete --><input name="{Button_Name}" type="submit" value="Delete" alt="Delete" id="ContentofficersButton_Delete" class="Button"><!-- END Button Button_Delete -->
+        <!-- BEGIN Button Button_Cancel --><input name="{Button_Name}" type="submit" value="Cancel" alt="Cancel" id="ContentofficersButton_Cancel" class="Button"><!-- END Button Button_Cancel --></td> 
+    </tr>
+ 
+  </table>
+     </td>
+    </tr>
+  </table>
+ </form>
+<!-- END Record officers -->
+<!-- END Panel Content -->
+<!-- BEGIN Panel Menu -->{Header} <!-- END Panel Menu -->
+<!-- BEGIN Panel Sidebar1 -->{AdminMenu}&nbsp;<!-- END Panel Sidebar1 -->

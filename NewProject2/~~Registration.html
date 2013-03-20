@@ -1,0 +1,275 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>Registration</TITLE>
+<META content="text/html; charset=windows-1252" http-equiv=Content-Type>
+<STYLE needdelete>td {border-style:dotted;border-width:1px;border-color:#aaaaaa;} table {border-style:dashed;border-width:1px;border-color:#aaaaaa;}</STYLE>
+<!-- ccs_begin_only_design_snippet --><LINK rel=stylesheet type=text/css 
+href="C:\Users\Lalit\Documents\CodeChargeStudio5\Projects\NewProject2\Designs\Simple\style.css" 
+media=screen 
+ccs_href="C:\Users\Lalit\Documents\CodeChargeStudio5\Projects\NewProject2\Designs\Simple\style.css"><!-- ccs_end_only_design_snippet -->
+<META name=GENERATOR content="MSHTML 10.00.9200.16494"></HEAD>
+<BODY><SPAN contentEditable=true 
+style="BORDER-TOP: transparent 1px dotted; BORDER-RIGHT: transparent 1px dotted; BORDER-BOTTOM: transparent 1px dotted; PADDING-BOTTOM: 3px; PADDING-TOP: 3px; PADDING-LEFT: 3px; BORDER-LEFT: transparent 1px dotted; MARGIN-TOP: 3px; DISPLAY: block; PADDING-RIGHT: 3px" 
+ccsServiceable="true" ccsName="Head" ccsId="90" ccsDesignColorSelection="true" 
+ccsContentPlaceHolder="Head" ccsType="Component">
+<SCRIPT language=JavaScript type=text/javascript>
+//Begin CCS script
+//Include Common JSFunctions @1-AD0F1E4D
+</SCRIPT>
+
+<SCRIPT language=JavaScript type=text/javascript charset=utf-8 
+src="ClientI18N.php?file=Functions.js&amp;lang={res:CCS_LocaleID}" 
+ccs_src="ClientI18N.php?file=Functions.js&amp;lang={res:CCS_LocaleID}"></SCRIPT>
+
+<SCRIPT language=JavaScript type=text/javascript>
+//End Include Common JSFunctions
+
+//Contentusersphone_home_OnLoad @73-1D995A4E
+function Contentusersphone_home_OnLoad()
+{
+    var result = true;
+//End Contentusersphone_home_OnLoad
+
+//Validate Entry @96-85744937
+    this.ccsRequired = false;
+    this.ccsMinLength = 14;
+    this.ccsMaxLength = 14;
+    this.ccsInputMask = "(000) 000-0000";
+    inputMaskInitialize(this, '_');
+    this.ccsCaption = "Phone Home";
+//End Validate Entry
+
+//Close Contentusersphone_home_OnLoad @73-BC33A33A
+    return result;
+}
+//End Close Contentusersphone_home_OnLoad
+
+//Contentusersphone_work_OnLoad @74-E33FD000
+function Contentusersphone_work_OnLoad()
+{
+    var result = true;
+//End Contentusersphone_work_OnLoad
+
+//Validate Entry @97-751093BA
+    this.ccsRequired = false;
+    this.ccsMinLength = 14;
+    this.ccsMaxLength = 14;
+    this.ccsInputMask = "(000) 000-0000";
+    inputMaskInitialize(this, '_');
+    this.ccsCaption = "Phone Work";
+//End Validate Entry
+
+//Close Contentusersphone_work_OnLoad @74-BC33A33A
+    return result;
+}
+//End Close Contentusersphone_work_OnLoad
+
+//ContentusersButton_Cancel_OnClick @58-2FAF894D
+function ContentusersButton_Cancel_OnClick()
+{
+    disableValidation = true;
+    return true;
+}
+//End ContentusersButton_Cancel_OnClick
+
+//bind_events @1-A69017F0
+function bind_events() {
+    try { Header_bind_events(); } catch(e) {}
+    try { Search_bind_events(); } catch(e) {}
+    addEventHandler("Contentusersphone_home", "load", Contentusersphone_home_OnLoad);
+    addEventHandler("Contentusersphone_work", "load", Contentusersphone_work_OnLoad);
+    addEventHandler("ContentusersButton_Cancel", "click", ContentusersButton_Cancel_OnClick);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</SCRIPT>
+
+<STYLE type=text/css>
+ .Record td { border: 0px; }
+</STYLE>
+&nbsp;</SPAN> <SPAN contentEditable=true 
+style="BORDER-TOP: transparent 1px dotted; BORDER-RIGHT: transparent 1px dotted; BORDER-BOTTOM: transparent 1px dotted; PADDING-BOTTOM: 3px; PADDING-TOP: 3px; PADDING-LEFT: 3px; BORDER-LEFT: transparent 1px dotted; MARGIN-TOP: 3px; DISPLAY: block; PADDING-RIGHT: 3px" 
+ccsServiceable="true" ccsName="Content" ccsId="91" 
+ccsDesignColorSelection="true" ccsContentPlaceHolder="Content" 
+ccsType="Component"><SPAN contentEditable=true 
+style="BORDER-TOP: #dcdcdc 1px solid; BORDER-RIGHT: #dcdcdc 1px solid; BORDER-BOTTOM: #dcdcdc 1px solid; BORDER-LEFT: #dcdcdc 1px solid; DISPLAY: block" 
+ccsServiceable="true" ccsName="users" ccsId="56" ccsDesignColorSelection="true" 
+ccsType="Component">
+<FORM id=Contentusers method=post name={HTMLFormName} action={Action} 
+ccsServiceable="true">
+<TABLE class=MainTable cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=top>
+      <TABLE class=Header cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=HeaderLeft><IMG alt="" 
+            src="C:\Users\Lalit\Documents\CodeChargeStudio5\Projects\NewProject2\Designs\Simple\Images/Spacer.gif" 
+            ccsServiceable="true" 
+            ccs_src="{CCS_PathToMasterPage}Images/Spacer.gif"></TD>
+          <TD class=th><STRONG>User Registration Form</STRONG></TD>
+          <TD class=HeaderRight><IMG alt="" 
+            src="C:\Users\Lalit\Documents\CodeChargeStudio5\Projects\NewProject2\Designs\Simple\Images/Spacer.gif" 
+            ccsServiceable="true" 
+            ccs_src="{CCS_PathToMasterPage}Images/Spacer.gif"></TD></TR></TBODY></TABLE><BR>
+      <TABLE class=Record style="WIDTH: 100%" cellSpacing=0 cellPadding=0><!-- BEGIN Error -->
+        <TBODY>
+        <TR class=Error>
+          <TD colSpan=2>{Error}</TD></TR><!-- END Error -->
+        <TR class=Controls>
+          <TD class=th><SPAN ccsServiceable="true" ccsHtmlTag="label">Login 
+            *</SPAN></TD>
+          <TD><INPUT id=Contentusersuser_login maxLength=20 value={user_login} 
+            name={user_login_Name} ccsServiceable="true" ccsName="user_login" 
+            ccsId="59" ccsType="Component"></TD></TR>
+        <TR class=Controls>
+          <TD class=th><SPAN ccsServiceable="true" ccsHtmlTag="label">Password 
+            *</SPAN></TD>
+          <TD><INPUT id=Contentusersuser_password maxLength=20 
+            value={user_password} name={user_password_Name} 
+            ccsServiceable="true" ccsName="user_password" ccsId="60" 
+            ccsType="Component"></TD></TR>
+        <TR class=Controls>
+          <TD class=th><SPAN ccsServiceable="true" ccsHtmlTag="label">First 
+            Name *</SPAN></TD>
+          <TD><INPUT id=Contentusersfirst_name style="WIDTH: 100%" 
+            maxLength=50 value={first_name} name={first_name_Name} 
+            ccsServiceable="true" ccsName="first_name" ccsId="61" 
+            ccsType="Component"></TD></TR>
+        <TR class=Controls>
+          <TD class=th><SPAN ccsServiceable="true" ccsHtmlTag="label">Last 
+            Name *</SPAN></TD>
+          <TD><INPUT id=Contentuserslast_name style="WIDTH: 100%" maxLength=50 
+            value={last_name} name={last_name_Name} ccsServiceable="true" 
+            ccsName="last_name" ccsId="62" ccsType="Component"></TD></TR>
+        <TR class=Controls>
+          <TD class=th><SPAN ccsServiceable="true" ccsHtmlTag="label">Email 
+            *</SPAN></TD>
+          <TD><INPUT id=Contentusersemail maxLength=50 value={email} 
+            name={email_Name} ccsServiceable="true" ccsName="email" ccsId="63" 
+            ccsType="Component"></TD></TR>
+        <TR class=Controls>
+          <TD class=th><SPAN ccsServiceable="true" 
+            ccsHtmlTag="label">Address</SPAN></TD>
+          <TD><INPUT id=Contentusersaddress1 style="WIDTH: 100%" maxLength=50 
+            value={address1} name={address1_Name} ccsServiceable="true" 
+            ccsName="address1" ccsId="64" ccsType="Component"></TD></TR>
+        <TR class=Controls>
+          <TD class=th></TD>
+          <TD><INPUT id=Contentusersaddress2 style="WIDTH: 100%" maxLength=50 
+            value={address2} name={address2_Name} ccsServiceable="true" 
+            ccsName="address2" ccsId="65" ccsType="Component"></TD></TR>
+        <TR class=Controls>
+          <TD class=th></TD>
+          <TD><INPUT id=Contentusersaddress3 style="WIDTH: 100%" maxLength=50 
+            value={address3} name={address3_Name} ccsServiceable="true" 
+            ccsName="address3" ccsId="66" ccsType="Component"></TD></TR>
+        <TR class=Controls>
+          <TD class=th><SPAN ccsServiceable="true" 
+            ccsHtmlTag="label">City</SPAN></TD>
+          <TD><INPUT id=Contentuserscity maxLength=30 value={city} 
+            name={city_Name} ccsServiceable="true" ccsName="city" ccsId="67" 
+            ccsType="Component"></TD></TR>
+        <TR class=Controls>
+          <TD class=th><SPAN ccsServiceable="true" 
+            ccsHtmlTag="label">State</SPAN></TD>
+          <TD><SELECT id=Contentusersstate_id name={state_id_Name} 
+            ccsServiceable="true" ccsName="state_id" ccsId="68" 
+            ccsType="Component"> <OPTION selected value="" 
+              ccsServiceable="true">Select Value</OPTION> 
+            {state_id_Options}</SELECT> </TD></TR>
+        <TR class=Controls>
+          <TD class=th><SPAN ccsServiceable="true" 
+            ccsHtmlTag="label">Zip</SPAN></TD>
+          <TD><INPUT id=Contentuserszip maxLength=10 size=10 value={zip} 
+            name={zip_Name} ccsServiceable="true" ccsName="zip" ccsId="70" 
+            ccsType="Component"></TD></TR>
+        <TR class=Controls>
+          <TD class=th><SPAN ccsServiceable="true" ccsHtmlTag="label">Country 
+            *</SPAN></TD>
+          <TD><SELECT id=Contentuserscountry_id name={country_id_Name} 
+            ccsServiceable="true" ccsName="country_id" ccsId="71" 
+            ccsType="Component"> <OPTION selected value="" 
+              ccsServiceable="true">Select Value</OPTION> 
+            {country_id_Options}</SELECT> </TD></TR>
+        <TR class=Controls>
+          <TD class=th><SPAN ccsServiceable="true" ccsHtmlTag="label">Phone 
+            Home</SPAN></TD>
+          <TD><INPUT id=Contentusersphone_home maxLength=50 value={phone_home} 
+            name={phone_home_Name} ccsServiceable="true" ccsName="phone_home" 
+            ccsId="73" ccsType="Component"></TD></TR>
+        <TR class=Controls>
+          <TD class=th><SPAN ccsServiceable="true" ccsHtmlTag="label">Phone 
+            Work</SPAN></TD>
+          <TD><INPUT id=Contentusersphone_work maxLength=50 value={phone_work} 
+            name={phone_work_Name} ccsServiceable="true" ccsName="phone_work" 
+            ccsId="74" ccsType="Component"></TD></TR>
+        <TR class=Controls>
+          <TD class=th><SPAN ccsServiceable="true" 
+            ccsHtmlTag="label">Language</SPAN></TD>
+          <TD><SELECT id=Contentuserslanguage_id name={language_id_Name} 
+            ccsServiceable="true" ccsName="language_id" ccsId="75" 
+            ccsType="Component"> <OPTION selected value="" 
+              ccsServiceable="true">Select Value</OPTION> 
+            {language_id_Options}</SELECT> </TD></TR>
+        <TR class=Controls>
+          <TD class=th><SPAN ccsServiceable="true" 
+            ccsHtmlTag="label">Age</SPAN></TD>
+          <TD><SELECT id=Contentusersage_id name={age_id_Name} 
+            ccsServiceable="true" ccsName="age_id" ccsId="77" 
+            ccsType="Component"> <OPTION selected value="" 
+              ccsServiceable="true">Select Value</OPTION> 
+            {age_id_Options}</SELECT> </TD></TR>
+        <TR class=Controls>
+          <TD class=th><SPAN ccsServiceable="true" ccsHtmlTag="label">Gender 
+            *</SPAN></TD>
+          <TD><SELECT id=Contentusersgender_id name={gender_id_Name} 
+            ccsServiceable="true" ccsName="gender_id" ccsId="79" 
+            ccsType="Component"> <OPTION selected value="" 
+              ccsServiceable="true">Select Value</OPTION> 
+            {gender_id_Options}</SELECT> </TD></TR>
+        <TR class=Controls>
+          <TD class=th><SPAN ccsServiceable="true" 
+            ccsHtmlTag="label">Education</SPAN></TD>
+          <TD><SELECT id=Contentuserseducation_id name={education_id_Name} 
+            ccsServiceable="true" ccsName="education_id" ccsId="81" 
+            ccsType="Component"> <OPTION selected value="" 
+              ccsServiceable="true">Select Value</OPTION> 
+            {education_id_Options}</SELECT> </TD></TR>
+        <TR class=Controls>
+          <TD class=th><SPAN ccsServiceable="true" 
+            ccsHtmlTag="label">Income</SPAN></TD>
+          <TD><SELECT id=Contentusersincome_id name={income_id_Name} 
+            ccsServiceable="true" ccsName="income_id" ccsId="83" 
+            ccsType="Component"> <OPTION selected value="" 
+              ccsServiceable="true">Select Value</OPTION> 
+            {income_id_Options}</SELECT> </TD></TR>
+        <TR class=Controls>
+          <TD class=th><SPAN ccsServiceable="true" ccsHtmlTag="label">Describe 
+            Yourself</SPAN></TD>
+          <TD><TEXTAREA id=Contentusersnotes style="WIDTH: 100%" rows=5 name={notes_Name} ccsServiceable="true" ccsName="notes" ccsId="85" ccsType="Component">{notes}</TEXTAREA> 
+          </TD></TR>
+        <TR class=Bottom>
+          <TD style="TEXT-ALIGN: right" colSpan=2><INPUT id=ContentusersButton_Insert class=Button alt=Add type=submit value=Register name={Button_Name} ccsServiceable="true" ccsName="Button_Insert" ccsId="57" ccsType="Component" ccsExtendedHtml="true"> 
+<INPUT id=ContentusersButton_Cancel class=Button alt=Cancel type=submit value=Cancel name={Button_Name} ccsServiceable="true" ccsName="Button_Cancel" ccsId="58" ccsType="Component" ccsExtendedHtml="true"></TD></TR></TBODY></TABLE><INPUT 
+      id=Contentusersgroup_id type=hidden value={group_id} name={group_id_Name} 
+      ccsServiceable="true" ccsName="group_id" ccsId="86" 
+  ccsType="Component"></TD></TR></TBODY></TABLE></FORM>&nbsp;</SPAN><BR>&nbsp;</SPAN> 
+<SPAN contentEditable=true 
+style="BORDER-TOP: transparent 1px dotted; BORDER-RIGHT: transparent 1px dotted; BORDER-BOTTOM: transparent 1px dotted; PADDING-BOTTOM: 3px; PADDING-TOP: 3px; PADDING-LEFT: 3px; BORDER-LEFT: transparent 1px dotted; MARGIN-TOP: 3px; DISPLAY: block; PADDING-RIGHT: 3px" 
+ccsServiceable="true" ccsName="Menu" ccsId="92" ccsDesignColorSelection="true" 
+ccsContentPlaceHolder="Menu" ccsType="Component"><SPAN contentEditable=false 
+style="BORDER-TOP: #96e593 1px solid; BORDER-RIGHT: #96e593 1px solid; WHITE-SPACE: nowrap; BORDER-BOTTOM: #96e593 1px solid; BORDER-LEFT: #96e593 1px solid" 
+ccsServiceable="true" ccsName="Header" ccsId="52" ccsType="Component" 
+ccsBlockIsWhiteSpace="true">Header</SPAN>&nbsp;</SPAN> <SPAN 
+contentEditable=true 
+style="BORDER-TOP: transparent 1px dotted; BORDER-RIGHT: transparent 1px dotted; BORDER-BOTTOM: transparent 1px dotted; PADDING-BOTTOM: 3px; PADDING-TOP: 3px; PADDING-LEFT: 3px; BORDER-LEFT: transparent 1px dotted; MARGIN-TOP: 3px; DISPLAY: block; PADDING-RIGHT: 3px" 
+ccsServiceable="true" ccsName="Sidebar1" ccsId="93" 
+ccsDesignColorSelection="true" ccsContentPlaceHolder="Sidebar1" 
+ccsType="Component"><SPAN contentEditable=false 
+style="BORDER-TOP: #96e593 1px solid; BORDER-RIGHT: #96e593 1px solid; WHITE-SPACE: nowrap; BORDER-BOTTOM: #96e593 1px solid; BORDER-LEFT: #96e593 1px solid" 
+ccsServiceable="true" ccsName="Search" ccsId="98" ccsType="Component" 
+ccsBlockIsWhiteSpace="true">Search</SPAN>&nbsp;</SPAN> </BODY></HTML>

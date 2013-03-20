@@ -1,0 +1,68 @@
+<!-- BEGIN Panel searchPanel -->
+<!-- BEGIN Panel searchTitle -->Search<!-- END Panel searchTitle -->
+<!-- BEGIN Panel searchContent -->
+<!-- BEGIN Record tasks -->
+<form id="SearchsearchPanelsearchContenttasks" name="{HTMLFormName}" action="{Action}">
+  <table>
+    <!-- BEGIN Error -->
+    <tr class="Error">
+      <td colspan="2">{Error}</td>
+    </tr>
+    <!-- END Error -->
+    <tr class="Controls">
+      <td class="th" nowrap><label>Assigned To&nbsp;</label></td> 
+      <td>
+        <select style="width:100%" id="SearchsearchPanelsearchContenttaskss_user_id_assign_to" name="{s_user_id_assign_to_Name}">
+          <option selected value="">All</option>
+          {s_user_id_assign_to_Options}
+        </select>
+ </td>
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th"><label>Project</label></td> 
+      <td>
+        <select style="width:100%"  id="SearchsearchPanelsearchContenttaskss_project_id" name="{s_project_id_Name}">
+          <option selected value="">All</option>
+          {s_project_id_Options}
+        </select>
+ </td>
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th"><label>Priority</label></td> 
+      <td>
+        <select style="width:100%"  id="SearchsearchPanelsearchContenttaskss_priority_id" name="{s_priority_id_Name}">
+          <option selected value="">All</option>
+          {s_priority_id_Options}
+        </select>
+ </td>
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th"><label>Status</label></td> 
+      <td>
+        <select style="width:100%"  id="SearchsearchPanelsearchContenttaskss_status_id" name="{s_status_id_Name}">
+          <option selected value="">All</option>
+          {s_status_id_Options}
+        </select>
+ </td>
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th"><label>Type</label></td> 
+      <td>
+        <select style="width:100%"  id="SearchsearchPanelsearchContenttaskss_type_id" name="{s_type_id_Name}">
+          <option selected value="">All</option>
+          {s_type_id_Options}
+        </select>
+ </td>
+    </tr>
+ 
+    <tr class="Bottom">
+      <td style="TEXT-ALIGN: right" colspan="2">&nbsp; 
+        <!-- BEGIN Button Button_DoSearch --><input type="submit" id="SearchsearchPanelsearchContenttasksButton_DoSearch" class="Button" value="Search" alt="Search" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+    </tr>
+  </table>
+</form>
+<!-- END Record tasks --><!-- END Panel searchContent --><!-- END Panel searchPanel -->

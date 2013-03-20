@@ -1,0 +1,148 @@
+<Site id="0" language="PHPTemplates" name="samridhiastrology" siteLanguage="en" securityType="Table" urlType="Absolute" server="IIS4" userIDStoreMethod="Session" userIDVariable="UserID" userLoginVariable="UserLogin" userPasswordVariable="UserPassword" groupIDVariable="GroupID" cookieVariable="UserInfo" automatedLogin="False" IISApplication="False" connection="InternetDB" higherLevel="True" loginPage="Login.ccp" securityConnection="InternetDB" usersTable="users" userIDField="user_id" userLoginField="user_login" userPasswordField="user_password" userGroupField="group_id" defaultDateFormat="mm/dd/yyyy h:nn AM/PM" outputFileFormat="Windows" PerlPath="#!c:\perl\bin\perl.exe" SessionFilesPath=".\session_files" SessionTimeout="30" SessionsFilesCleanRate="100" useCCSCultureFormats="True" startPage="Default.ccp" TargetSchema="IE50" tempSaveDir="CCSBuild" targetServer="Other servers" appAsWar="True" includeType="Virtual" LSEnableQueryString="True" LSQueryStringName="lang" LSEnableHTTPHeader="True" LSEnableSession="True" LSSessionName="lang" LSEnableCookie="False" LSCookieName="lang" LSCookieExpired="365" cachingMethod="None" useI18nFeatures="False" emailProgID="CDONTS.NewMail" LSLanguageSessionName="lang" showDepreciatedStyles="Styles" useDynamicStyles="False" SSEnableQueryString="True" SSQueryStringName="style" SSEnableSession="True" SSSessionName="style" SSEnableCookie="False" SSCookieName="style" SSCookieExpired="365" defaultStyle="Blueprint" _defaultStyle="Blueprint" _siteLanguage="en" _useDynamicStyles="false" omitIfEmpty="True" isSection508="True" ccsVersion="5.0.0.16254" PHPEncodeExtension="iconv" htmlTemplateType="HTML" createIdsForControls="False" createIdsForNonEditableControls="True" createLablesForControls="False" generateJS="True" useDynamicDesigns="True" DDEnableQueryString="True" DDQueryStringName="design" DDEnableSession="True" DDSessionName="design" DDEnableCookie="False" DDCookieName="design" DDCookieExpired="365" improvedHTTPCaching="True" PHPVersion="5" designFolder="Designs" defaultDesign="BookStore">
+	<Components>
+	</Components>
+	<Connections>
+		<Connection id="1" serverSameAsDesign="True" serverConnectionType="String" database="MSAccess" serverDatabase="MSAccess" showViews="True" showSynonyms="True" showSysTable="False" showSysView="False" showAliases="False" relationshipDiscovery="True" connectionType="String" connectionString="Provider=Microsoft.Jet.OLEDB.4.0;User ID=Admin;Data Source=C:\Program Files\CodeChargeStudio5\Examples\Internet\Internet.mdb;Persist Security Info=False" name="InternetDB" login="Admin" DBNameUppercase="False" connection="InternetDB" PHPDBLib="ODBC" serverDatabaseName="CCSInternet" serverPersistentConnection="False" DBDateFormat="yyyy-mm-dd HH:nn:ss" PerlDBDriver="ODBC" ConnectCached="False" serverPrintError="True" serverLongReadLen="5000" serverRaiseError="True" serverLongTruncOk="True" DBBooleanFormat="true;false" OptimizeSQL="True"/>
+	</Connections>
+	<CodeFiles>
+		<CodeFile id="JSFunctions" language="PHPTemplates" name="functions.js" comment="//" forShow="False"/>
+		<CodeFile id="JSDatePicker" language="PHPTemplates" name="DatePicker.js" comment="//" forShow="False"/>
+		<CodeFile id="JSFunctions" language="PerlTemplates" name="functions.js" comment="//" forShow="False"/>
+		<CodeFile id="JSDatePicker" language="PerlTemplates" name="DatePicker.js" comment="//" forShow="False"/>
+		<CodeFile id="Templates" language="PHPTemplates" forShow="False" name="Template.php" comment="//"/>
+		<CodeFile id="Common" language="PHPTemplates" forShow="False" name="Common.php" comment="//"/>
+		<CodeFile id="Sorter" language="PHPTemplates" forShow="False" name="Sorter.php" comment="//"/>
+		<CodeFile id="Navigator" language="PHPTemplates" forShow="False" name="Navigator.php" comment="//"/>
+		<CodeFile id="Classes" language="PHPTemplates" forShow="False" name="Classes.php" comment="//"/>
+		<CodeFile id="db_odbc" language="PHPTemplates" forShow="False" name="db_odbc.php" comment="//"/>
+		<CodeFile id="JSDatePickerHTML" language="PHPTemplates" forShow="False" name="DatePicker.html" comment="&lt;!--" commentEnd="--&gt;"/>
+		<CodeFile id="Templates" language="PerlTemplates" forShow="False" name="Template.pm" comment="#"/>
+		<CodeFile id="Common" language="PerlTemplates" forShow="False" name="Common.pm" comment="#"/>
+		<CodeFile id="Sorter" language="PerlTemplates" forShow="False" name="Sorter.pm" comment="#"/>
+		<CodeFile id="Navigator" language="PerlTemplates" forShow="False" name="Navigator.pm" comment="#"/>
+		<CodeFile id="Classes" language="PerlTemplates" forShow="False" name="Classes.pm" comment="#"/>
+		<CodeFile id="JSDatePickerHTML" language="PerlTemplates" forShow="False" name="DatePicker.html" comment="&lt;!--" commentEnd="--&gt;"/>
+		<CodeFile id="JSFunctions" language="VB" name="functions.js" comment="//" forShow="False"/>
+		<CodeFile id="JSDatePickerHTML" language="VB" name="DatePicker.html" comment="&lt;!--" commentEnd="--&gt;" forShow="False"/>
+		<CodeFile id="JSDatePicker" language="VB" name="DatePicker.js" comment="//" forShow="False"/>
+		<CodeFile id="1" language="VB" name="CodeCharge.Data.OleDb.vb" path="components\" comment="'" forShow="False"/>
+		<CodeFile id="1a" language="VB" name="CodeCharge.Data.Oracle.vb" path="components\" comment="'" forShow="False"/>
+		<CodeFile id="2" language="VB" name="CodeCharge.Data.MSSQL.vb" path="components\" comment="'" forShow="False"/>
+		<CodeFile id="3" language="VB" name="CodeCharge.Data.ODBC.vb" path="components\" comment="'" forShow="False"/>
+		<CodeFile id="4" language="VB" name="CodeCharge.Data.BaseClass.vb" path="components\" comment="'" forShow="False"/>
+		<CodeFile id="6" language="VB" name="CodeCharge.Data.WhereBuilder.vb" path="components\" comment="'" forShow="False"/>
+		<CodeFile id="7" language="VB" name="Global.asax.vb" comment="'" forShow="False"/>
+		<CodeFile id="7a" language="VB" name="Global.asax.resx" comment="'" forShow="False"/>
+		<CodeFile id="8" language="VB" name="Global.asax" comment="'" forShow="False"/>
+		<CodeFile id="9" language="VB" name="AssemblyInfo.vb" comment="'" forShow="False"/>
+		<CodeFile id="10" language="VB" name="DataBaseDataProvider.vb" path="components\" comment="'" forShow="False"/>
+		<CodeFile id="11" language="VB" name="DbSpProvider.vb" path="components\" comment="'" forShow="False"/>
+		<CodeFile id="12" language="VB" name="DbSqlProvider.vb" path="components\" comment="'" forShow="False"/>
+		<CodeFile id="13" language="VB" name="DbTableProvider.vb" path="components\" comment="'" forShow="False"/>
+		<CodeFile id="28" language="VB" name="RecordDataProviderBase.vb" path="components\" comment="'" forShow="False"/>
+		<CodeFile id="29" language="VB" name="GridDataProviderBase.vb" path="components\" comment="'" forShow="False"/>
+		<CodeFile id="14" language="VB" name="Parameter.vb" path="components\" comment="'" forShow="False"/>
+		<CodeFile id="15" language="VB" name="BooleanParameter.vb" path="components\" comment="'" forShow="False"/>
+		<CodeFile id="16" language="VB" name="IntegerParameter.vb" path="components\" comment="'" forShow="False"/>
+		<CodeFile id="17" language="VB" name="FloatParameter.vb" path="components\" comment="'" forShow="False"/>
+		<CodeFile id="18" language="VB" name="TextParameter.vb" path="components\" comment="'" forShow="False"/>
+		<CodeFile id="19" language="VB" name="MemoParameter.vb" path="components\" comment="'" forShow="False"/>
+		<CodeFile id="20" language="VB" name="DateParameter.vb" path="components\" comment="'" forShow="False"/>
+		<CodeFile id="21" language="VB" name="Settings.vb" path="components\" comment="'" forShow="False"/>
+		<CodeFile id="23" language="VB" name="DataUtility.vb" path="components\" comment="'" forShow="False"/>
+		<CodeFile id="35" language="VB" name="Sorter.vb" path="components\" comment="'" forShow="False"/>
+		<CodeFile id="35a" language="VB" name="Navigator.vb" path="components\" comment="'" forShow="False"/>
+		<CodeFile id="35b" language="VB" name="Directory.vb" path="components\" comment="'" forShow="False"/>
+		<CodeFile id="35c" language="VB" name="Path.vb" path="components\" comment="'" forShow="False"/>
+		<CodeFile id="35d" language="VB" name="FileUpload.vb" path="components\" comment="'" forShow="False"/>
+		<CodeFile id="37" language="VB" name="Fields.vb" path="components\" comment="'" forShow="False"/>
+		<CodeFile id="50" language="VB" name="Store.vbproj" comment="&lt;!--" commentEnd="--&gt;" forShow="False"/>
+		<CodeFile id="51" language="VB" name="Store.vsdisco" comment="&lt;!--" commentEnd="--&gt;" forShow="False"/>
+		<CodeFile id="52" language="VB" name="Store.vbproj.webinfo" comment="&lt;!--" commentEnd="--&gt;" forShow="False"/>
+		<CodeFile id="26" language="VB" name="web.config" comment="&lt;!--" commentEnd="--&gt;" forShow="False"/>
+		<CodeFile id="27" language="VB" name="makeall.bat" comment="REM _" forShow="False"/>
+		<CodeFile id="JSFunctions" language="C#" name="functions.js" comment="//" forShow="False"/>
+		<CodeFile id="JSDatePickerHTML" language="C#" name="DatePicker.html" comment="&lt;!--" commentEnd="--&gt;" forShow="False"/>
+		<CodeFile id="JSDatePicker" language="C#" name="DatePicker.js" comment="//" forShow="False"/>
+		<CodeFile id="1" language="C#" name="CodeCharge.Data.OleDb.cs" path="components\" comment="//" forShow="False"/>
+		<CodeFile id="2" language="C#" name="CodeCharge.Data.MSSQL.cs" path="components\" comment="//" forShow="False"/>
+		<CodeFile id="3" language="C#" name="CodeCharge.Data.ODBC.cs" path="components\" comment="//" forShow="False"/>
+		<CodeFile id="3a" language="C#" name="CodeCharge.Data.Oracle.cs" path="components\" comment="//" forShow="False"/>
+		<CodeFile id="4" language="C#" name="CodeCharge.Data.BaseClass.cs" path="components\" comment="//" forShow="False"/>
+		<CodeFile id="6" language="C#" name="CodeCharge.Data.WhereBuilder.cs" path="components\" comment="//" forShow="False"/>
+		<CodeFile id="7" language="C#" name="Global.asax.cs" comment="//" forShow="False"/>
+		<CodeFile id="7a" language="C#" name="Global.asax.resx" comment="//" forShow="False"/>
+		<CodeFile id="8" language="C#" name="Global.asax" comment="//" forShow="False"/>
+		<CodeFile id="9" language="C#" name="AssemblyInfo.cs" comment="//" forShow="False"/>
+		<CodeFile id="10" language="C#" name="DataBaseDataProvider.cs" path="components\" comment="//" forShow="False"/>
+		<CodeFile id="11" language="C#" name="DbSpProvider.cs" path="components\" comment="//" forShow="False"/>
+		<CodeFile id="12" language="C#" name="DbSqlProvider.cs" path="components\" comment="//" forShow="False"/>
+		<CodeFile id="13" language="C#" name="DbTableProvider.cs" path="components\" comment="//" forShow="False"/>
+		<CodeFile id="28" language="C#" name="RecordDataProviderBase.cs" path="components\" comment="//" forShow="False"/>
+		<CodeFile id="29" language="C#" name="GridDataProviderBase.cs" path="components\" comment="//" forShow="False"/>
+		<CodeFile id="14" language="C#" name="Parameter.cs" path="components\" comment="//" forShow="False"/>
+		<CodeFile id="15" language="C#" name="BooleanParameter.cs" path="components\" comment="//" forShow="False"/>
+		<CodeFile id="16" language="C#" name="IntegerParameter.cs" path="components\" comment="//" forShow="False"/>
+		<CodeFile id="17" language="C#" name="FloatParameter.cs" path="components\" comment="//" forShow="False"/>
+		<CodeFile id="18" language="C#" name="TextParameter.cs" path="components\" comment="//" forShow="False"/>
+		<CodeFile id="19" language="C#" name="MemoParameter.cs" path="components\" comment="//" forShow="False"/>
+		<CodeFile id="20" language="C#" name="DateParameter.cs" path="components\" comment="//" forShow="False"/>
+		<CodeFile id="21" language="C#" name="Settings.cs" path="components\" comment="//" forShow="False"/>
+		<CodeFile id="23" language="C#" name="DataUtility.cs" path="components\" comment="//" forShow="False"/>
+		<CodeFile id="35" language="C#" name="Sorter.cs" path="components\" comment="//" forShow="False"/>
+		<CodeFile id="351" language="C#" name="Navigator.cs" path="components\" comment="//" forShow="False"/>
+		<CodeFile id="37" language="C#" name="Fields.cs" path="components\" comment="//" forShow="False"/>
+		<CodeFile id="100" language="C#" name="Directory.cs" path="components\" comment="//" forShow="False"/>
+		<CodeFile id="101" language="C#" name="Path.cs" path="components\" comment="//" forShow="False"/>
+		<CodeFile id="102" language="C#" name="FileUpload.cs" path="components\" comment="//" forShow="False"/>
+		<CodeFile id="50" language="C#" name="Store.csproj" comment="&lt;!--" commentEnd="--&gt;" forShow="False"/>
+		<CodeFile id="51" language="C#" name="Store.vsdisco" comment="&lt;!--" commentEnd="--&gt;" forShow="False"/>
+		<CodeFile id="52" language="C#" name="Store.csproj.webinfo" comment="&lt;!--" commentEnd="--&gt;" forShow="False"/>
+		<CodeFile id="26" language="C#" name="web.config" comment="&lt;!--" commentEnd="--&gt;" forShow="False"/>
+		<CodeFile id="27" language="C#" name="makeall.bat" comment="REM _" forShow="False"/>
+		<CodeFile id="Templates" language="ASPTemplates" name="Template.asp" forShow="False" comment="'"/><CodeFile id="ClientI18N.asp" language="ASPTemplates" name="ClientI18N.asp" forShow="False" comment="'"/><CodeFile id="Common" language="ASPTemplates" name="Common.asp" forShow="False" comment="'"/><CodeFile id="Cache" language="ASPTemplates" name="Cache.asp" forShow="False" comment="'"/><CodeFile id="Sorter" language="ASPTemplates" name="Sorter.asp" forShow="False" comment="'"/><CodeFile id="Navigator" language="ASPTemplates" name="Navigator.asp" forShow="False" comment="'"/><CodeFile id="Classes" language="ASPTemplates" name="Classes.asp" forShow="False" comment="'"/><CodeFile id="ADOVBS" language="ASPTemplates" name="Adovbs.asp" forShow="False" comment="'"/><CodeFile id="JSFunctions" language="ASPTemplates" name="Functions.js" forShow="False" comment="//" codePage="utf-8"/><CodeFile id="JSDatePickerHTML" language="ASPTemplates" name="DatePicker.html" forShow="False" comment="&lt;!--" commentEnd="--&gt;"/><CodeFile id="JSDatePicker" language="ASPTemplates" name="DatePicker.js" forShow="False" comment="//" codePage="utf-8"/>
+	</CodeFiles>
+	<Groups>
+		<Group id="373" name="User" value="1"/>
+		<Group id="374" name="Admin" value="2"/>
+	</Groups>
+	<Events/>
+	<Profiles>
+		<Profile name="Server1" FTPPassiveMode="True" FTPSecureConnection="False" FTPpublishingAllMask="html;js;asp;php;jsp;cfm;cfc;pl;pm;cgi;mdb;gif;jpg;png;css;xml;java;asax;ascx;aspx;asmx;cs;vb;vbproj;resx;config;vsdisco;csproj;webinfo;bat;tld;jar;properties;inc;txt;resources;dll;swf;master;res;ico" FTPpublishingExceptMask="ccs;ccp" FTPpublishingType="Project" fileExtension=".php" location="Local" publishingAllMask="html;js;asp;php;jsp;cfm;cfc;pl;pm;cgi;mdb;gif;jpg;png;css;xml;java;asax;ascx;aspx;asmx;cs;vb;vbproj;resx;config;vsdisco;csproj;webinfo;bat;tld;jar;properties;inc;txt;resources;dll;swf;master;res;ico" publishingExceptMask="ccs;ccp" publishingType="AllMask">
+<Connections>
+				<Connection id="1" serverSameAsDesign="True" serverConnectionType="String" database="MSAccess" serverDatabase="MSAccess" showViews="True" showSynonyms="True" showSysTable="False" showSysView="False" showAliases="False" relationshipDiscovery="True" connectionType="String" connectionString="Provider=Microsoft.Jet.OLEDB.4.0;User ID=Admin;Data Source=C:\Program Files\CodeChargeStudio5\Examples\Internet\Internet.mdb;Persist Security Info=False" name="InternetDB" login="Admin" DBNameUppercase="False" connection="InternetDB" PHPDBLib="ODBC" serverDatabaseName="CCSInternet" serverPersistentConnection="False" DBDateFormat="yyyy-mm-dd HH:nn:ss" PerlDBDriver="ODBC" ConnectCached="False" serverPrintError="True" serverLongReadLen="5000" serverRaiseError="True" serverLongTruncOk="True" DBBooleanFormat="true;false" OptimizeSQL="True"/>
+			</Connections>
+		</Profile>
+<Profile name="Server2" FTPPassiveMode="True" FTPSecureConnection="False" FTPpublishingAllMask="html;js;asp;php;jsp;cfm;cfc;pl;pm;cgi;mdb;gif;jpg;png;css;xml;java;asax;ascx;aspx;asmx;cs;vb;vbproj;resx;config;vsdisco;csproj;webinfo;bat;tld;jar;properties;inc;txt;resources;dll;swf;master;res;ico" FTPpublishingExceptMask="ccs;ccp" FTPpublishingType="Project" fileExtension=".php" location="FTP" publishingAllMask="" publishingExceptMask="" publishingType="">
+<Connections>
+				<Connection id="1" serverSameAsDesign="True" serverConnectionType="String" database="MSAccess" serverDatabase="MSAccess" showViews="True" showSynonyms="True" showSysTable="False" showSysView="False" showAliases="False" relationshipDiscovery="True" connectionType="String" connectionString="Provider=Microsoft.Jet.OLEDB.4.0;User ID=Admin;Data Source=C:\Program Files\CodeChargeStudio5\Examples\Internet\Internet.mdb;Persist Security Info=False" name="InternetDB" login="Admin" DBNameUppercase="False" connection="InternetDB" PHPDBLib="ODBC" serverDatabaseName="CCSInternet" serverPersistentConnection="False" DBDateFormat="yyyy-mm-dd HH:nn:ss" PerlDBDriver="ODBC" ConnectCached="False" serverPrintError="True" serverLongReadLen="5000" serverRaiseError="True" serverLongTruncOk="True" DBBooleanFormat="true;false" OptimizeSQL="True"/>
+			</Connections>
+		</Profile>
+</Profiles>
+	<Languages>
+		<Language name="en" encoding="iso-8859-1" defaultCountry="US">
+			<LocaleInfo overrideDateFormats="False" booleanFormat="Yes;No;" overrideNumberFormats="False" msValue="1033" phpValue=""/>
+		</Language>
+	</Languages>
+	<Styles>
+		<Style id="354" name="Blueprint" caption="Blueprint"/>
+	</Styles>
+	<CustomButtons>
+		<CustomButton id="357" name="ButtonCancel" value="Cancel"/>
+		<CustomButton id="358" name="ButtonDelete" value="Delete"/>
+		<CustomButton id="359" name="ButtonInsert" value="Add"/>
+		<CustomButton id="360" name="ButtonLogin" value="Login"/>
+		<CustomButton id="361" name="ButtonLogout" value="Logout"/>
+		<CustomButton id="362" name="ButtonSearch" value="Search"/>
+		<CustomButton id="363" name="ButtonToday" value="Today  "/>
+		<CustomButton id="364" name="ButtonUpdate" value="Submit"/>
+		<CustomButton id="365" name="ButtonLast" value="Last"/>
+		<CustomButton id="366" name="ButtonLastOff" value="Last"/>
+		<CustomButton id="367" name="ButtonFirst" value="First"/>
+		<CustomButton id="368" name="ButtonFirstOff" value="First"/>
+		<CustomButton id="369" name="ButtonNext" value="Next"/>
+		<CustomButton id="370" name="ButtonNextOff" value="Next"/>
+		<CustomButton id="371" name="ButtonPrev" value="Prev"/>
+		<CustomButton id="372" name="ButtonPrevOff" value="Prev"/>
+	</CustomButtons>
+</Site>

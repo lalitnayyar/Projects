@@ -1,0 +1,25 @@
+<Site id="0" language="PHPTemplates" name="NewProject4" siteLanguage="en" publishingType="Project" FTPpublishingType="Project" securityType="None" urlType="Absolute" useCCSCultureFormats="True" defaultDateFormat="ShortDate" LSEnableQueryString="True" LSQueryStringName="locale" LSEnableHTTPHeader="False" LSEnableSession="True" LSSessionName="locale" LSLanguageSessionName="lang" LSEnableCookie="False" LSCookieName="locale" LSCookieExpired="365" cachingMethod="None" useI18nFeatures="False" showDepreciatedStyles="Styles" useDynamicStyles="False" SSEnableQueryString="True" SSQueryStringName="style" SSEnableSession="True" SSSessionName="style" SSEnableCookie="False" SSCookieName="style" SSCookieExpired="365" htmlTemplateType="HTML" isSection508="True" createIdsForControls="True" createIdsForNonEditableControls="True" createLablesForControls="False" generateJS="True" useDynamicDesigns="True" DDEnableQueryString="True" DDQueryStringName="design" DDEnableSession="True" DDSessionName="design" DDEnableCookie="False" DDCookieName="design" DDCookieExpired="365" fileExtension=".php" improvedHTTPCaching="True" outputFileFormat="Windows" PHPVersion="5" userIDStoreMethod="Session" userIDVariable="UserID" userLoginVariable="UserLogin" groupIDVariable="GroupID" cookieVariable="UserInfo" automatedLogin="False" defaultHTMLEncoding="windows-1252" omitIfEmpty="True" separateEvents="False" designFolder="Designs" PHPEncodeExtension="iconv" FCKBasePath="ckeditor" ccsVersion="5.0.0.16254" useAmp="True" codeFileEncoding="windows-1252" ALLoginCookieName="NewProject4Login" ALCookieExpired="30" ALEncryptionKey="Y59603hwd08lQSxZ" ALAutoProlong="False" ProtectPasswordsCodeExpression="md5({password})" ProtectPasswordsDBFunction="MD5({password})">
+	<Components>
+	</Components>
+	<Connections>
+	</Connections>
+	<CodeFiles>
+	</CodeFiles>
+	<Groups/>
+<Styles/>
+<CustomButtons/>
+<Profiles>
+<Profile name="Server1" FTPPassiveMode="True" FTPSecureConnection="False" FTPpublishingAllMask="html;js;asp;php;jsp;cfm;cfc;pl;pm;cgi;mdb;gif;jpg;png;css;xml;java;asax;ascx;aspx;asmx;cs;vb;vbproj;resx;config;vsdisco;csproj;webinfo;bat;tld;jar;properties;inc;txt;resources;dll;swf;master;res;ico" FTPpublishingExceptMask="ccs;ccp" FTPpublishingType="Project" fileExtension=".php" location="Local" publishingAllMask="html;js;asp;php;jsp;cfm;cfc;pl;pm;cgi;mdb;gif;jpg;png;css;xml;java;asax;ascx;aspx;asmx;cs;vb;vbproj;resx;config;vsdisco;csproj;webinfo;bat;tld;jar;properties;inc;txt;resources;dll;swf;master;res;ico" publishingExceptMask="ccs;ccp" publishingType="Project">
+<Connections/>
+</Profile>
+<Profile name="Server2" FTPPassiveMode="True" FTPSecureConnection="False" FTPpublishingAllMask="html;js;asp;php;jsp;cfm;cfc;pl;pm;cgi;mdb;gif;jpg;png;css;xml;java;asax;ascx;aspx;asmx;cs;vb;vbproj;resx;config;vsdisco;csproj;webinfo;bat;tld;jar;properties;inc;txt;resources;dll;swf;master;res;ico" FTPpublishingExceptMask="ccs;ccp" FTPpublishingType="Project" fileExtension=".php" location="FTP" publishingAllMask="html;js;asp;php;jsp;cfm;cfc;pl;pm;cgi;mdb;gif;jpg;png;css;xml;java;asax;ascx;aspx;asmx;cs;vb;vbproj;resx;config;vsdisco;csproj;webinfo;bat;tld;jar;properties;inc;txt;resources;dll;swf;master;res;ico" publishingExceptMask="ccs;ccp" publishingType="Project">
+<Connections/>
+</Profile>
+</Profiles>
+<Languages>
+<Language name="en" defaultCountry="US" encoding="windows-1252">
+<LocaleInfo language="en" country="US" encoding="windows-1252" msValue="1033" booleanFormat="Yes;No" decimalDigits="2" decimalSeparator="." groupSeparator="," monthNames="January;February;March;April;May;June;July;August;September;October;November;December" monthShortNames="Jan;Feb;Mar;Apr;May;Jun;Jul;Aug;Sep;Oct;Nov;Dec" weekdayNames="Sunday;Monday;Tuesday;Wednesday;Thursday;Friday;Saturday" weekdayShortNames="Sun;Mon;Tue;Wed;Thu;Fri;Sat" shortDate="m/d/yyyy" longDate="dddd, mmmm dd, yyyy" shortTime="h:nn tt" longTime="h:nn:ss tt" firstWeekDay="0" AMDesignator="AM" PMDesignator="PM" weekdayNarrowNames="S;M;T;W;T;F;S"/>
+</Language>
+</Languages>
+<Events/>
+</Site>

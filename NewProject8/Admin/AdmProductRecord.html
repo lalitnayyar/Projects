@@ -1,0 +1,120 @@
+<!-- BEGIN Panel Head -->
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-DA1BEFC0
+</script>
+<script language="JavaScript" src="../ClientI18N.php?file=Functions.js&amp;lang={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Contentstore_productsButton_Delete_OnClick @33-3E6E2564
+function Contentstore_productsButton_Delete_OnClick()
+{
+    var result = true;
+//End Contentstore_productsButton_Delete_OnClick
+
+//Confirmation Message @34-8243B274
+    return confirm('Delete record?');
+//End Confirmation Message
+
+//Close Contentstore_productsButton_Delete_OnClick @33-BC33A33A
+    return result;
+}
+//End Close Contentstore_productsButton_Delete_OnClick
+
+//Contentstore_productsButton_Cancel_OnClick @35-A1593A7A
+function Contentstore_productsButton_Cancel_OnClick()
+{
+    disableValidation = true;
+    return true;
+}
+//End Contentstore_productsButton_Cancel_OnClick
+
+//bind_events @1-A82C6FB7
+function bind_events() {
+    try { AdmHeader_bind_events(); } catch(e) {}
+    try { AdmMenu_bind_events(); } catch(e) {}
+    addEventHandler("Contentstore_productsButton_Delete", "click", Contentstore_productsButton_Delete_OnClick);
+    addEventHandler("Contentstore_productsButton_Cancel", "click", Contentstore_productsButton_Cancel_OnClick);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+<title>AdmProductRecord</title>
+<!-- END Panel Head -->
+<!-- BEGIN Panel Content --> 
+<!-- BEGIN Record store_products -->
+<form id="Contentstore_products" method="post" action="{Action}" name="{HTMLFormName}"> 
+<table style="width: 100%" class="MainTable" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+  <table cellspacing="0" cellpadding="0" border="0" class="Header">
+	<tr>
+	  <td class="HeaderLeft"><img src="{CCS_PathToMasterPage}images/spacer.gif" alt=""></td>
+	  <td class="th"><strong>Add/Edit Store Products</strong></td>
+	  <td class="HeaderRight"><img src="{CCS_PathToMasterPage}images/spacer.gif" alt=""></td>
+	</tr>
+   </table>
+  <table cellspacing="0" cellpadding="0" class="Record" >
+    <!-- BEGIN Error -->
+    <tr class="Error">
+      <td colspan="2">{Error}</td> 
+    </tr>
+ <!-- END Error -->
+    <tr class="Controls">
+      <td class="th"><label>Category&nbsp;*</label></td> 
+      <td>
+        <select name="{category_id_Name}" id="Contentstore_productscategory_id">
+          <option value="">Select Value</option>
+ {category_id_Options} 
+        </select>
+ </td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th"><label>Product Name&nbsp;*</label></td> 
+      <td><input type="text" name="{product_name_Name}" value="{product_name}" maxlength="250" size="50" id="Contentstore_productsproduct_name"></td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th"><label>Price&nbsp;*</label></td> 
+      <td><input type="text" name="{price_Name}" value="{price}" maxlength="20" size="20" id="Contentstore_productsprice"></td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th"><label>Image Url</label></td> 
+      <td><input type="text" name="{image_url_Name}" value="{image_url}" maxlength="100" style="width: 98%" id="Contentstore_productsimage_url"></td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th"><label>Description</label></td> 
+      <td><textarea name="{description1_Name}" style="width: 98%" rows="10" id="Contentstore_productsdescription1">{description1}</textarea></td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th"><label>Is Recommended</label></td> 
+      <td><input type="checkbox" name="{is_recommended_Name}" value="1" {is_recommended} id="Contentstore_productsis_recommended"></td> 
+    </tr>
+ 
+    <tr class="Bottom">
+      <td colspan="2" style="text-align: right">
+        <!-- BEGIN Button Button_Insert --><input name="{Button_Name}" type="submit" value="Add" alt="Add" id="Contentstore_productsButton_Insert" class="Button"><!-- END Button Button_Insert -->
+        <!-- BEGIN Button Button_Update --><input name="{Button_Name}" type="submit" value="Submit" alt="Submit" id="Contentstore_productsButton_Update" class="Button"><!-- END Button Button_Update -->
+        <!-- BEGIN Button Button_Delete --><input name="{Button_Name}" type="submit" value="Delete" alt="Delete" id="Contentstore_productsButton_Delete" class="Button"><!-- END Button Button_Delete -->
+        <!-- BEGIN Button Button_Cancel --><input name="{Button_Name}" type="submit" value="Cancel" alt="Cancel" id="Contentstore_productsButton_Cancel" class="Button"><!-- END Button Button_Cancel --></td> 
+    </tr>
+ 
+  </table>
+ 
+  <!--input type="hidden" name="{product_id_Name}" value="{product_id}" id="Contentstore_productsTemplatePanelstore_productsContentstore_productsproduct_id"-->
+     </td>
+    </tr>
+  </table>
+ </form>
+<!-- END Record store_products --> 
+<!-- END Panel Content -->
+<!-- BEGIN Panel Menu -->{AdmHeader}<!-- END Panel Menu -->
+<!-- BEGIN Panel Sidebar -->{AdmMenu}&nbsp;<!-- END Panel Sidebar -->

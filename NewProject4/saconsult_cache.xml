@@ -1,0 +1,34 @@
+<LldlCache allCatalogs="True" allSchemes="True" allColumns="True" allPrimaryKeys="True" allForeignKeys="False" allTables="True" allAliases="False" allSynonyms="True" allSystemTables="False" allSystemViews="False" allViews="True" allProcedures="False" allProcedureParameters="False">
+  <catalog allSchemes="True" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="False">
+    <schema SCHEMA_NAME="information_schema" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
+    <schema SCHEMA_NAME="cdcol" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
+    <schema SCHEMA_NAME="mysql" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
+    <schema SCHEMA_NAME="performance_schema" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
+    <schema SCHEMA_NAME="phpmyadmin" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
+    <schema SCHEMA_NAME="soniasa" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="True" allAliases="False" allSynonyms="True" allSystemTables="False" allSystemViews="False" allViews="True" allProcedures="False" allProcedureParameters="False" full="True">
+      <table TABLE_NAME="saconsult" TABLE_TYPE="5" DESCRIPTION="" allColumns="True" allPrimaryKeys="True" allForeignKeys="False" full="True">
+        <column COLUMN_NAME="Pkey" ORDINAL_POSITION="1" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="sacon_registration" ORDINAL_POSITION="2" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="sacon_DTReg" ORDINAL_POSITION="3" DATA_TYPE="135" CCS_TYPE="3" NATIVE_TYPE="System.DateTime" DATE_TIME_PRECISION="19" IS_NULLABLE="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="sacon_DOB" ORDINAL_POSITION="4" DATA_TYPE="7" CCS_TYPE="7" NATIVE_TYPE="System.DateTime" DATE_TIME_PRECISION="19" IS_NULLABLE="False" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="sacon_TOB" ORDINAL_POSITION="5" DATA_TYPE="134" CCS_TYPE="3" NATIVE_TYPE="System.TimeSpan" DATE_TIME_PRECISION="19" IS_NULLABLE="False" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="sacon_POB" ORDINAL_POSITION="6" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="60" IS_NULLABLE="False" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="sacon_phone" ORDINAL_POSITION="7" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="60" IS_NULLABLE="False" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="sacon_email" ORDINAL_POSITION="8" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="60" IS_NULLABLE="False" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="sacon_address1" ORDINAL_POSITION="9" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="60" IS_NULLABLE="False" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="sacon_address2" ORDINAL_POSITION="10" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="60" IS_NULLABLE="False" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="sacon_DateOfMarriage" ORDINAL_POSITION="11" DATA_TYPE="7" CCS_TYPE="7" NATIVE_TYPE="System.DateTime" DATE_TIME_PRECISION="19" IS_NULLABLE="False" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="sacon_noChildB" ORDINAL_POSITION="12" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="sacon_noChildG" ORDINAL_POSITION="13" DATA_TYPE="3" CCS_TYPE="0" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="sacon_education" ORDINAL_POSITION="14" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="60" IS_NULLABLE="False" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="sacon_profession" ORDINAL_POSITION="15" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="60" IS_NULLABLE="False" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="sacon_reference" ORDINAL_POSITION="16" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="60" IS_NULLABLE="False" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="sacon_question" ORDINAL_POSITION="17" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="65535" IS_NULLABLE="False" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="sacon_notes" ORDINAL_POSITION="18" DATA_TYPE="8" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="65535" IS_NULLABLE="False" DESCRIPTION="" full="True" />
+        <primaryKey PK_COLUMN_NAME="Pkey" KEY_NAME="PRIMARY" ENABLED="True" full="True" />
+      </table>
+    </schema>
+    <schema SCHEMA_NAME="test" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
+    <schema SCHEMA_NAME="webauth" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
+  </catalog>
+</LldlCache>

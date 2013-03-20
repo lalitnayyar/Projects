@@ -1,0 +1,285 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="GENERATOR" content="CodeCharge Studio 5.0.0.9569">
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Wish List</title>
+<link rel="stylesheet" type="text/css" href="Styles/Spring/Style_doctype.css">
+<script language="JavaScript" type="text/javascript">
+</script>
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-D3B5F5BF
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-47771F9A
+</script>
+<script language="JavaScript" src="js/pt/prototype.js" type="text/javascript"></script>
+<script language="JavaScript" src="js/pt/ajaxpanel.js" type="text/javascript"></script>
+<script language="JavaScript" src="js/yui/build/yahoo-dom-event/yahoo-dom-event.js" type="text/javascript"></script>
+<script language="JavaScript" src="js/yui/build/animation/animation-min.js" type="text/javascript"></script>
+<script language="JavaScript" src="js/yui/build/dragdrop/dragdrop-min.js" type="text/javascript"></script>
+<script language="JavaScript" src="js/yui/build/container/container-min.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="js/yui/build/container/assets/skins/sam/container.css">
+<link rel="stylesheet" type="text/css" href="Styles/Spring/ccs-yui-container.css">
+<script language="JavaScript" type="text/javascript">
+//End Include User Scripts
+
+//Start Panel1 @2-6F19DF97
+function Panel1_start(sender) {
+    var panel = $("Panel1");
+    if (!panel) return;
+    panel.onrefresh = function() {
+    };
+    AjaxPanel.init(panel);
+    AjaxPanel._bind(panel);
+    Panel1_bind(sender);
+}
+//End Start Panel1
+
+//Refresh Panel1 @2-479FB2A3
+function Panel1_bind(sender) {
+    addEventHandler("Panel1wishesLink1", "click", Panel2YahooPanel1_show);
+    addEventHandler("Panel1Condition1", "true", Panel2YahooPanel1_hide);
+}
+//End Refresh Panel1
+
+//Refresh Panel1UpdatePanel @3-B0171027
+function Panel1UpdatePanel_refresh(sender) {
+    var panel = $("Panel1");
+    if (!panel) return;
+    AjaxPanel.reload(panel);
+}
+//End Refresh Panel1UpdatePanel
+
+//Handle Panel1Condition1 @38-565C2F93
+function Panel1Condition1_start(sender) {
+//End Handle Panel1Condition1
+
+//Custom Panel1Condition1 @38-BF5A3987
+    if (document.getElementById("Panel2Panel3wishes1Error")==null)
+    {
+        Panel2YahooPanel1_hide(sender);
+    } else {
+    }
+//End Custom Panel1Condition1
+
+//Panel1Condition1 Tail @38-FCB6E20C
+}
+//End Panel1Condition1 Tail
+
+//Start Panel2Panel3 @31-3DAF0AC9
+function Panel2Panel3_start(sender) {
+    var panel = $("Panel2Panel3");
+    if (!panel) return;
+    panel.onrefresh = function() {
+        Panel1UpdatePanel_refresh(sender);
+        Panel1Condition1_start(sender);
+    };
+    AjaxPanel.init(panel);
+    AjaxPanel._bind(panel);
+    Panel2Panel3_bind(sender);
+}
+//End Start Panel2Panel3
+
+//Refresh Panel2Panel3 @31-960B0300
+function Panel2Panel3_bind(sender) {
+}
+//End Refresh Panel2Panel3
+
+//Refresh Panel2Panel3UpdatePanel @32-76DF795A
+function Panel2Panel3UpdatePanel_refresh(sender) {
+    var panel = $("Panel2Panel3");
+    if (!panel) return;
+    AjaxPanel.reload(panel);
+}
+//End Refresh Panel2Panel3UpdatePanel
+
+//Initialize Panel2YahooPanel1 @13-516D791F
+function Panel2YahooPanel1_init() {
+    var panel = document.getElementById('Panel2');
+    if (!panel) return;
+    window.Panel2YahooPanel1_Panel = new YAHOO.widget.Panel('Panel2YahooPanel1_Panel',  { 
+        modal: false,
+        fixedcenter: true,
+        visible: false,
+        constraintoviewport: false,
+        close: true
+    });
+    panel.style.position = "absolute";
+    //panel.style.float = "left";
+    panel.style.visibility = "hidden";
+    if (panel) { 
+        var html = panel.innerHTML;
+        var w = panel.clientWidth + 20;
+        panel.parentNode.removeChild(panel);
+        window.Panel2YahooPanel1_Panel.setHeader('New Wish');
+        window.Panel2YahooPanel1_Panel.appendToBody(panel);
+        window.Panel2YahooPanel1_Panel.render(document.body);
+        window.Panel2YahooPanel1_Panel.hide();
+        panel.style.visibility = "";
+        panel.style.position = "";
+        window.Panel2YahooPanel1_Panel.body.overflow = 'auto';
+        var css = document.body.className;
+        if (css.toLowerCase().indexOf('yui-skin-sam') == -1) css += " yui-skin-sam";
+        document.body.className = css.replace(/^[\s]*/m, "");
+        window.Panel2YahooPanel1_Panel.body.style.backgroundColor = "#fff";
+            window.Panel2YahooPanel1_Panel.beforeShowEvent.subscribe(function (sender) {
+            }, window.Panel2YahooPanel1_Panel, true);
+            window.Panel2YahooPanel1_Panel.beforeHideEvent.subscribe(function (sender) {
+    Panel2Panel3UpdatePanel_refresh(sender);
+            }, window.Panel2YahooPanel1_Panel, true);
+        window.Panel2YahooPanel1_Panel.cfg.setProperty("width", w + "px");
+        var h = window.Panel2YahooPanel1_Panel.element.clientHeight;
+        var doch = document.documentElement.clientHeight - 20;
+        if (h > doch) 
+            window.Panel2YahooPanel1_Panel.cfg.setProperty("height", doch + "px");
+    } else { delete window.Panel2YahooPanel1_Panel; }
+}
+function Panel2YahooPanel1_show() {
+    if (!window.Panel2YahooPanel1_Panel)
+        Panel2YahooPanel1_init();
+    window.Panel2YahooPanel1_Panel.show();
+    return false;
+}
+function Panel2YahooPanel1_hide() {
+    if (!window.Panel2YahooPanel1_Panel)
+        Panel2YahooPanel1_init();
+    window.Panel2YahooPanel1_Panel.hide();
+    return false;
+}
+//End Initialize Panel2YahooPanel1
+
+//bind_events @1-599022F8
+function bind_events() {
+    try { header_bind_events(); } catch(e) {}
+    try { footer_bind_events(); } catch(e) {}
+    Panel1_start(window);
+    Panel2Panel3_start(window);
+    Panel2YahooPanel1_init();
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+</head>
+<body>
+<p>{header}</p>
+<h1>Ajax example: Modal Window (pop-up)</h1>
+<p><strong><a href="{Link1_Src}">View more information about this example</a></strong></p>
+<p><strong>Adding of wish is performed within a modal window.<br>
+The new wish is verified and updated without page refresh.</strong></p>
+<p>Usage instructions:<br>
+1. Click on a 'Add New' link. Wish description&nbsp;is displayed without page refresh.<br>
+</p>
+<!-- BEGIN Panel Panel1 -->
+<!-- BEGIN Grid wishes -->
+<table cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td valign="top">
+      <table cellspacing="0" cellpadding="0" border="0" class="Header">
+        <tr>
+          <td class="HeaderLeft"><img src="Styles/Spring/Images/Spacer.gif" alt=""></td> 
+          <td class="th"><strong>Wishes</strong></td> 
+          <td class="HeaderRight"><img src="Styles/Spring/Images/Spacer.gif" alt=""></td> 
+        </tr>
+ 
+      </table>
+ 
+      <table cellspacing="0" cellpadding="0" class="Grid">
+        <tr class="Caption">
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_wish_email --><span class="Sorter"><a href="{Sort_URL}" id="Panel1wishesSorter_wish_email">Name</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Spring/Images/Asc.gif" alt="Ascending"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Spring/Images/Desc.gif" alt="Descending"><!-- END Desc_On --></span><!-- END Sorter Sorter_wish_email --></th>
+ 
+          <th scope="col">Wish Desc</th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_wish_date --><span class="Sorter"><a href="{Sort_URL}" id="Panel1wishesSorter_wish_date">Wish Date</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Spring/Images/Asc.gif" alt="Ascending"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Spring/Images/Desc.gif" alt="Descending"><!-- END Desc_On --></span><!-- END Sorter Sorter_wish_date --></th>
+ 
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td>{wish_name}&nbsp;</td> 
+          <td>{wish_desc}&nbsp;</td> 
+          <td>{wish_date}&nbsp;</td> 
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="3">No records</td> 
+        </tr>
+ <!-- END NoRecords -->
+        <tr class="Footer">
+          <td colspan="3"><a href="{Link1_Src}" id="Panel1wishesLink1">Add New</a> 
+            <!-- BEGIN Navigator Navigator --><span class="Navigator">Records per page 
+            <select name="{FormName}PageSize" onchange="CCChangeSize(this, '{FormName}')">
+              <option value="">-</option>
+ {PageSize_Options} 
+            </select>
+ 
+            <!-- BEGIN First_On --><a href="{First_URL}">First</a> <!-- END First_On -->
+            <!-- BEGIN First_Off -->First <!-- END First_Off -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}">Prev</a> <!-- END Prev_On -->
+            <!-- BEGIN Prev_Off -->Prev <!-- END Prev_Off -->&nbsp; 
+            <!-- BEGIN Pages -->
+            <!-- BEGIN Page_On --><a href="{Page_URL}">{Page_Number}</a>&nbsp;<!-- END Page_On -->
+            <!-- BEGIN Page_Off -->{Page_Number}&nbsp;<!-- END Page_Off --><!-- END Pages -->of &nbsp;{Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a href="{Next_URL}">Next</a> <!-- END Next_On -->
+            <!-- BEGIN Next_Off -->Next <!-- END Next_Off -->
+            <!-- BEGIN Last_On --><a href="{Last_URL}">Last</a> <!-- END Last_On -->
+            <!-- BEGIN Last_Off -->Last <!-- END Last_Off --></span><!-- END Navigator Navigator -->&nbsp;</td> 
+        </tr>
+ 
+      </table>
+ </td> 
+  </tr>
+</table>
+<!-- END Grid wishes --><br>
+<!-- END Panel Panel1 -->
+<!-- BEGIN Panel Panel2 -->
+<!-- BEGIN Panel Panel3 -->
+<!-- BEGIN Record wishes1 -->
+<form id="Panel2Panel3wishes1" method="post" action="{Action}" name="{HTMLFormName}">
+<div style="width:300px">
+  <!-- BEGIN Error -->
+  <div id="Panel2Panel3wishes1Error" class="Error">
+    {Error}
+  </div>
+  <br>
+  <!-- END Error -->
+  <div style="width:100%; text-align:left">
+    <label for="Panel2Panel3wishes1wish_name">Name</label>
+  </div>
+  <input style="margin-top:2px;width:100%" type="text" name="{wish_name_Name}" value="{wish_name}" id="Panel2Panel3wishes1wish_name">
+  <br>
+  <div style="width:100%; text-align:left">
+    <label for="Panel2Panel3wishes1wish_email">E-mail</label>
+  </div>
+  <input style="margin-top:2px;width:100%" type="text" name="{wish_email_Name}" value="{wish_email}" id="Panel2Panel3wishes1wish_email"><br>
+  <br>
+  <div style="width:100%; text-align:left">
+    <label for="Panel2Panel3wishes1wish_desc">Description</label>
+  </div>
+  <textarea style="margin-top:2px;width:100%;" name="{wish_desc_Name}" cols="51" rows="5" id="Panel2Panel3wishes1wish_desc">{wish_desc}</textarea>
+  <label style="display:none" for="Panel2Panel3wishes1wish_date">Wish Date</label><input type="hidden" name="{wish_date_Name}" value="{wish_date}" id="Panel2Panel3wishes1wish_date"><br>
+  <br>
+  <div style="width:100%; text-align:center">
+    <!-- BEGIN Button Button_Insert --><input name="{Button_Name}" type="submit" value="Submit" alt="Submit" id="Panel2Panel3wishes1Button_Insert" class="Button" class="Button"><!-- END Button Button_Insert -->
+  </div>
+</div>
+</form>
+<!-- END Record wishes1 --><br>
+<!-- END Panel Panel3 --><!-- END Panel Panel2 --><br>
+{footer} 
+</body>
+</html>

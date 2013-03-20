@@ -1,0 +1,88 @@
+<!-- BEGIN Panel Head -->
+<style type="text/css">
+select {
+	width: 100%;
+}
+</style>
+<title>Advanced Search</title>
+<!-- END Panel Head -->
+<!-- BEGIN Panel Content -->
+
+<!-- BEGIN Record products_search -->
+<form action="{Action}" method="post" name="{HTMLFormName}"> 
+<table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+  <table cellspacing="0" cellpadding="0" border="0" class="Header">
+	<tr>
+	  <td class="HeaderLeft"><img src="{CCS_PathToMasterPage}images/spacer.gif" alt=""></td>
+	  <td class="th"><strong>Search Products</strong></td>
+	  <td class="HeaderRight"><img src="{CCS_PathToMasterPage}images/spacer.gif" alt=""></td>
+	</tr>
+   </table>
+  <table class="Record" cellspacing="0" cellpadding="0">
+    <!-- BEGIN Error --><!-- END Error -->
+    <tr class="Controls">
+      <td><label for="Contentproducts_searchcategory_id">Category</label></td> 
+      <td>
+        <select name="{category_id_Name}" id="Contentproducts_searchcategory_id">
+          <option value="" selected>All</option>
+ {category_id_Options} 
+        </select>
+ </td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th"><label for="Contentproducts_searchs_keyword">Keyword</label></td> 
+      <td><input maxlength="250" name="{s_keyword_Name}" value="{s_keyword}" id="Contentproducts_searchs_keyword" /></td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th"><label for="Contentproducts_searchprice_form">Price more then</label></td> 
+      <td><input maxlength="20" name="{price_from_Name}" value="{price_from}" id="Contentproducts_searchprice_form" /></td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th"><label for="Contentproducts_searchprice_to">Price less then</label></td> 
+      <td><input maxlength="20" name="{price_to_Name}" value="{price_to}" id="Contentproducts_searchprice_to" /></td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th"><label for="Contentproducts_searchproductsOrder">Order By</label></td> 
+      <td>
+        <select name="{productsOrder_Name}" id="Contentproducts_searchproductsOrder">
+          <option selected value="">Select Column</option>
+ {productsOrder_Options} 
+        </select>
+ <label for="Contentproducts_searchproductsDir" style="display: none;">Products Dir</label> 
+        <select name="{productsDir_Name}" id="Contentproducts_searchproductsDir">
+          <option value="">Select Direction</option>
+ {productsDir_Options} 
+        </select>
+ </td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th"><label for="Contentproducts_searchproductsPageSize">Records per page</label></td> 
+      <td>
+        <select name="{productsPageSize_Name}" id="Contentproducts_searchproductsPageSize">
+          <option selected value="">Select Value</option>
+ {productsPageSize_Options} 
+        </select>
+ </td> 
+    </tr>
+ 
+    <tr class="Bottom">
+      <td style="text-align: right" colspan="2">
+        <!-- BEGIN Button DoSearch --><input name="{Button_Name}" type="submit" class="Button" alt="{res:CCS_Search}" value="{res:CCS_Search}" /><!-- END Button DoSearch -->&nbsp; </td> 
+    </tr>
+ 
+  </table>
+     </td>
+    </tr>
+  </table>
+ </form>
+<!-- END Record products_search -->
+<!-- END Panel Content -->
+<!-- BEGIN Panel Menu -->{Header}<!-- END Panel Menu -->
+<!-- BEGIN Panel Sidebar -->{Categories} {Recommended}<!-- END Panel Sidebar -->

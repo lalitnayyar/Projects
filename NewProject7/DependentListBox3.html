@@ -1,0 +1,420 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Three Dependent Listbox</title>
+<meta content="CodeCharge Studio 3.0.99.54" name="GENERATOR">
+<link href="Styles/Spring/Style_doctype.css" type="text/css" rel="stylesheet" />
+<!--[if IE 6]><link rel="stylesheet" type="text/css" href="Styles/Spring/Style_ie6.css"><![endif]-->
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+
+
+//Include Common JSFunctions @1-D3B5F5BF
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-B93D65AC
+</script>
+<script language="JavaScript" src="js/pt/prototype.js" type="text/javascript"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include User Scripts
+
+//directory_items_statesSearchs_subcategory_idPTDependantListBox2 Start @65-59BC8AA2
+function directory_items_statesSearchs_subcategory_idPTDependantListBox2_start(sender) {
+directory_items_statesSearchs_subcategory_idClientCustomCode1_start(sender);
+    if (!sender || sender === window) return;
+    var dependentElement = $("directory_items_statesSearchs_subcategory_id" + sender.id.substring(41));
+    if (!dependentElement) return;
+    var selected = null;
+    if (addEventHandler.isOnLoad) {
+        if (dependentElement.multiple) {
+            selected = [];
+            for (var i = 0; i < dependentElement.options.length; i++)
+                if (dependentElement.options[i].selected)
+                    selected[dependentElement.options[i].value] = true;
+        }
+        else
+            selected = dependentElement.value;
+    }
+    new Ajax.Request("services/directory_categories.php?keyword=" + sender.value, {
+        method: "get",
+        requestHeaders: ['If-Modified-Since', new Date(0)],
+        onSuccess: function(transport) {
+            for (var i = dependentElement.options.length - 1; i >= 0; i--) {
+                var currentOption = dependentElement.options.item(i);
+                if (currentOption.value != "") {
+                    dependentElement.remove(i);
+                }
+            }
+            var valueRows = eval(transport.responseText);
+            for (var i = 0; i < valueRows.length; i++) {
+                var newOption = new Option(valueRows[i]["1"], valueRows[i]["0"]);
+                dependentElement.options[dependentElement.options.length] = newOption;
+            } 
+            if (CCGetParam(sender.name) == sender.value) {
+                dependentElement.value = CCGetParam(dependentElement.name);
+            }
+            if (selected) {
+                if (dependentElement.multiple) {
+                    for (var i = 0; i < dependentElement.options.length; i++)
+                        if (selected[dependentElement.options[i].value])
+                            dependentElement.options[i].selected = true;
+                }
+                else
+                    dependentElement.value = selected;
+            }
+            directory_items_statesSearchs_subcategory_idClientCustomCode2_start(sender);
+        }, 
+        onFailure: function(transport) {
+            alert(transport.responseText);
+        }
+    });
+}
+//End directory_items_statesSearchs_subcategory_idPTDependantListBox2 Start
+
+
+//Handle directory_items_statesSearchs_subcategory_idClientCustomCode1 @91-3C1E79E3
+function directory_items_statesSearchs_subcategory_idClientCustomCode1_start(sender) {
+//End Handle directory_items_statesSearchs_subcategory_idClientCustomCode1
+
+//Custom directory_items_statesSearchs_subcategory_idClientCustomCode1 @91-2A29BDB7
+   var lb = document.getElementById("directory_items_statesSearchs_subcategory_id");
+   lb.options[0].text = "please wait";
+   lb.disabled = true;
+   lb = document.getElementById("directory_items_statesSearchs_item_id");
+   lb.options[0].text = "please wait";
+   lb.disabled = true;
+//End Custom directory_items_statesSearchs_subcategory_idClientCustomCode1
+
+//directory_items_statesSearchs_subcategory_idClientCustomCode1 Tail @91-FCB6E20C
+}
+//End directory_items_statesSearchs_subcategory_idClientCustomCode1 Tail
+
+//Handle directory_items_statesSearchs_subcategory_idClientCustomCode2 @92-15D6CD11
+function directory_items_statesSearchs_subcategory_idClientCustomCode2_start(sender) {
+//End Handle directory_items_statesSearchs_subcategory_idClientCustomCode2
+
+//Custom directory_items_statesSearchs_subcategory_idClientCustomCode2 @92-2A29BDB7
+   var lb = document.getElementById("directory_items_statesSearchs_subcategory_id");
+   lb.options[0].text = "Select Value";
+   lb.disabled = false;
+   directory_items_statesSearchs_item_idPTDependentListBox3_start(lb);
+   lb = document.getElementById("directory_items_statesSearchs_item_id");
+   lb.options[0].text = "Select Value";
+   lb.disabled = false;
+//End Custom directory_items_statesSearchs_subcategory_idClientCustomCode2
+
+//directory_items_statesSearchs_subcategory_idClientCustomCode2 Tail @92-FCB6E20C
+}
+//End directory_items_statesSearchs_subcategory_idClientCustomCode2 Tail
+
+//directory_items_statesSearchs_item_idPTDependentListBox3 Start @67-ABCD43A9
+function directory_items_statesSearchs_item_idPTDependentListBox3_start(sender) {
+directory_items_statesSearchs_item_idClientCustomCode1_start(sender);
+    if (!sender || sender === window) return;
+    var dependentElement = $("directory_items_statesSearchs_item_id" + sender.id.substring(44));
+    if (!dependentElement) return;
+    var selected = null;
+    if (addEventHandler.isOnLoad) {
+        if (dependentElement.multiple) {
+            selected = [];
+            for (var i = 0; i < dependentElement.options.length; i++)
+                if (dependentElement.options[i].selected)
+                    selected[dependentElement.options[i].value] = true;
+        }
+        else
+            selected = dependentElement.value;
+    }
+    new Ajax.Request("services/directory_items_lookup.php?keyword=" + sender.value, {
+        method: "get",
+        requestHeaders: ['If-Modified-Since', new Date(0)],
+        onSuccess: function(transport) {
+            for (var i = dependentElement.options.length - 1; i >= 0; i--) {
+                var currentOption = dependentElement.options.item(i);
+                if (currentOption.value != "") {
+                    dependentElement.remove(i);
+                }
+            }
+            var valueRows = eval(transport.responseText);
+            for (var i = 0; i < valueRows.length; i++) {
+                var newOption = new Option(valueRows[i]["1"], valueRows[i]["0"]);
+                dependentElement.options[dependentElement.options.length] = newOption;
+            } 
+            if (CCGetParam(sender.name) == sender.value) {
+                dependentElement.value = CCGetParam(dependentElement.name);
+            }
+            if (selected) {
+                if (dependentElement.multiple) {
+                    for (var i = 0; i < dependentElement.options.length; i++)
+                        if (selected[dependentElement.options[i].value])
+                            dependentElement.options[i].selected = true;
+                }
+                else
+                    dependentElement.value = selected;
+            }
+            directory_items_statesSearchs_item_idPTAutoFill1_start(sender);
+            directory_items_statesSearchs_item_idClientCustomCode2_start(sender);
+        }, 
+        onFailure: function(transport) {
+            alert(transport.responseText);
+        }
+    });
+}
+//End directory_items_statesSearchs_item_idPTDependentListBox3 Start
+
+//PTAutoFill1 Loading @69-21A743C7
+function directory_items_statesSearchs_item_idPTAutoFill1_start(sender) {
+    if (!sender || sender === window) return;
+    new Ajax.Request("services/directory_items.php?keyword=" + encodeURIComponent(sender.value).replace(/'/g, "%27"), {
+        method: "get",
+        requestHeaders: ['If-Modified-Since', new Date(0)],
+        onSuccess: function(transport) {
+            var valuesRow = eval(transport.responseText)[0];
+            if (typeof(valuesRow) != "undefined") {
+                $("directory_items_statesitem_name").innerHTML = valuesRow["item_name"];
+                $("directory_items_statesaddress").innerHTML = valuesRow["address"];
+                $("directory_items_statescity").innerHTML = valuesRow["city"];
+                $("directory_items_stateszip").innerHTML = valuesRow["zip"];
+                $("directory_items_statesstate_name").innerHTML = valuesRow["state_name"];
+                $("directory_items_statesphone").innerHTML = valuesRow["phone"];
+                $("directory_items_statesnote").innerHTML = valuesRow["note"];
+                $("directory_items_statesemail").innerHTML = valuesRow["email"];
+                $("directory_items_statesurl").innerHTML = valuesRow["url"];
+                $("directory_items_statesurl").href = valuesRow["url"];
+            } else {
+                $("directory_items_statesitem_name").innerHTML = "";
+                $("directory_items_statesaddress").innerHTML = "";
+                $("directory_items_statescity").innerHTML = "";
+                $("directory_items_stateszip").innerHTML = "";
+                $("directory_items_statesstate_name").innerHTML = "";
+                $("directory_items_statesphone").innerHTML = "";
+                $("directory_items_statesnote").innerHTML = "";
+                $("directory_items_statesemail").innerHTML = "";
+                $("directory_items_statesurl").innerHTML = "";
+                $("directory_items_statesurl").href = "";
+            }
+        }, 
+        onFailure: function(transport) {
+            alert(transport.responseText);
+        }
+    });
+}
+//End PTAutoFill1 Loading
+
+
+//Handle directory_items_statesSearchs_item_idClientCustomCode1 @93-49ABB2D3
+function directory_items_statesSearchs_item_idClientCustomCode1_start(sender) {
+//End Handle directory_items_statesSearchs_item_idClientCustomCode1
+
+//Custom directory_items_statesSearchs_item_idClientCustomCode1 @93-2A29BDB7
+   var lb = document.getElementById("directory_items_statesSearchs_item_id");
+   lb.options[0].text = "please wait";
+   lb.disabled = true;
+//End Custom directory_items_statesSearchs_item_idClientCustomCode1
+
+//directory_items_statesSearchs_item_idClientCustomCode1 Tail @93-FCB6E20C
+}
+//End directory_items_statesSearchs_item_idClientCustomCode1 Tail
+
+//Handle directory_items_statesSearchs_item_idClientCustomCode2 @94-60630621
+function directory_items_statesSearchs_item_idClientCustomCode2_start(sender) {
+//End Handle directory_items_statesSearchs_item_idClientCustomCode2
+
+//Custom directory_items_statesSearchs_item_idClientCustomCode2 @94-2A29BDB7
+   var lb = document.getElementById("directory_items_statesSearchs_item_id");
+   lb.options[0].text = "Select Value";
+   lb.disabled = false;
+//End Custom directory_items_statesSearchs_item_idClientCustomCode2
+
+//directory_items_statesSearchs_item_idClientCustomCode2 Tail @94-FCB6E20C
+}
+//End directory_items_statesSearchs_item_idClientCustomCode2 Tail
+
+//bind_events @1-BD388437
+function bind_events() {
+    try { header_bind_events(); } catch(e) {}
+    try { footer_bind_events(); } catch(e) {}
+    addEventHandler("directory_items_statesSearchs_category_id", "change", directory_items_statesSearchs_subcategory_idPTDependantListBox2_start);
+    addEventHandler("directory_items_statesSearchs_category_id", "load", directory_items_statesSearchs_subcategory_idPTDependantListBox2_start);
+    addEventHandler("directory_items_statesSearchs_subcategory_id", "change", directory_items_statesSearchs_item_idPTDependentListBox3_start);
+    addEventHandler("directory_items_statesSearchs_subcategory_id", "load", directory_items_statesSearchs_item_idPTDependentListBox3_start);
+    addEventHandler("directory_items_statesSearchs_item_id", "change", directory_items_statesSearchs_item_idPTAutoFill1_start);
+}
+//End bind_events
+
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+</head>
+<body>
+<p>{header}</p>
+<h1>Ajax example: Three Dependent Listboxes &amp; Autofill</h1>
+<p><strong><a href="{Link1_Src}">View more information about this example</a></strong></p>
+<p><strong>An&nbsp;implementation of dependent drop-down menus (dependent listboxes) using Ajax.<br>
+Company information is automatically prefilled based on listbox selection.</strong></p>
+<p>Usage instructions:<br>
+1. Select category "Computers and Internet". The subcategory listbox populates automatically without page refresh.<br>
+2. Select subcategory "Software". The company listbox populates automatically without page refresh.<br>
+3. Select a company. Company information is displayed without page refresh.</p>
+<table border="0">
+  <tr>
+    <td valign="top" width="280">
+      <!-- BEGIN Record directory_items_statesSearch -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <table cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td valign="top">
+              <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td class="HeaderLeft"><img alt="" src="Styles/Spring/Images/Spacer.gif" border="0"></td> 
+                  <th>Search Items</th>
+ 
+                  <td class="HeaderRight"><img alt="" src="Styles/Spring/Images/Spacer.gif" border="0"></td> 
+                </tr>
+ 
+              </table>
+ 
+              <table class="Record" cellspacing="0" cellpadding="0">
+                <!-- Begin Error  -->
+                <tr class="Error">
+                  <td>{Error}</td> 
+                </tr>
+ <!-- End Error  -->
+                <tr class="Controls">
+                  <th><label for="directory_items_statesSearchs_category_id">Category</label></th>
+ 
+                </tr>
+ 
+                <tr class="Controls">
+                  <th>
+                  <select id="directory_items_statesSearchs_category_id" name="{s_category_id_Name}">
+                    <option value="">Select Value</option>
+ {s_category_id_Options} 
+                  </select>
+ </th>
+ 
+                </tr>
+ 
+                <tr class="Controls">
+                  <th><label for="directory_items_statesSearchs_subcategory_id">Subcategory</label></th>
+ 
+                </tr>
+ 
+                <tr class="Controls">
+                  <th>
+                  <!-- BEGIN ListBox s_subcategory_id -->
+                  <select id="directory_items_statesSearchs_subcategory_id" name="{s_subcategory_id_Name}">
+                    <option value="">Select Value</option>
+ {s_subcategory_id_Options} 
+                  </select>
+ <!-- END ListBox s_subcategory_id --></th>
+ 
+                </tr>
+ 
+                <tr class="Controls">
+                  <th><label for="directory_items_statesSearchs_item_id">Company</label></th>
+ 
+                </tr>
+ 
+                <tr class="Controls">
+                  <td>
+                    <!-- BEGIN ListBox s_item_id -->
+                    <select id="directory_items_statesSearchs_item_id" name="{s_item_id_Name}">
+                      <option value="">Select Value</option>
+ {s_item_id_Options} 
+                    </select>
+ <!-- END ListBox s_item_id --></td> 
+                </tr>
+ 
+              </table>
+ </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END Record directory_items_statesSearch --></td> 
+    <td valign="top">
+      <!-- BEGIN Record directory_items_states -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <table cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td valign="top">
+              <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td class="HeaderLeft"><img alt="" src="Styles/Spring/Images/Spacer.gif" border="0"></td> 
+                  <th>Company Information</th>
+ 
+                  <td class="HeaderRight"><img alt="" src="Styles/Spring/Images/Spacer.gif" border="0"></td> 
+                </tr>
+ 
+              </table>
+ 
+              <table class="Record" cellspacing="0" cellpadding="0">
+                <!-- Begin Error  -->
+                <tr class="Error">
+                  <td colspan="2">{Error}</td> 
+                </tr>
+ <!-- End Error  -->
+                <tr class="Row">
+                  <td>Item Name&nbsp;</td> 
+                  <td>{item_name}<span id="directory_items_statesitem_name">&nbsp;</span>&nbsp;</td> 
+                </tr>
+ 
+                <tr class="Row">
+                  <td>Address&nbsp;</td> 
+                  <td>{address}<span id="directory_items_statesaddress">&nbsp;</span>&nbsp;</td> 
+                </tr>
+ 
+                <tr class="Row">
+                  <td>City&nbsp;</td> 
+                  <td>{city}<span id="directory_items_statescity">&nbsp;</span>&nbsp;</td> 
+                </tr>
+ 
+                <tr class="Row">
+                  <td>Zip&nbsp;</td> 
+                  <td>{zip}<span id="directory_items_stateszip">&nbsp;</span>&nbsp;</td> 
+                </tr>
+ 
+                <tr class="Row">
+                  <td>State&nbsp;</td> 
+                  <td>{state_name}<span id="directory_items_statesstate_name">&nbsp;</span>&nbsp;</td> 
+                </tr>
+ 
+                <tr class="Row">
+                  <td>Phone&nbsp;</td> 
+                  <td>{phone}<span id="directory_items_statesphone">&nbsp;</span>&nbsp;</td> 
+                </tr>
+ 
+                <tr class="Row">
+                  <td>Note&nbsp;</td> 
+                  <td>{note}<span id="directory_items_statesnote">&nbsp;</span>&nbsp;</td> 
+                </tr>
+ 
+                <tr class="Row">
+                  <td>Email&nbsp;</td> 
+                  <td>{email}<span id="directory_items_statesemail">&nbsp;</span>&nbsp;</td> 
+                </tr>
+ 
+                <tr class="Row">
+                  <td>Url&nbsp;</td> 
+                  <td><a href="{url_Src}" id="directory_items_statesurl">{url}</a>&nbsp;</td> 
+                </tr>
+ 
+              </table>
+ </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END Record directory_items_states --></td> 
+  </tr>
+</table>
+<p>{footer}</p>
+</body>
+</html>

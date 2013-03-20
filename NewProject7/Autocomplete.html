@@ -1,0 +1,144 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Employee Editor</title>
+<meta content="CodeCharge Studio 3.0.99.54" name="GENERATOR">
+<link href="Styles/Spring/Style_doctype.css" type="text/css" rel="stylesheet">
+<!--[if IE 6]><link rel="stylesheet" type="text/css" href="Styles/Spring/Style_ie6.css"><![endif]-->
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+</head>
+<body>
+<p>{header}</p>
+<h1>Ajax example: Autocomplete and Autofill (Automated Data Retrieval)</h1>
+<strong>
+<p><a href="{Link1_Src}">View more information about this example</a></p>
+</strong>
+<p><strong>Matching names are displayed automatically when typing a name.<br>
+Employee information is retrieved automatically after selecting an employee.</strong></p>
+<p>Usage instructions:<br>
+1. Type a letter into the Name field, for example "a". Matching names will be displayed automatically.<br>
+2. Select a name. Employee information will be retrieved and shown automatically.</p>
+<!-- BEGIN Record employees -->
+<form name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img alt="" src="Styles/Spring/Images/Spacer.gif" border="0"></td> 
+            <th>Employees </th>
+ 
+            <td class="HeaderRight"><img alt="" src="Styles/Spring/Images/Spacer.gif" border="0"></td> 
+          </tr>
+ 
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- Begin Error  -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+ <!-- End Error  -->
+          <tr class="Controls">
+            <th><label for="employeesemp_name">Name</label></th>
+ 
+            <td>
+              <!-- BEGIN TextBox emp_name --><input id="employeesemp_name" maxlength="50" size="50" value="{emp_name}" name="{emp_name_Name}">
+              <!-- BEGINF UpdateDB UpdateDB1 -->{emp_name:postSnippet}<!-- ENDF UpdateDB UpdateDB1 -->
+              <!-- BEGINF PTAutocomplete PTAutocomplete1 -->
+              <div id="employeesemp_name_choices">
+              </div>
+ <!-- ENDF PTAutocomplete PTAutocomplete1 -->
+ <!-- END TextBox emp_name --></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th><label for="employeestitle">Title</label></th>
+ 
+            <td><input id="employeestitle" maxlength="50" size="50" value="{title}" name="{title_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th><label for="employeesdepartment_id">Department Id</label></th>
+ 
+            <td>
+              <select id="employeesdepartment_id" name="{department_id_Name}">
+                <option value="" selected>Select Value</option>
+                {department_id_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th><label for="employeesemail">Email</label></th>
+ 
+            <td><input id="employeesemail" maxlength="50" size="50" value="{email}" name="{email_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls" id="employeespicture1">
+            <th>Picture</th>
+ 
+            <td><img id="employeespicture" alt="" src="{picture}">&nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th><label for="employeesphone_home">Phone Home</label></th>
+ 
+            <td><input id="employeesphone_home" maxlength="50" size="50" value="{phone_home}" name="{phone_home_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th><label for="employeesphone_work">Phone Work</label></th>
+ 
+            <td><input id="employeesphone_work" maxlength="50" size="50" value="{phone_work}" name="{phone_work_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th><label for="employeesphone_cell">Phone Cell</label></th>
+ 
+            <td><input id="employeesphone_cell" maxlength="50" size="50" value="{phone_cell}" name="{phone_cell_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th><label for="employeesfax">Fax</label></th>
+ 
+            <td><input id="employeesfax" maxlength="50" size="50" value="{fax}" name="{fax_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th><label for="employeescity">City</label></th>
+ 
+            <td><input id="employeescity" maxlength="50" size="50" value="{city}" name="{city_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th><label for="employeeszip">Zip</label></th>
+ 
+            <td><input id="employeeszip" maxlength="20" value="{zip}" name="{zip_Name}" size="20"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th><label for="employeesaddress">Address</label></th>
+ 
+            <td><input id="employeesaddress" maxlength="50" size="50" value="{address}" name="{address_Name}"></td>
+          </tr>
+ 
+          <tr class="Bottom" id="updatep">
+            <td align="right" colspan="2"><span id="updateindicator" style="DISPLAY: none">Updating. Please wait...</span><label for="Update" style="display: none;">Update</label><input id="employeesemp_id" type="hidden" value="{emp_id}" name="{emp_id_Name}"><input class="Button" id="Update" type="button" value="Update" name="Update"></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record employees -->
+<p></p>
+<p>{footer}</p>
+</body>
+</html>

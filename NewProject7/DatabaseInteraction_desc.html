@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Database Interaction</title>
+<link href="Styles/Spring/Style_doctype.css" type="text/css" rel="stylesheet">
+<link href="cchelpstyle.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-D3B5F5BF
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//bind_events @1-47AD86DA
+function bind_events() {
+    try { header_bind_events(); } catch(e) {}
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+</head>
+<body>
+<p>{header}</p>
+<h1>Ajax example: Database Interaction (Silent Data Update) and Tabbed View</h1>
+<h2>Description</h2>
+<p>This example demonstrates how to retrieve information from the database and
+update it without refreshing the page. Tabs are used for viewing and editing
+information.</p>
+<h2>Usage</h2>
+<ol>
+  <li>Select an employee from the list. Note how the employee information is
+    displayed without the page being refreshed.
+  <li>Click the Edit tab, modify information and click &quot;Save&quot;. The
+    data will be saved in the background and the employee list and information
+    will be updated on the page.<br>
+</ol>
+<h2>Steps to recreate</h2>
+<ol>
+  <li>Add the <b>Update Panel</b> component to the page.
+  <li>Create an HTML table with three columns within the Update Panel.
+  <li>In the left column of the table use the <b>Grid Builder</b> to create a
+    grid based on the <i>officers</i> table in the in the <i>InternetDB</i>
+    database. Include <i>officer_name</i> column in the second step of the
+    builder.
+  <li>To make the officer_name field &quot;clickable&quot;, change the <b>Label</b>
+    control to a <b>Link</b> control. Then switch to the Data tab of the
+    Properties window and set the current page as the value of the new link's <b>Href
+    Source</b> property. While editing the <b>Href Source</b> property also add
+    a Link <b>Parameter</b> with the following values: <b>Data Source Type</b> =
+    <i>DataSource Column</i>, <b>Parameter Source</b> = <i>officer_id</i> and <b>Parameter
+    name</b> = <i>officer_id</i>.
+  <li>In the bottom row of the Grid, create &quot;<b><i>Add New&quot;</i></b>
+    Link and set its <b>Href Sourc</b>e property to the current page, then add <i>officer_id</i>
+    into the <b>Remove Parameters</b> property.
+  <li>In the right cell of the HTML table, use the <b>TabbedView</b> and <b>TabbedTab</b>
+    options in the &quot;Forms&quot; tab of the Toolbox to create Yahoo Tabbed
+    View with two tabs.
+  <li>On both tabs, use the <b>Record Builder</b> to create record forms based
+    on the <i>officers</i> table with the following three fields: <i>officer_name</i>,
+    <i>officer_position</i> and <i>officer_email</i>. At builder's 	<b>Action</b> step
+    uncheck Allow Insert and Allow Delete options.
+  <li>In the first tab, convert the <i>officer_name</i>, <i>officer_position</i>
+    and <i>officer_email</i> TextBox controls to Labels and remove all the
+    buttons from the form.
+  <li>Make cosmetic changes as needed, by modifying the text, tab and button
+    captions within the HTML.
+</ol>
+<h2>Database Tables used</h2>
+<p>Database: <I>Internet</I></p>
+<p>Tables: <I>officers</I> </p>
+</body>
+</html>

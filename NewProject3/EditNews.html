@@ -1,0 +1,46 @@
+<!-- BEGIN Panel Head -->
+<title>Edit News</title>
+
+<!-- END Panel Head -->
+<!-- BEGIN Panel Content -->
+
+
+<!-- BEGIN Record news -->
+<form id="Contentnews" method="post" action="{Action}" name="{HTMLFormName}"> 
+<table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+  <table cellspacing="0" cellpadding="0" border="0" class="Header">
+	<tr>
+	  <td class="HeaderLeft"><img src="{CCS_PathToMasterPage}Images/Spacer.gif" alt=""></td>
+	  <td class="th"><strong>SVEC - Add/Edit News</strong></td>
+	  <td class="HeaderRight"><img src="{CCS_PathToMasterPage}Images/Spacer.gif" alt=""></td>
+	</tr>
+   </table>
+  <table cellspacing="0" cellpadding="0" class="Record" style="width: 10px">
+    <!-- BEGIN Error -->
+    <tr class="Error">
+      <td>{Error}</td> 
+    </tr>
+ <!-- END Error -->
+    <tr class="Controls">
+      <td><textarea name="{news_desc_Name}" cols="65" rows="16" id="Contentnewsnews_desc">{news_desc}</textarea></td> 
+    </tr>
+ 
+    <tr class="Bottom">
+      <td style="text-align: right">
+        <!-- BEGIN Button Button_Insert --><input name="{Button_Name}" type="submit" value="Add" alt="Add" id="ContentnewsButton_Insert" class="Button"><!-- END Button Button_Insert -->
+        <!-- BEGIN Button Button_Update --><input name="{Button_Name}" type="submit" value="Submit" alt="Submit" id="ContentnewsButton_Update" class="Button"><!-- END Button Button_Update -->
+        <!-- BEGIN Button Button_Delete --><input name="{Button_Name}" type="submit" value="Delete" alt="Delete" id="ContentnewsButton_Delete" class="Button"><!-- END Button Button_Delete -->
+        <!-- BEGIN Button Button_Cancel --><input name="{Button_Name}" type="submit" value="Cancel" alt="Cancel" id="ContentnewsButton_Cancel" class="Button"><!-- END Button Button_Cancel --></td> 
+    </tr>
+ 
+  </table>
+     </td>
+    </tr>
+  </table>
+ </form>
+<!-- END Record news --> 
+<!-- END Panel Content -->
+<!-- BEGIN Panel Menu -->{Header}<!-- END Panel Menu -->
+<!-- BEGIN Panel Sidebar1 -->{AdminMenu}&nbsp;<!-- END Panel Sidebar1 -->

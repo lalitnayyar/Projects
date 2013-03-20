@@ -1,0 +1,124 @@
+<!-- BEGIN Panel Head -->
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-63DF9707
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&lang={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" src="ClientI18N.php?file=DatePicker.js&lang={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-A328438A
+</script>
+<script language="JavaScript" src="js/yui/build/yahoo-dom-event/yahoo-dom-event.js" type="text/javascript"></script>
+<script language="JavaScript" src="js/yui/build/calendar/calendar-min.js" type="text/javascript"></script>
+<script language="JavaScript" src="js/yui/datepicker-commons.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="{CCS_PathToMasterPage}ccs-yui-calendar.css">
+<script language="JavaScript" type="text/javascript">
+//End Include User Scripts
+
+//Contenteventsportal_Delete_OnClick @50-06325CBD
+function Contenteventsportal_Delete_OnClick()
+{
+    disableValidation = true;
+    return true;
+}
+//End Contenteventsportal_Delete_OnClick
+
+//Contenteventsportal_Cancel_OnClick @51-DC03C60B
+function Contenteventsportal_Cancel_OnClick()
+{
+    disableValidation = true;
+    return true;
+}
+//End Contenteventsportal_Cancel_OnClick
+
+//Handle Contenteventsdate_startInlineDatePicker2 @41-06B970A1
+function Contenteventsdate_startInlineDatePicker2_start(sender) {
+    if (!sender || sender === window) return;
+    generateDatePicker(sender.id, "mm/dd/yyyy","");
+}
+//End Handle Contenteventsdate_startInlineDatePicker2
+
+//bind_events @1-193E94CB
+function bind_events() {
+    try { Header_bind_events(); } catch(e) {}
+    try { AdminMenu_bind_events(); } catch(e) {}
+    addEventHandler("Contenteventsdate_start", "load", Contenteventsdate_startInlineDatePicker2_start);
+    addEventHandler("Contenteventsportal_Delete", "click", Contenteventsportal_Delete_OnClick);
+    addEventHandler("Contenteventsportal_Cancel", "click", Contenteventsportal_Cancel_OnClick);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+<title>Edit Event</title>
+
+<!-- END Panel Head -->
+<!-- BEGIN Panel Content -->
+
+
+<!-- BEGIN Record events -->
+<form action="{Action}" method="post" name="{HTMLFormName}"> 
+<table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+  <table cellspacing="0" cellpadding="0" border="0" class="Header">
+	<tr>
+	  <td class="HeaderLeft"><img src="{CCS_PathToMasterPage}Images/Spacer.gif" alt=""></td>
+	  <td class="th"><strong>Add/Edit Event</strong></td>
+	  <td class="HeaderRight"><img src="{CCS_PathToMasterPage}Images/Spacer.gif" alt=""></td>
+	</tr>
+   </table>
+  <table class="Record">
+    <!-- BEGIN Error -->
+    <tr class="Error">
+      <td colspan="2">{Error}</td> 
+    </tr>
+ <!-- END Error -->
+    <tr class="Controls">
+      <td class="th"><label for="Contenteventsdate_start">Date</label></td> 
+      <td>
+        <!-- BEGIN TextBox date_start --><input maxlength="20" name="date_start" value="{date_start}" id="Contenteventsdate_start" /><!-- END TextBox date_start -->&nbsp;(mm/dd/yyyy)</td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th"><label for="Contenteventsevent_name">Title *</label></td> 
+      <td><textarea name="event_name" cols="50" rows="8" id="Contenteventsevent_name">{event_name}</textarea></td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th"><label for="Contenteventsevent_desc">Description</label></td> 
+      <td><textarea name="event_desc" rows="8" cols="50" id="Contenteventsevent_desc">{event_desc}</textarea></td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th"><label for="Contenteventslocation">Location *</label></td> 
+      <td><textarea name="location" rows="3" cols="50" id="Contenteventslocation">{location}</textarea></td> 
+    </tr>
+ 
+    <tr class="Controls">
+      <td class="th"><label for="Contenteventspresenter">Presenter *</label></td> 
+      <td><input maxlength="100" name="presenter" size="50" value="{presenter}" id="Contenteventspresenter" /></td> 
+    </tr>
+ 
+    <tr class="Bottom">
+      <td style="text-align: right" colspan="2">
+        <!-- BEGIN Button portal_Insert --><input type="submit" name="portal_Insert" class="Button" alt="{res:CCS_Insert}" value="{res:CCS_Insert}"><!-- END Button portal_Insert -->
+        <!-- BEGIN Button portal_Update --><input type="submit" name="portal_Update" class="Button" alt="{res:CCS_Update}" value="{res:CCS_Update}"><!-- END Button portal_Update -->
+        <!-- BEGIN Button portal_Delete --><input type="submit" name="portal_Delete" class="Button" alt="{res:CCS_Delete}" value="{res:CCS_Delete}"><!-- END Button portal_Delete -->
+        <!-- BEGIN Button portal_Cancel --><input type="submit" name="portal_Cancel" class="Button" alt="{res:CCS_Cancel}" value="{res:CCS_Cancel}"><!-- END Button portal_Cancel --></td> 
+    </tr>
+ 
+  </table>
+ <input type="hidden" name="user_added" value="{user_added}" />
+     </td>
+    </tr>
+  </table>
+ </form>
+<!-- END Record events --> 
+<!-- END Panel Content -->
+<!-- BEGIN Panel Menu -->{Header}<!-- END Panel Menu -->
+<!-- BEGIN Panel Sidebar1 -->{AdminMenu}&nbsp;<!-- END Panel Sidebar1 -->

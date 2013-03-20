@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Modal Window (pop-up)</title>
+<link rel="stylesheet" type="text/css" href="Styles/Spring/Style_doctype.css">
+<link href="cchelpstyle.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-D6831454
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//bind_events @1-47AD86DA
+function bind_events() {
+    try { header_bind_events(); } catch(e) {}
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+</head>
+
+<body>
+
+<p>{header}</p>
+<h1>Ajax example: Modal Window (pop-up)</h1>
+<h2>Description</h2>
+<p>This example shows how to use a modal window to add wishes at site. 
+The wish list will be updated automatically without refresh of whole page.</p>
+<h2><strong>Steps to recreate</strong></h2>
+<ol>
+  <li>Add <b>Update Panel</b> component selecting it from the &quot;Forms&quot; tab of the Toolbox window. Leave the default <i>Panel1</i> name.</li>
+  <li>Run <b>Grid Builder</b> to create the Grid based on the wishes table inside the Panel1 panel. Delete fields 'wish_id' and 'wish_email' from field list.</li>
+  <li>Add link control into botton of wishes grid, with Static Text 'Add New' and default name <i>Link1</i>.</li>
+  <li>Add <b>Dialog Panel</b> component (outside <i>Panel1</i>) selecting it from the &quot;Forms&quot; tab of the Toolbox window. In dialog set <strong>Width</strong> and <strong>Height</strong> attributes as empty. Leave the default <i>Panel2</i> name.</li>
+  <li>Add <b>Update Panel</b> component (inside <i>Panel2</i>) selecting it from the &quot;Forms&quot; tab of the Toolbox window. Leave the default <i>Panel3</i> name.</li>
+  <li>Run <b>Record Builder</b> to create the Record based on the wishes table inside the <i>Panel3</i> panel. In <b>Action</b> tab uncheck Allow Update and Allow Delete checkboxes,</li>
+  <li>In <strong>HTML</strong> mode add <strong>id="Panel2Panel3wishes1Error"</strong> to any tag in Error block for <i>wishes1</i> record.</li>
+  <li>For <i>wishes1</i> record, change type of <i>wish_date</i> textbox to hidden, set it properties:
+    <ul style="margin-left: 5px">
+      <li><strong>Format:</strong> <em>mm/dd/yyyy h:nn AM/PM</em></li>
+      <li><strong>Default Value:</strong> <em>CurrentDateTime</em></li>
+      <li><strong>Caption:</strong> <em>Wish Date</em></li>
+    </ul>
+  </li>
+  <li>For textbox <i>wish_email</i> in <i>wishes1</i> record, add Validate Email action to On Validate event, set:
+    <ul style="margin-left: 5px">
+      <li><strong>Control Name:</strong> <em>wish_email</em></li>
+    </ul>
+  </li>
+  <li>Add Condition feature to <i>Panel1</i> panel, set it attributes as:
+    <ul style="margin-left: 5px">
+      <li><strong>Condition:</strong> <em>equals (=)</em></li>
+      <li><strong>Parameter 1:</strong> <em>$("Panel2Panel3wishes1Error")</em></li>
+      <li><strong>Source Type:</strong> <em>Expression</em></li>
+      <li><strong>Parameter 2:</strong> <em>null</em></li>
+      <li><strong>Source Type:</strong> <em>Expression</em></li>
+      <li><strong>Start Event:</strong> <em>Panel2Panel3UpdatePanel.onrefresh;</em></li>
+    </ul>
+  </li>
+  <li>At <i>Panel1</i> panel for UpdatePanel feature set value for attribute:
+    <ul style="margin-left: 5px">
+      <li><strong>Refresh:</strong> <em>Panel2Panel3UpdatePanel.onrefresh;</em></li>
+    </ul>
+  </li>
+  <li>At <i>Panel2</i> panel for YahooPanel1 feature set values of attributes:
+    <ul style="margin-left: 5px">
+      <li><strong>Fixed center:</strong> <em>Yes</em></li>
+      <li><strong>Show event:</strong> <em>Panel1wishesLink1.onclick;</em></li>
+      <li><strong>Hide event:</strong> <em>Panel1Condition1.ontrue;</em></li>
+    </ul>
+  </li>
+  <li>At <i>Panel3</i> panel for UpdatePanel feature set value for attribute:
+    <ul style="margin-left: 5px">
+      <li><strong>Refresh:</strong> <em>Panel2YahooPanel1.onhide;</em></li>
+    </ul>
+  </li>
+</ol>
+<h2>Database Tables used:</h2>
+<p>Database: <em>Internet</em></p>
+<p>Tables: <em>wishes </em></p>
+</body>
+</html>
